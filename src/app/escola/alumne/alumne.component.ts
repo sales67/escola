@@ -16,4 +16,14 @@ import { Routes } from '@angular/router';
            
  constructor(private alumneService: AlumneService) { } 
 
+  alumnes; 
+        
+    listAlumnes(){
+     this.alumneService.getAlumnes()
+                .subscribe(
+                data => { this.alumnes = data;console.log(data);},
+                err => console.error(err),
+                () => console.log('done')
+      );}
+        
     }
