@@ -1,4 +1,4 @@
-﻿input{
+input{
 	width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -37,4 +37,12 @@ button{
 }
 .error{
   color:orangered;
+}
+.secundary{
+    background-color: aliceblue;
+    margin-right: 50%
+}
+.primary{
+    background-color: aqua;
+    margin-right: 75%;
 }

@@ -12,8 +12,11 @@ import { ProfessorComponent } from './escola/professor/professor.component';
 
 import { EsportComponent } from './escola/professor/esport/esport.component';
 import { CrearProfeComponent } from './escola/professor/crear-profe/crear-profe.component';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d730cba4965f4a1e559c75ac0f664bc750c25bdc
 import { ConsultarProfeComponent } from './escola/professor/consultar-profe/consultar-profe.component';
 import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
