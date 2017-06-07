@@ -6,64 +6,23 @@ html {background-color: skyblue;}
     </head>
 <div class="title" >
 <h1>
-  {{title}} <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" />
+  <h1>Escola Otaku</h1> <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" />
 </h1>
   </div>
     <div id="cssmenu">
         <ul>
-          <li class="has-sub">
-            <a routerLink="/client" routerLinkActive="active" href="index.html">Client</a>
-            <ul>
-              <li><a routerLink="/regist" routerLinkActive="active">Registrar Client</a></li>
-              <li><a routerLink="/update" routerLinkActive="active">Modificar Client</a></li>
-              <li><a class="delete" routerLink="/delete" routerLinkActive="active">Eliminar Client</a></li>
-              
-            </ul>
+          <li>
+            <a routerLink="/client" routerLinkActive="active" href="index.html">Professors</a>
           </li>
-          <li class="has-sub"><a routerLink="/marca" routerLinkActive="active">Marca</a>
-            <ul>
-                <li><a routerLink="/addMarca" routerLinkActive="active">Afegir Marca</a></li>
-                <li><a routerLink="/updateMarca" routerLinkActive="active">Actualitzar Marca</a></li>
-                <li class="has-sub"><a routerLink="/listMarca" routerLinkActive="active">Mostrar les Marques</a>
-                    <ul>                        
-                        <li><a routerLink="/listMarcaId" routerLinkActive="active">Mostrar per Id</a></li>
-                        <li><a  routerLink="/listMarcaName" routerLinkActive="active">Mostrar per Nom</a></li>
-                        <li><a  routerLink="/listMarcaAll" routerLinkActive="active">Mostrar totes les marques</a></li>
-                    </ul>  
-                </li>
-                <li><a class="delete" routerLink="/deleteMarca" routerLinkActive="active">Esborrar una marca</a></li> 
-            </ul>
-        </li>
-        <li class="has-sub"><a href="#" routerLink="/model" routerLinkActive="active" >Model</a>
-        <ul>
-            <li><a routerLink="/addModel" routerLinkActive="active">Afegir Model</a></li>
-                <li><a routerLink="/updateModel" routerLinkActive="active">Actualitzar Model</a></li>
-                <li><a routerLink="/listModel" routerLinkActive="active">Mostrar els models</a></li>
-                <li><a class="delete" routerLink="/deleteModel" routerLinkActive="active">Esborrar un model</a></li>
-        </ul></li>
-        <!-- <li><a href="#" routerLink="/equipament" routerLinkActive="active" >Equipaments</a></li> -->
-        <li class="has-sub "><a routerLink="/equipament" routerLinkActive="active">Equipament</a>
-            <ul>
-                <li><a routerLink="crear-eq" routerLinkActive="active">Crear</a></li>
-                <li><a routerLink="modificar-eq" routerLinkActive="active">Modificar</a></li>
-                <li><a routerLink="consultar-eq" routerLinkActive="active">Consultar</a></li>
-                <li><a class="delete" routerLink="esborrar-eq" routerLinkActive="active">Esborrar</a></li>
-            </ul>
-        </li>
-          <li class="has-sub ">
-            <a  routerLink="/informacio" routerLinkActive="active" href="index.html">Informació</a>
-            <ul>
-              <li class="has-sub ">
-                <a routerLink="/informacio-empresa" routerLinkActive="active">Informació de l'Empresa</a>
-                <ul>
-                  <li ><a routerLink="/contacte" routerLinkActive="active">Descripció i Contacte</a></li>
-                  <li><a routerLink="/ubicacio" routerLinkActive="active">On som</a></li>
-                </ul>
-              </li>
-              <li><a routerLink="/noticies" routerLinkActive="active">Noticies i Novetats</a></li>
-            </ul>
+          <li>
+            <a routerLink="/marca" routerLinkActive="active">Cursos</a>
           </li>
-      </ul>
+          <li>
+            <a href="#" routerLink="/model" routerLinkActive="active">Centres</a>
+          <li>
+            <a routerLink="/equipament" routerLinkActive="active">Alumnes</a>
+          </li>
+       </ul>
     </div>
 <router-outlet></router-outlet>
 </html>

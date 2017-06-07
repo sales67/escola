@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { MarcaComponent } from './marca/marca.component';
@@ -17,7 +17,7 @@ import { DeleteComponent } from './client/delete/delete.component';
 import { CrearEQComponent } from './equipament/crear-eq/crear-eq.component';
 import { ConsultarEQComponent } from './equipament/consultar-eq/consultar-eq.component';
 import { ModificarEQComponent } from './equipament/modificar-eq/modificar-eq.component';
-import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
+//import { EsborrarEQComponent } from './equipament/esborrar-eq/esborrar-eq.component';
 
 import {AppRoutingModule} from '../app-routing.module';
 import { InformacioComponent } from './informacio/informacio.component';

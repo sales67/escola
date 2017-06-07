@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -18,7 +18,7 @@ import { DeleteComponent } from './cotxes/client/delete/delete.component';
 import { CrearEQComponent } from './cotxes/equipament/crear-eq/crear-eq.component';
 import { ConsultarEQComponent } from './cotxes/equipament/consultar-eq/consultar-eq.component';
 import { ModificarEQComponent } from './cotxes/equipament/modificar-eq/modificar-eq.component';
-import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
+//import { EsborrarEQComponent } from './cotxes/equipament/esborrar-eq/esborrar-eq.component';
 import {ListMarcaIdComponent} from './cotxes/marca/listMarca/listMarcaId/listMarcaId.component';
 import {ListMarcaNameComponent} from './cotxes/marca/listMarca/listMarcaName/listMarcaName.component';
 import { ListMarcaAllComponent } from './cotxes/marca/listMarca/listMarcaAll/listMarcaAll.component';

@@ -1,9 +1,9 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+﻿import {Component, OnInit, ViewChild} from '@angular/core';
 import {deleteModelService} from './deleteModel.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
 import 'rxjs/add/observable/of';
-import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.component";
+//import{EsborrarEQComponent} from "../../equipament/esborrar-eq/esborrar-eq.component";
 
 @Component({
   selector: 'deleteModel',
