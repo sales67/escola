@@ -1,1 +1,28 @@
-﻿
+<html>
+    <body>
+    <form name="addMarca" display="block">      
+            <h2>Busca un alumne</h2>		        
+            <label for="content">Entra el nom  </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addName"><br>
+            <label for="content">Entra el telèfon   </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addTel"><br>
+            <label for="content">Entra l'e-Mail  </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addMail"><br>
+            <label for="content">Entra el país</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addCountry"><br><br>
+		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr una marca</button>
+    </form>	
+        
+        
+        ----------------------------------------------------------------------------<br>
+        
+        <button (click)="listAlumnes()" type="submit" class="btn btn-default">Llista tots els alumnes amb els seus respectus hobbies</button>
+        <div *ngFor='let alumne of alumnes'>
+                        <p style="margin-bottom:0%">Alumne {{alumne.ida}}</p>
+                        ------------------------------------  <br> 
+                        Nom: {{alumne.nom}} <br>
+                        Hobbie {{alumne.hobby}}
+                    </div>	
+        
+    </body>
+</html>
