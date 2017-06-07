@@ -16,7 +16,7 @@ import {Routes,Router} from '@angular/router';
         
         delid;data;logError;marques;errorBuit;finished;errorServer;
 
-    constructor(private delCursService: DelCursService, private delCursComponent:DelCursComponent) { }
+    constructor(private delCursService: DelCursService) { }
         
     // @ViewChild(deleteModelComponent) deleteModelcomponent;
 
