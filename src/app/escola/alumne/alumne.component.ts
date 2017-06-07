@@ -6,7 +6,7 @@ import {AlumneService} from './alumne.service';
 @Component({
   selector: 'alumne',
   templateUrl:'./alumne.component.html',
-  styleUrls: ['../../cotxes.css'],
+  styleUrls: ['../alumne.css'],
   providers: [AlumneService]
 })
 
