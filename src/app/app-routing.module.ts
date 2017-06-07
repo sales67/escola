@@ -8,8 +8,7 @@ const routes: Routes = [
     path: 'alumne',
     component: AlumneComponent,
     children: []
-  },
-    
+  },    
 ];
 
 @NgModule({

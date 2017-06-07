@@ -1,12 +1,10 @@
-﻿import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { CotxesModule } from './cotxes/cotxes.module';
+import { EscolaModule } from './escola/escola.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +15,7 @@ import { CotxesModule } from './cotxes/cotxes.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    CotxesModule
+    EscolaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
