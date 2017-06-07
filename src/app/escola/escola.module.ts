@@ -6,6 +6,8 @@ import {FormsModule} from '@angular/forms'
 
 
 import {AlumneComponent} from './alumne/alumne.component';
+import { ProfessorComponent } from './professor/professor.component';
+import { EsportComponent } from './professor/esport/esport.component';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import {AlumneComponent} from './alumne/alumne.component';
       AppRoutingModule
   ],
   declarations: [
-      AlumneComponent
+      AlumneComponent,
+      ProfessorComponent,
+      EsportComponent
   ]
 })
 export class EscolaModule { }
