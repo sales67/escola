@@ -52,7 +52,4 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.finished=false;  
 <<<<<<< HEAD
      }*/
-=======
      }
->>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
-}

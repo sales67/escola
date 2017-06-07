@@ -1,3 +1,67 @@
-<p>
-  consultar-profe works!
-</p>
+<html>
+<body>
+    
+<br>
+
+<h2>Introdueix l'ID d'un professor per consultar les seves dades:</h2>
+
+<form name="consultarUnProfeForm">
+    <label for="idProfe">ID</label>
+    <input type="text" name="idProfe" id="idProfe" [(ngModel)]="idProfe">
+    
+    <br>
+    <br>
+    
+    <!-- -->
+    <h2>Selecciona la informació que vols consultar:</h2>
+    
+    <label>DNI</label>
+    <input type="checkbox" name="boolDni" [(ngModel)]="boolDni" checked="true">
+
+    <!-- -->
+    
+    <br>
+    <br>
+    
+    <button (click)="consultarProfe()" type="submit" class="btn btn-default">CERCAR PROFESSOR</button>
+    
+    <br>
+    <br>
+</form>
+
+<div *ngFor = 'let profe of profes'> <!-- Si no fem un bucle l'HTML mostra el nom dels camps sense els seus valors.. -->
+    <h3>Dades personals</h3>
+    <p>Nom: {{profe.nom}}</p>
+    <p>Cognoms: {{profe.cognoms}}</p>
+    <p *ngIf="boolDni">DNI: {{profe.dni}}</p>
+    <!--<p>DNI: {{profe.dni}}</p>-->
+    
+    <br>
+    
+    <h3>Curs impartit</h3>
+    <!--<div *ngFor ="let c of curs">--> <!-- NO CAL!! ja que sabem que sempre serà 1 valor retornat -->
+    <p>Curs: {{profe.curs.nom}}</p>
+    <p>Credits: {{profe.curs.credits}}</p>
+    <!--</div>-->
+    
+    <br>
+    
+    <h3>Esports practicats</h3>
+    
+    <div *ngFor = "let e of profe.esport; let i = index">
+        <p>{{i+1}}- {{e.nom}}</p>
+    </div>
+    
+    <!--<p>Esport: {{profe.esport[0].nom}}</p>--> <!-- funciona per 1, per més d'un no.. -->
+    
+    <!--<h3>Incidències</h3>
+    
+    <div *ngFor = "let in of profe.incidencia">
+        <p>{{in.incidencia}}</p>
+    </div>-->
+    
+    <br>
+</div>
+
+</body>
+</html>
