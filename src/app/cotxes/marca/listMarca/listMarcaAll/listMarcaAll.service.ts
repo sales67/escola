@@ -14,7 +14,7 @@ constructor(private http: Http){}
 
 getMarques() {
       var a = this.http.get(this.listUrl)
-                .map(res => res.json())
+                .map(res => res.json());
       return a;
   }
 }

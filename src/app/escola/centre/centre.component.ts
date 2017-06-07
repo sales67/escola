@@ -4,24 +4,30 @@ import {CentreService} from './centre.service';
 
 
 @Component({
+<<<<<<< HEAD
+ selector: 'centre',
+ templateUrl:'./centre.component.html',
+ styleUrls: ['../../cotxes.css'],
+ providers: [CentreService]
+=======
   selector: 'centre',
-  templateUrl:'./centr.component.html',
+  templateUrl:'./centre.component.html',
   styleUrls: ['../../cotxes.css'],
   providers: [CentreService]
+>>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
 })
 
-    export class CentreComponent{
-        
+   export class CentreComponent{
+       
 
+<<<<<<< HEAD
+          
+constructor(private centreService: CentreService) { } 
+       
+   }
+=======
            
  constructor(private centreService: CentreService) { } 
-              marques; 
         
-    listMarca(){
-     this.listMarcaAllService.getMarques()
-                .subscribe(
-                data => { this.marques = data;console.log(data);},
-                err => console.error(err),
-                () => console.log('done')
-      );}
-}
+    }
+>>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
