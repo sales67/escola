@@ -13,13 +13,13 @@ import {Routes,Router} from '@angular/router';
     export class ListCursComponent{
 
     constructor(private listCursService: ListCursService) { }
-        curs; 
+        cursos; 
 
         
     listCurs(){
      this.listCursService.listCurs()
                 .subscribe(
-                data => (this.curs = data)
+                data => (this.cursos = data)
       );    
     }
     }

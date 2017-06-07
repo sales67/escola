@@ -12,6 +12,7 @@ import { ProfessorComponent } from './escola/professor/professor.component';
 
 import { EsportComponent } from './escola/professor/esport/esport.component';
 import { CrearProfeComponent } from './escola/professor/crear-profe/crear-profe.component';
+
 import { ConsultarProfeComponent } from './escola/professor/consultar-profe/consultar-profe.component';
 import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
@@ -42,8 +43,12 @@ const routes: Routes = [
   {
       path: 'listCurs',
       component: ListCursComponent,
+<<<<<<< HEAD
      
   },
+=======
+  },   
+>>>>>>> 879c3ed74244e5c98b2910d38285a7d20cc00608
     {
     path: 'professor',
     component: ProfessorComponent,
@@ -69,6 +74,10 @@ const routes: Routes = [
     component: EsborrarProfeComponent,
     children: []
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 879c3ed74244e5c98b2910d38285a7d20cc00608
 ];
 
 @NgModule({
