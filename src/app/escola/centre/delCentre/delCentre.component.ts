@@ -43,7 +43,7 @@ import {delCentreService} from'../delCentre/delCentre.service';
           value => this.data=value,
           error => {},
           () => {
-              this.delCentreComponent.deleteByMarca(this.deleteId);
+              //this.delCentreComponent.deleteByMarca(this.deleteId);
               this.finished = true;              
           }            
       );        
