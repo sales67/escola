@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { MarcaComponent } from './marca/marca.component';
@@ -68,11 +68,7 @@ import { updateModelComponent } from './model/update-model/updateModel.component
       ListMarcaAllComponent,
 
 
-      DeleteMarcaComponent,
-      CrearEQComponent,
-      ConsultarEQComponent,
-      ModificarEQComponent,
-      EsborrarEQComponent,
+      DeleteMarcaComponent,      
       InformacioComponent,
 
        addModelComponent,

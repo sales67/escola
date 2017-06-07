@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ClientComponent } from './cotxes/client/client.component';
@@ -87,22 +87,7 @@ const routes: Routes = [
       path: 'regist',
       component: RegistComponent
   },
-    {
-    path: 'deleteMarca',
-    component: DeleteMarcaComponent
-  },{
-    path: 'crear-eq',
-    component: CrearEQComponent
-  },{
-    path: 'consultar-eq',
-    component: ConsultarEQComponent
-  },{
-    path: 'modificar-eq',
-    component: ModificarEQComponent
-  },{
-    path: 'esborrar-eq',
-    component: EsborrarEQComponent
-  },
+    
   {
     path: 'addModel',
     component: addModelComponent
