@@ -20,7 +20,7 @@ import {delCentreService} from'../delCentre/delCentre.service';
         
      @ViewChild(delCentreComponent) delCentrecomponent;
 
-        /*deleteMarca(){  
+        deleteMarca(){  
             this.delCentreService.delCentre(this.deleteId) 
             .catch((error: any) => { 
                 console.log(error.status);
@@ -50,9 +50,5 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorServer=false;
         this.errorBuit=false;
         this.finished=false;  
-<<<<<<< HEAD
-     }*/
-=======
-     }
->>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
+}
 }

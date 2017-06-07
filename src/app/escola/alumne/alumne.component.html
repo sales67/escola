@@ -17,15 +17,13 @@
         ----------------------------------------------------------------------------<br>
         
         <button (click)="listAlumnes()" type="submit" class="btn btn-default">Llista tots els alumnes amb els seus respectus hobbies</button>
-        <div *ngFor='let alumne of alumnes'>
+        <div class="primary" *ngFor='let alumne of alumnes'>
                         <p style="margin-bottom:0%">Alumne {{alumne.ida}}</p>
                         ------------------------------------  <br> 
-                        Nom: {{alumne.nom}} <br>
-                        Hobbie {{alumne.hooby.nom}}
-                        <div *ngFor='let hobbies of hobbie'>
-                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>
-                        ------------------------------------  <br> 
-                        Nom: {{hpobies.nom}} <br>                       
+                        Nom: {{alumne.nom}} <br>                        
+                        <div class="secundary" *ngFor='let hobbies of alumne.hobby'>
+                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>  
+                        Nom: {{hobbies.nom}} <br>                       
                             </div>
                     </div>	
         
