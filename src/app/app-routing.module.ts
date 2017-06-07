@@ -1,7 +1,12 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import{AlumneComponent} from './escola/alumne/alumne.component';
+import { AlumneComponent } from './escola/alumne/alumne.component';
+import { CursComponent } from './escola/curs/curs.component';
+import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';
+import { PutCursComponent } from './escola/curs/putCurs/putCurs.component';
+import { AddCursComponent } from './escola/curs/addCurs/addCurs.component';
+import { ListCursComponent } from './escola/curs/listCurs/listCurs.component';
 
 import { ProfessorComponent } from './escola/professor/professor.component';
 
@@ -16,6 +21,30 @@ const routes: Routes = [
     path: 'alumne',
     component: AlumneComponent,
     children: []
+<<<<<<< HEAD
+    },  
+  {
+      path: 'curs',
+      component: CursComponent,
+      children: []
+  },
+  {
+      path: 'addCurs',
+      component: AddCursComponent,
+  },    
+  {
+      path: 'putCurs',
+      component: PutCursComponent,
+  },    
+  {
+      path: 'delCurs',
+      component: DelCursComponent,
+  },   
+  {
+      path: 'listCurs',
+      component: ListCursComponent,
+  },   
+=======
   },
     {
     path: 'professor',
@@ -42,6 +71,7 @@ const routes: Routes = [
     component: EsborrarProfeComponent,
     children: []
   },
+>>>>>>> 089bfaf7324cee0e22e6b5e5fadb84333323a5bb
 ];
 
 @NgModule({
