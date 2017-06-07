@@ -8,6 +8,10 @@ import {FormsModule} from '@angular/forms'
 import {AlumneComponent} from './alumne/alumne.component';
 import { ProfessorComponent } from './professor/professor.component';
 import { EsportComponent } from './professor/esport/esport.component';
+import { CrearProfeComponent } from './professor/crear-profe/crear-profe.component';
+import { ConsultarProfeComponent } from './professor/consultar-profe/consultar-profe.component';
+import { ModificarProfeComponent } from './professor/modificar-profe/modificar-profe.component';
+import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-profe.component';
 
 @NgModule({
   imports: [
@@ -19,7 +23,11 @@ import { EsportComponent } from './professor/esport/esport.component';
   declarations: [
       AlumneComponent,
       ProfessorComponent,
-      EsportComponent
+      EsportComponent,
+      CrearProfeComponent,
+      ConsultarProfeComponent,
+      ModificarProfeComponent,
+      EsborrarProfeComponent
   ]
 })
 export class EscolaModule { }
