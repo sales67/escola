@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import{AlumneComponent} from './escola/alumne/alumne.component';
 
-import { ProfessorComponent } from './professor/professor.component';
-import { EsportComponent } from './professor/esport/esport.component';
-import { CrearProfeComponent } from './professor/crear-profe/crear-profe.component';
-import { ConsultarProfeComponent } from './professor/consultar-profe/consultar-profe.component';
-import { ModificarProfeComponent } from './professor/modificar-profe/modificar-profe.component';
-import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-profe.component';
+import { ProfessorComponent } from './escola/professor/professor.component';
+import { EsportComponent } from './escola/professor/esport/esport.component';
+import { CrearProfeComponent } from './escola/professor/crear-profe/crear-profe.component';
+import { ConsultarProfeComponent } from './escola/professor/consultar-profe/consultar-profe.component';
+import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
+import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
 
 const routes: Routes = [
   {
