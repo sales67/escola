@@ -1,0 +1,24 @@
+﻿
+<h2>Elimina un client</h2>
+<div name="delete">
+  <div *ngIf="errorServerD" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Server off
+  </div>
+  <div *ngIf="errorClientD" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Client inexistent
+  </div>
+  <div *ngIf="errorBuitD" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Ompli el camp
+  </div>
+
+ 
+    <div *ngIf="finishedD" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Correcte! </strong>S'ha eliminat el client
+    </div>
+
+    <label for="content">Numero identificatiu del client</label><br />
+    <input type="text" name="idModelDel" [(ngModel)]="idD">
+    <br /><br />
+
+    <button (click)="deleteButton()" type="submit" class="btn btn-default">Eliminar</button>
+</div>

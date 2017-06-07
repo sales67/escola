@@ -1,0 +1,36 @@
+﻿<h2>Afegeix un client nou</h2>
+<form name="formul">
+  <div name="regist">
+
+    <div *ngIf="finishedR" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Correcte! </strong>S'ha registrat el client
+    </div>
+    <div *ngIf="errorServerR" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Error!</strong> Server off
+    </div>
+    <div *ngIf="errorBuitR" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Error!</strong> Ompli tots els camps
+    </div>
+    <div *ngIf="errorBDR" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+      <strong>Error!</strong> BBDD inaccessible
+    </div>
+    <!--<label for="content">Numero identificatiu</label><br />
+    <input type="text" name="id" [(ngModel)]="idR"><br />-->
+    <label for="content">Dni</label><br />
+    <input type="text" name="dni" [(ngModel)]="dniR"><br />
+    <label for="content">Nom</label><br />
+    <input type="text" name="nom" [(ngModel)]="nomR"><br />
+    <label for="content">Cognoms</label><br />
+    <input type="text" name="cognoms" [(ngModel)]="cognomsR"><br />
+    <label for="content">Correu</label><br />
+    <input type="text" name="correu" [(ngModel)]="correuR"><br />
+    <label for="content">Direccio</label><br />
+    <input type="text" name="direccio" [(ngModel)]="direccioR"><br />
+    <label for="content">Telefon</label><br />
+    <input type="text" name="telefon" [(ngModel)]="telefonR"><br />
+    <span  class="error" *ngIf="telefonR?.length < 9">Introdueix 9 digits</span>
+    <br />
+    <button (click)="registButton()" type="submit" class="btn btn-default">Registrar</button>
+
+  </div>
+</form>

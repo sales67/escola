@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Moltbe!</strong> Nova marca guardada Correctament
+</div>
+         <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Hi ha algún camp buit
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Server not Works!
+</div>
+    <form name="addMarca" display="block">      
+            <h2>Introdueix una nova Marca de cotxes</h2>		        
+            <label for="content">Entra el nom  </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addName"><br>
+            <label for="content">Entra el telèfon   </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addTel"><br>
+            <label for="content">Entra l'e-Mail  </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addMail"><br>
+            <label for="content">Entra el país</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addCountry"><br><br>
+		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr una marca</button>
+    </form>	
+    </body>
+</html>

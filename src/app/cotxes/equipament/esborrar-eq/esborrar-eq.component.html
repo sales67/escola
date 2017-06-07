@@ -1,0 +1,57 @@
+<div class="verd">
+    <br>
+        <h2>Introdueix l'ID d'un equipament per esborrar-lo:</h2>
+    
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+            <span class="totb">S'ha esborrat l'equipament</span> <br><br>
+        </div>
+
+        <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+            <span class="error">No s'ha pogut esborrar l'equipament, falten dades o són incorrectes</span> <br><br>
+        </div>
+
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+            <span class="error">Error del servidor</span> <br><br>
+        </div>
+
+        <form name="delEq">
+            <label for="idEq2">ID: </label>
+            <input type="text" name="idEq2" id="idEq2" [(ngModel)]="idEq2"> <br> <br>
+            <button (click)="delEq()" type="submit" class="btn btn-success">Submit</button>
+        </form>
+    <br>
+</div>
+
+<div class="groc">
+    <br>
+        <h2>Introdueix l'ID d'un model per esborrar tots els seus equipaments:</h2>
+
+        <form name="delEqModel">
+            <label for="idModel">Model: </label>
+            <input type="text" name="idModel" id="idModel" [(ngModel)]="idModel"> <br> <br>
+            <button (click)="delEqModel()" type="submit" class="btn btn-success">Submit</button>
+        </form>
+    <br>
+    
+    <p class="totb">{{missatge_del_model}}</p>
+    <p class="error">{{error_del_model}}</p>
+    
+    <br>
+</div>
+
+<!--<div class="verd">
+    <br>
+        <h2>Introdueix l'ID d'un client per esborrar-lo:</h2>
+
+        <form name="del_client">
+            <label for="del_client">Client: </label>
+            <input type="text" name="del_client" id="del_client" [(ngModel)]="del_client"> <br> <br>
+            <button (click)="deleteClient()" type="submit" class="btn btn-success">Submit</button>
+        </form>
+    <br>
+    
+    <p class="totb">{{missatge_del_model}}</p>
+    <p class="error">{{error_del_model}}</p>
+    
+    <br>
+</div> -->

@@ -1,0 +1,24 @@
+<html>
+    <body>
+                <div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Aquesta marca no existeix
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Aquesta marca no existeix
+</div>
+    <form name="listMarcaName" display="block">      
+            <h2>Mostrar les dades de una marca</h2>
+            	<label for="content">Entra el nom a buscar </label><br>
+		        <input type="text" name="listMarcaName" [(ngModel)]="name"><br>
+		        <button (click)="listMarcaName()" type="submit" class="btn btn-default">Envia per mostrar la marca</button>
+                <div *ngFor='let marca of marques'>
+                        <p style="margin-bottom:0%">MARCA {{marca.id}}</p>
+                        ------------------------------------  <br>                
+                        Nom: {{marca.name}} <br>
+                        Telefon: {{marca.telefon}} <br>
+                        Correu: {{marca.correu}} <br>
+                        País: {{marca.pais}}
+                </div>	
+    </form>  
+    </body>
+</html>

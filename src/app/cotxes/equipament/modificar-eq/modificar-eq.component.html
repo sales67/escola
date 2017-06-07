@@ -1,0 +1,51 @@
+<br>
+
+<h2>Modificar un equipament</h2>
+
+<!--<div *ngIf="error_mod; else success_mod" class="error alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    Error a l'hora de modificar un equipament (html)
+    <br> <br>
+</div>
+
+<ng-template #success_mod>
+    <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+        Equipament modificat correctament (html)
+    </div>
+    <br> <br>
+</ng-template>-->
+
+<form name="modificarEquipament">
+    
+    <input type="text" name="idEq4" id="idEq4" [(ngModel)]="idEq4">
+    <label> Introdueix l'ID de l'equipament que vols modificar </label>
+    <br> <br>
+    
+    <select id="selectBool" name="camp" [(ngModel)]="camp">
+        <option *ngFor="let c of camps" [value]="c.value">  
+            {{c.display}}
+        </option>
+    </select>
+    <label>Selecciona el camp que vols modificar </label>  
+    <br> <br>
+    
+    <div id="noEsBoolea" [hidden]="true">
+        <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+        <label> Introdueix el nou valor </label>
+        <br> <br>
+    </div>
+    
+    <div id="esBoolea" [hidden]="true">
+        <select name="esBoolea" [(ngModel)]="nouValor">
+            <option *ngFor="let cf of certFals" [value]="cf.value">  
+                {{cf.display}}
+            </option>
+        </select>
+        <label>Ho vols afegir o treure de l'equipament?</label>
+        <br> <br>
+    </div>
+    
+    <button (click)="modEquipament()" type="submit" class="btn btn-success">Submit</button>
+    
+</form>
+
+<br>

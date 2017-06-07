@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div *ngIf="error;else success" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> La id no existeix
+</div>
+    <form name="listMarcaId" display="block">      
+            <h2>Mostrar les dades de una marca</h2>
+            	<label for="content">Entra l'id a buscar </label><br>
+		        <input type="text" name="listMarcaId" [(ngModel)]="id"><br>
+		        <button (click)="listMarcaId()" type="submit" class="btn btn-default">Envia per mostrar la marca</button>
+                <div *ngFor="let marca of marques">
+                        <p>MARCA {{marca.id}}</p>
+                        ------------------------------------  <br>                
+                        Nom: {{marca.name}} <br>                        
+                        Telefon: {{marca.telefon}} <br>
+                        Correu: {{marca.correu}} <br>
+                        País: {{marca.pais}}
+                </div>	
+    </form>
+    </body>
+</html>

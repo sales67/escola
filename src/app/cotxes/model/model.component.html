@@ -1,0 +1,67 @@
+<!--<form name="addModel" display="block">-->      
+           <button routerLink="../addModel" routerLinkActive="active">Afegir models</button>
+        <button routerLink="../updateModel" routerLinkActive="active">Actualitzar Models</button>
+        <button routerLink="../listModel" routerLinkActive="active">Llista de models</button>
+        <button routerLink="../deleteModel" routerLinkActive="active">Eliminar Model </button>
+		        <!--<label for="content">Entra el nom del model    </label><br>
+		        <input type="text" name="addName" [(ngModel)]="addName"><br>
+            <label for="content">Entra el nom de la Marca   </label><br>
+		        <input type="text" name="addModel" [(ngModel)]="addMarca"><br>
+            
+		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr un model</button>
+		    </form>	        <br>
+        <form name="addMarcaPost"> 
+                <h2>Introdueix una nova Marca de cotxes (POST)</h2>
+		        <label for="content">Entra la Id del Concessionari    </label><br>
+		        <input type="text" name="addMarca2" [(ngModel)]="addConce2"><br>
+            <label for="content">Entra el nom de la Marca   </label><br>
+		        <input type="text" name="addMarca2" [(ngModel)]="addName2"><br>
+            <label for="content">Entra l'any actual     </label><br>
+		        <input type="text" name="addMarca2" [(ngModel)]="addYear2"><br>
+            <label for="content">Entra el Païs de la Marca</label><br>
+		        <input type="text" name="addMarca2" [(ngModel)]="addCountry2"><br><br>
+		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr una marca</button>
+		    </form>	
+		<br>	
+		<form name="addMarca" display="block">      
+            <h2>Actulatiza els valors de una Marca (PUT)</h2>
+            	<label for="content">Entra la Id a actualitzar   </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addId3"><br>
+		        <label for="content">Entra la Id del Concessionari    </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addConce3"><br>
+            <label for="content">Entra el nom de la Marca   </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addName3"><br>
+            <label for="content">Entra l'any actual     </label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addYear3"><br>
+            <label for="content">Entra el Païs de la Marca</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addCountry3"><br><br>
+		        <button (click)="updateMarca()" type="submit" class="btn btn-default">Envia per actualitzar una marca</button>
+		 </form>
+		 <br>		
+		<p class="jat">---------------------------------</p>
+			<form name="idMarca">      
+		        <label for="content">Entra la Id de una Concessionari</label>
+		        <input type="text" name="idMarca" [(ngModel)]="idMarca">
+		        <button (click)="listModel()" type="submit" class="btn btn-default">Envia per veure la informació</button>
+		    </form>
+		     <br>
+		<p>Mostra els models de cotxe que pertanyen a les Marques que te el concessionari demanat! </p><br>
+		<div *ngFor='let model of models'>
+		<div *ngFor='let model2 of model'>
+            ------------------------------------ <br>            
+            IdModel:  {{model2.id}} <br>            
+            Model: {{model2.model}}<br>
+            IdMarca: {{model2.marca}}
+            </div>
+        </div>
+			<br>
+			<button (click)="listMarca()" type="submit" class="btn btn-default">Mostra totes les Marques</button><br>
+		            <div *ngFor='let marca of marques'>
+                        ------------------------------------ <br>
+                        IdMarca: {{ marca.id }} <br>
+                        nom: {{marca.name}} <br>
+                        any: {{marca.any}} <br>
+                        ID consecionari: {{marca.idConce}} <br>
+                        païs: {{marca.pais}}
+                    </div>	
+                  	-->

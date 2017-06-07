@@ -1,0 +1,52 @@
+﻿<button (click)="listButton()" class="btn btn-default">Mostrar tots els clients</button>
+<form name="telefonClient">
+  <button (click)="listButtonId()" type="submit" class="btn btn-success">Mostrar client</button><br />
+  <label for="telefonClient">Telefon del client: </label>
+  <input type="text" name="telefonClient" [(ngModel)]="telefonClient"> <br>
+</form>
+<div *ngIf="errorServerU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+  <strong>Error!</strong> Server off
+</div>
+  <div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Error!</strong> Client inexistent
+</div>
+
+
+<!--<ng-template #success>
+  <div *ngIf="finishedC" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+    <strong>Correcte! </strong>S'han actualitzat les dades
+  </div>
+</ng-template>-->
+  
+  <div>
+          <div *ngFor='let client of clients'>
+            -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+              <p>Client amb Id: {{client.id}}</p>
+            -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+              <p>
+                Dni: {{client.dni}}
+              </p> 
+              <p>
+                Nom: {{client.nom}}
+              </p> 
+              <p>
+                Cognoms: {{client.cognoms}}
+              </p> 
+              <p>
+                Correu: {{client.correu}}
+              </p> 
+              <p>
+                Direccio: {{client.direccio}}
+              </p> 
+              <p>Telefon: {{client.telefon}} </p> 
+            <br />
+            <br />
+            
+
+         </div>
+  </div>
+<br />
+<br />
+<br />
+
+
