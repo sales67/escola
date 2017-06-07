@@ -8,7 +8,7 @@
 
 
 <div>
-  <div *ngFor='let curs of cursos'>
+  <div *ngFor='let curs of cursos'><!--cursos fa ref. a components data-->
     -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
     <p>Curs amb Id: {{curs.id}}</p>
     -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
@@ -16,11 +16,9 @@
       nom: {{curs.nom}}
     </p>
     <p>
-      id centre: {{curs.idcentre}}
+      aules: {{curs.aula}}
     </p>
-    <p>
-      nom centre: {{curs.nomcentre}}
-    </p>
+
 
   </div>
 </div>
