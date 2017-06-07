@@ -5,7 +5,7 @@ import {CentreService} from './centre.service';
 
 @Component({
   selector: 'centre',
-  templateUrl:'./centr.component.html',
+  templateUrl:'./centre.component.html',
   styleUrls: ['../../cotxes.css'],
   providers: [CentreService]
 })
@@ -15,5 +15,5 @@ import {CentreService} from './centre.service';
 
            
  constructor(private centreService: CentreService) { } 
-
+        
     }
