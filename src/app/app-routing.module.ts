@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AlumneComponent } from './escola/alumne/alumne.component';
@@ -21,7 +21,6 @@ const routes: Routes = [
     path: 'alumne',
     component: AlumneComponent,
     children: []
-<<<<<<< HEAD
     },  
   {
       path: 'curs',
@@ -43,8 +42,7 @@ const routes: Routes = [
   {
       path: 'listCurs',
       component: ListCursComponent,
-  },   
-=======
+     
   },
     {
     path: 'professor',
@@ -71,7 +69,6 @@ const routes: Routes = [
     component: EsborrarProfeComponent,
     children: []
   },
->>>>>>> 089bfaf7324cee0e22e6b5e5fadb84333323a5bb
 ];
 
 @NgModule({
