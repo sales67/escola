@@ -4,8 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import{AlumneComponent} from './escola/alumne/alumne.component';
 
 import { ProfessorComponent } from './escola/professor/professor.component';
+<<<<<<< HEAD
+import { EsportComponent } from './escola/professor/esport/esport.component';
+import { CrearProfeComponent } from './escola/professor/crear-profe/crear-profe.component';
+=======
 import { EsportComponent } from './escola//professor/esport/esport.component';
 import { CrearProfeComponent } from './escola//professor/crear-profe/crear-profe.component';
+>>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
 import { ConsultarProfeComponent } from './escola/professor/consultar-profe/consultar-profe.component';
 import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
