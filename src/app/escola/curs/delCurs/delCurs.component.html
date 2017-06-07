@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <body>
         <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
     <strong>Error!</strong> Server not Works!
@@ -11,10 +11,10 @@
     <strong>Correcte! </strong>s'ha eliminat la marca correctament
 </div>
     <form name="updateMarca" display="block">      
-            <h2>Eliminar els registres de una Marca</h2>
-            	<label for="content">Entra la Id a eliminar </label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="deleteId"><br>
-		        <button (click)="deleteMarca()" type="submit" class="btn btn-default">Envia per eliminar una marca</button>
+            <h2>Eliminar un Curs</h2>
+            	<label for="content">id</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="delid"><br>
+		        <button (click)="delCurs()" type="submit" class="btn btn-default">Enviar</button>
     </form>        
     </body>
 </html>

@@ -1,24 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {UpdateMarcaService} from '../updateMarca/updateMarca.service';
+﻿import {Component, OnInit} from '@angular/core';
+import {PutCursService} from '../putCurs/putCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
 
 
 @Component({
-  selector: 'UpdateMarca',
-  templateUrl:'./UpdateMarca.component.html',
-  styleUrls: ['../../cotxes.css'],
-  providers: [UpdateMarcaService]
+  selector: 'putCurs',
+  templateUrl:'./PutCurs.component.html',
+  styleUrls: ['../../escola.css'],
+  providers: [PutCursService]
 })
 
-    export class UpdateMarcaComponent{
+    export class PutCursComponent{
         
     addId;addName;addTel;addCountry;addMail;values;errorBuit;finished;errorServer;errorId;
         
 
-    constructor(private updateMarcaService: UpdateMarcaService) { }
+    constructor(private putCursService: PutCursService) { }
                             
-        updateMarca(){              this.updateMarcaService.updateMarca(this.addId,this.addName,this.addTel,this.addCountry,this.addMail)
+        putCurs(){              this.putCursService.putCurs(this.addId,this.addName,this.addTel,this.addCountry)
                   .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {                   
                     this.errorServer=true;

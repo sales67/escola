@@ -1,4 +1,4 @@
-import {Injectable}  from '@angular/core';
+﻿import {Injectable}  from '@angular/core';
 import {Http,Headers,RequestOptions,URLSearchParams,Response}  from '@angular/http';
 import 'rxjs/add/operator/map';
 //import { Cotxe } from './cotxe';
@@ -9,12 +9,12 @@ import {sprintf} from "sprintf-js";
 
 @Injectable()
 
-export class UpdateMarcaService{
-private updateUrl = 'http://172.17.0.98:8080/cotxe/updateMarca?';
+export class PutCursService{
+private updateUrl = 'http://172.17.0.161:8080/escola/putCurs?';
 
 constructor(private http: Http){}
 
-updateMarca(addId,addName,addTel,addCountry,addMail){     
+putCurs(addid,addnom,addidcentre,addnomcentre){     
    
     /*
     var creds = "id=" + addId +  "&name=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
@@ -30,11 +30,10 @@ updateMarca(addId,addName,addTel,addCountry,addMail){
     */
     
         let params: URLSearchParams = new URLSearchParams();
-params.set('id', addId);
-params.set('name', addName);
-params.set('telefon', addTel);
-params.set('pais', addCountry);
-params.set('correu', addMail);
+params.set('id', addid);
+params.set('name', addnom);
+params.set('telefon', addidcentre);
+params.set('pais', addnomcentre);
 
 
     let options = new RequestOptions({ headers: headers });

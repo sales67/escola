@@ -1,23 +1,23 @@
-import {Component, OnInit} from '@angular/core';
-import {MarcaService} from '../marca.service';
-import {AddMarcaService} from './addMarca.service';
+﻿import {Component, OnInit} from '@angular/core';
+import {CursService} from '../curs.service';
+import {AddCursService} from './addCurs.service';
 
 
 
 @Component({
-  selector: 'addMarca',
-  templateUrl:'./addMarca.component.html',
-  styleUrls: ['../../cotxes.css'],
-  providers: [AddMarcaService]
+  selector: 'addCurs',
+  templateUrl:'./addCurs.component.html',
+  styleUrls: ['../../escola.css'],
+  providers: [AddCursService]
 })
 
-    export class AddMarcaComponent{
+    export class AddCursComponent{
         
-        addName;addTel;addCountry;addMail;values;error;finished;errorBuit;errorServer;
+        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
            
- constructor(private addMarcaService: AddMarcaService) { } 
+ constructor(private addCursService: AddCursService) { } 
         
-     addMarcaPost(){        this.addMarcaService.addMarcaPost(this.addName,this.addTel,this.addCountry,this.addMail)
+     addCursPost(){        this.addCursService.addCursPost(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 

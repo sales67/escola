@@ -1,4 +1,4 @@
-import {Injectable}  from '@angular/core';
+﻿import {Injectable}  from '@angular/core';
 import {Http,Headers,Response}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
@@ -6,15 +6,15 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 
-export class AddMarcaService{
-private addUrl = 'http://172.17.0.98:8080/cotxe/addMarca';
+export class AddCursService{
+private addUrl = 'http://172.17.0.161:8080/escola/addCurs';
 
 
 constructor(private http: Http){}
 
 
-addMarcaPost(addName,addTel,addCountry,addMail){     
-        var creds = "nom=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
+addCursPost(addid,addnom,addidcentre,addnomcentre){     
+        var creds = "id=" + addid + "&nom=" + addnom + "idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
 
         
           var headers = new Headers();

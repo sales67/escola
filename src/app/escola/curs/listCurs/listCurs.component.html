@@ -1,0 +1,29 @@
+﻿<button (click)="listCurs()" class="btn btn-default">Mostrar cursos</button>
+<div *ngIf="errorServerU" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+  <strong>Error!</strong> Server off
+</div>
+<div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">
+  <strong>Error!</strong> Client inexistent
+</div>
+
+
+<div>
+  <div *ngFor='let curs of cursos'>
+    -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+    <p>Curs amb Id: {{curs.id}}</p>
+    -->-->-->-->-->-->-->-->-->-->-->-->-->-->-->-->
+    <p>
+      nom: {{curs.nom}}
+    </p>
+    <p>
+      id centre: {{curs.idcentre}}
+    </p>
+    <p>
+      nom centre: {{curs.nomcentre}}
+    </p>
+
+  </div>
+</div>
+<br />
+<br />
+<br />

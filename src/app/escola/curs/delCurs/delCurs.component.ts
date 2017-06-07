@@ -1,27 +1,27 @@
-import {Component, OnInit,ViewChild} from '@angular/core';
-import {DeleteMarcaService} from '../deleteMarca/deleteMarca.service';
+﻿import {Component, OnInit,ViewChild} from '@angular/core';
+import {DelCursService} from '../delCurs/delCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
-import {deleteModelComponent} from '../../model/delete-model/deleteModel.component';
-import {deleteModelService} from'../../model/delete-model/deleteModel.service';
+//import {deleteModelComponent} from '../../model/delete-model/deleteModel.component';
+//import {deleteModelService} from'../../model/delete-model/deleteModel.service';
 
 @Component({
-  selector: 'deleteMarca',
-  templateUrl:'./deleteMarca.component.html',
-  styleUrls: ['../../cotxes.css'],
-  providers: [DeleteMarcaService,deleteModelComponent,deleteModelService]
+  selector: 'delCurs',
+  templateUrl:'./delCurs.component.html',
+  styleUrls: ['../../escola.css'],
+  providers: [DelCursService,/*deleteModelComponent,deleteModelService*/]
 })
 
-    export class DeleteMarcaComponent{
+    export class DelCursComponent{
         
-        deleteId;data;logError;marques;errorBuit;finished;errorServer;
+        delid;data;logError;marques;errorBuit;finished;errorServer;
 
-    constructor(private deleteMarcaService: DeleteMarcaService, private deleteModelComponent:deleteModelComponent) { }
+    constructor(private delCursService: DelCursService, private delCursComponent:DelCursComponent) { }
         
-     @ViewChild(deleteModelComponent) deleteModelcomponent;
+    // @ViewChild(deleteModelComponent) deleteModelcomponent;
 
-        deleteMarca(){  
-            this.deleteMarcaService.deleteMarca(this.deleteId) 
+        delCurs(){  
+            this.delCursService.delCurs(this.delid) 
             .catch((error: any) => { 
                 console.log(error.status);
                if (error.status === 0 || error.status === "0") {
@@ -41,11 +41,7 @@ import {deleteModelService} from'../../model/delete-model/deleteModel.service';
                 }            
         }).subscribe(
           value => this.data=value,
-          error => {},
-          () => {
-              this.deleteModelComponent.deleteByMarca(this.deleteId);
-              this.finished = true;              
-          }            
+          error => {}         
       );        
         this.errorServer=false;
         this.errorBuit=false;
