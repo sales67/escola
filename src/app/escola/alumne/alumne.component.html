@@ -21,7 +21,12 @@
                         <p style="margin-bottom:0%">Alumne {{alumne.ida}}</p>
                         ------------------------------------  <br> 
                         Nom: {{alumne.nom}} <br>
-                        Hobbie {{alumne.hobby}}
+                        Hobbie {{alumne.hooby.nom}}
+                        <div *ngFor='let hobbies of hobbie'>
+                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>
+                        ------------------------------------  <br> 
+                        Nom: {{hpobies.nom}} <br>                       
+                            </div>
                     </div>	
         
     </body>
