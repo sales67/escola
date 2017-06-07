@@ -51,4 +51,4 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorBuit=false;
         this.finished=false;  
      }
-          
+}

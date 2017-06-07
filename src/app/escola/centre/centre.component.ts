@@ -15,13 +15,5 @@ import {CentreService} from './centre.service';
 
            
  constructor(private centreService: CentreService) { } 
-              marques; 
-        
-    listMarca(){
-     this.listMarcaAllService.getMarques()
-                .subscribe(
-                data => { this.marques = data;console.log(data);},
-                err => console.error(err),
-                () => console.log('done')
-      );}
-}
+
+    }
