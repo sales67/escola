@@ -17,6 +17,12 @@ import { ConsultarProfeComponent } from './escola/professor/consultar-profe/cons
 import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
 
+import {CentreComponent } from './escola/centre/centre.component';
+import {addCentreComponent } from './escola/centre/addCentre/addCentre.component';
+import {putCentreComponent } from './escola/centre/putCentre/putCentre.component';
+import {delCentreComponent } from './escola/centre/delCentre/delCentre.component';
+import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
+
 const routes: Routes = [
   {
     path: 'alumne',
@@ -69,7 +75,26 @@ const routes: Routes = [
     component: EsborrarProfeComponent,
     children: []
   },
-
+   {
+      path: 'centre',
+      component: CentreComponent,
+  },
+  {
+      path: 'listCentre',
+      component: listCentreComponent,
+  },
+  {
+      path: 'putCentre',
+      component: putCentreComponent,
+  },
+  {
+      path: 'delCentre',
+      component: delCentreComponent,
+  },
+  {
+      path: 'addCentre',
+      component: addCentreComponent,
+  }
 ];
 
 @NgModule({

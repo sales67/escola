@@ -6,7 +6,7 @@ import {Routes,Router} from '@angular/router';
 import {delCentreService} from'../delCentre/delCentre.service';
 
 @Component({
-  selector: 'deleteMarca',
+  selector: 'delCentre',
   templateUrl:'./delCentre.component.html',
   styleUrls: ['../../escola.css'],
   providers: [delCentreService,delCentreComponent,delCentreService]

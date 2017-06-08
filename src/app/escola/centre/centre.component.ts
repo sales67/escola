@@ -6,7 +6,7 @@ import {CentreService} from './centre.service';
 @Component({
   selector: 'centre',
   templateUrl:'./centre.component.html',
-  styleUrls: ['../../cotxes.css'],
+  styleUrls: ['../escola.css'],
   providers: [CentreService]
 })
 
