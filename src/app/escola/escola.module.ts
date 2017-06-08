@@ -32,6 +32,7 @@ import {addCentreComponent } from './centre/addCentre/addCentre.component';
 import {putCentreComponent } from './centre/putCentre/putCentre.component';
 import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
+import { BotoComponent } from './professor/boto/boto.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import {listCentreComponent } from './centre/listCentre/listCentre.component';
       addCentreComponent,
       putCentreComponent,
       delCentreComponent,
-      listCentreComponent
+      listCentreComponent,
+      BotoComponent
 
   ]
 })
