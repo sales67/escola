@@ -42,7 +42,7 @@ button{
 .error{
   color:orangered;
 }
-<<<<<<< HEAD
+
 
 label{
     font-weight: bold;
@@ -50,13 +50,14 @@ label{
 
 input[type=checkbox]{
     width: 5%;
-=======
+}
+
 .secundary{
     background-color: aliceblue;
     margin-right: 50%
 }
+    
 .primary{
     background-color: aqua;
     margin-right: 75%;
->>>>>>> fdc3b6121d9002a1c5c6bdaf482dece72e4d4aca
 }
