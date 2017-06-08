@@ -15,7 +15,7 @@ delCentre(deleteId){
  var crear = "?id=" + deleteId;
        var headers = new Headers();
        headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
+       console.log(deleteId);
 
        return this.http.delete(this.delUrl+ crear, {
            headers: headers

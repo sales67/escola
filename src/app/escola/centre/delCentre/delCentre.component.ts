@@ -12,7 +12,7 @@ import {delCentreService} from'../delCentre/delCentre.service';
   providers: [delCentreService]
 })
 
-    export class delCentreComponent{/*
+    export class delCentreComponent{
         
         deleteId;data;logError;marques;errorBuit;finished;errorServer;
 
@@ -52,4 +52,4 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.finished=false;  
      
      }
-}*/}
+}
