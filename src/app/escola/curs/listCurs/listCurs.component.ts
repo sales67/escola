@@ -17,9 +17,10 @@ import {Routes,Router} from '@angular/router';
 
         
     listCurs(){
-     this.listCursService.listCurs()
-                .subscribe(
-                data => (this.cursos = data)
+        this.listCursService.listCurs()
+            .subscribe(
+            data => (this.cursos = data, console.log(data))
+                    
       );    
     }
     }

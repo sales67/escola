@@ -29,6 +29,12 @@ import { ConsultarProfeComponent } from './professor/consultar-profe/consultar-p
 import { ModificarProfeComponent } from './professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-profe.component';
 
+import {CentreComponent } from './centre/centre.component';
+import {addCentreComponent } from './centre/addCentre/addCentre.component';
+import {putCentreComponent } from './centre/putCentre/putCentre.component';
+import {delCentreComponent } from './centre/delCentre/delCentre.component';
+import {listCentreComponent } from './centre/listCentre/listCentre.component';
+
 
 @NgModule({
   imports: [
@@ -56,7 +62,13 @@ import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-prof
       CrearProfeComponent,
       ConsultarProfeComponent,
       ModificarProfeComponent,
-      EsborrarProfeComponent
+      EsborrarProfeComponent,
+
+      CentreComponent,
+      addCentreComponent,
+      putCentreComponent,
+      delCentreComponent,
+      listCentreComponent
 
   ]
 })
