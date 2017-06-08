@@ -13,8 +13,8 @@ private addUrl = 'http://172.17.0.242:8080/centre/new';
 constructor(private http: Http){}
 
 
-addCentrePost(addid,addnom,addidcentre,addnomcentre){     
-        var creds = "id=" + addid + "&nom=" + addnom + "idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
+addCentrePost(addid,addnom,addidlocalitat){     
+        var creds = "id=" + addid + "&nom=" + addnom + "&localitat=" + addidlocalitat;
 
         
           var headers = new Headers();

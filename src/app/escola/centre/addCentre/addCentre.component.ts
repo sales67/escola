@@ -13,12 +13,12 @@ import {addCentreService} from './addCentre.service';
 
     export class addCentreComponent{
         
-        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
+        addid;addnom;addidlocalitat;values;error;finished;errorBuit;errorServer;
            
  constructor(private addCentreService: addCentreService) { } 
         
-     addCursPost(){        this.addCentreService.addCentrePost(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
-               .catch((error: any) => {               
+     addCursPost(){        this.addCentreService.addCentrePost(this.addid,this.addnom,this.addidlocalitat)
+               /*.catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 
                     this.errorServer=true;
@@ -34,7 +34,7 @@ import {addCentreService} from './addCentre.service';
                 else {                    
                    return error.json();                    
                 }            
-        }).subscribe(
+        })*/.subscribe(
           value => this.values=value,
           error => {},
           () => this.finished = true         
