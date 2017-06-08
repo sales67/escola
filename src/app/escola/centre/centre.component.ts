@@ -9,25 +9,25 @@ import {CentreService} from './centre.service';
  templateUrl:'./centre.component.html',
  styleUrls: ['../../cotxes.css'],
  providers: [CentreService]
+
 =======
   selector: 'centre',
   templateUrl:'./centre.component.html',
   styleUrls: ['../../cotxes.css'],
   providers: [CentreService]
->>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
+>>>>>>> 879c3ed74244e5c98b2910d38285a7d20cc00608
 })
 
    export class CentreComponent{
        
 
-<<<<<<< HEAD
           
 constructor(private centreService: CentreService) { } 
        
    }
+<<<<<<< HEAD
+
+
 =======
            
- constructor(private centreService: CentreService) { } 
-        
-    }
->>>>>>> 8f9e917f9ba1563dd96a0f5c65d612e7c36f17f6
+>>>>>>> 879c3ed74244e5c98b2910d38285a7d20cc00608
