@@ -7,11 +7,18 @@ import { Routes, Router } from '@angular/router';
 @Component({
 
  selector: 'phpSergi',
- templateUrl:'./phpSergi.component.php',
+ templateUrl:'./phpSergi.component.html',
  //styleUrls: ['../escola.css'],
  providers: [PhpSergiService]
 
 })
 export class PhpSergiComponent {
-    constructor(private centreService: PhpSergiService) { }
-}
+    consultardades;
+    
+    constructor(private phpSergiService: PhpSergiService) { }
+    consultar_db(){
+         this.phpSergiService.consultar()
+           .subscribe(
+               data => (this.consultardades = data))
+    }
+             }
