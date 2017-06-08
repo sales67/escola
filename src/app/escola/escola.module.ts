@@ -6,9 +6,8 @@ import {FormsModule} from '@angular/forms';
 
 
 
-
-
 import { AlumneComponent } from './alumne/alumne.component';
+import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
 import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
@@ -44,11 +43,11 @@ import {listCentreComponent } from './centre/listCentre/listCentre.component';
       AppRoutingModule
   ],
   declarations: [
+      AlumneModol,
       AlumneComponent,
       ListAlumneIdComponent,
       ListAlumneAllComponent,
-      ListAlumneComponent,
-      
+      ListAlumneComponent,      
 
       CursComponent,
       DelCursComponent,

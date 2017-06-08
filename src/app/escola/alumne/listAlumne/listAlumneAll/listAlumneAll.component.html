@@ -1,5 +1,6 @@
 <html>
     <body>
+        <alumne-modol></alumne-modol>
         <button (click)="listAlumnes()" type="submit" class="btn btn-default">Llista tots els alumnes amb els seus respectus hobbies</button>
         <div class="primary" *ngFor='let alumne of alumnes'>
                         <p style="margin-bottom:0%">Alumne {{alumne.ida}}</p>
@@ -10,7 +11,5 @@
                         Nom: {{hobbies.nom}} <br>                       
                             </div>
                     </div>	<br>
-        
-        ----------------------------------------------------------------------------<br>
     </body>
 </html>       
