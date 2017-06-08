@@ -1,3 +1,71 @@
-<p>
-  crear-profe works!
-</p>
+<html>
+<body>
+
+<br>
+
+<div *ngIf="finished && !errorBuit && !errorServer" class="alert alert-success fade in alert-dismissable">
+    <span class="totb">S'ha donat d'alta un nou professor</span>
+    <br>
+    <br>
+</div>
+
+<div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable">
+    <span class="error" >El procés d'alta ha fallat, falten dades o aquestes són incorrectes</span>
+    <br>
+    <br>
+</div>
+
+<div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable">
+    <span class="error">S'ha produit un error al servidor</span>
+    <br>
+    <br>
+</div>
+
+<h2>Introdueix les dades per donar d'alta un nou professor:</h2>
+
+<form name="crearProfeForm">
+    <label for="crearId">ID</label>
+    <input type="text" name="crearId" id="crearId" [(ngModel)]="crearId">
+    
+    <br>
+    <br>
+    
+    <label for="crearNom">Nom</label>
+    <input type="text" name="crearNom" id="crearNom" [(ngModel)]="crearNom">
+    
+    <br>
+    <br>
+    
+    <label for="crearCognoms">Cognoms</label>
+    <input type="text" name="crearCognoms" id="crearCognoms" [(ngModel)]="crearCognoms">
+    
+    <br>
+    <br>
+    
+    <label for="crearDni">DNI</label>
+    <input type="text" name="crearDni" id="crearDni" [(ngModel)]="crearDni">
+    
+    <br>
+    <br>
+    
+    <label for="crearDni">Data Naixement</label>
+    <input type="date" name="crearData" id="crearData" [(ngModel)]="crearData">
+    
+    <br>
+    <br>
+    
+    <label for="crearCurs">Curs</label>
+    <input type="text" name="crearCurs" id="crearCurs" [(ngModel)]="crearCurs">
+    
+    <br>
+    <br>
+    
+    <button (click)="crearProfe()" type="submit" class="btn btn-default">ALTA PROFESSOR</button>
+    
+    <br>
+    <br>
+    
+</form>
+        
+</body>
+</html>
