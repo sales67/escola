@@ -1,14 +1,12 @@
-﻿<html>
+<html>
     <head>
         <style>
 html {background-color: skyblue;}
 </style>
     </head>
 <div class="title" >
-<h1>
-  <h1>Escola Otaku</h1> <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" />
-</h1>
-  </div>
+  <h1>Escola Otaku <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" /></h1>
+  </div>   
     <div id="cssmenu">
         <ul>
           <li>
@@ -25,9 +23,22 @@ html {background-color: skyblue;}
             </ul>  
           </li>
           <li>
-            <a href="#" routerLink="/centre" routerLinkActive="active">Centres</a>
+            <a  routerLink="/centre" routerLinkActive="active">Centres</a>
           <li>
             <a routerLink="/alumne" routerLinkActive="active">Alumnes</a>
+              <ul>
+                <li>
+                    <a routerLink="/listAlumne" routerLinkActive="active">Mostrar alumnes</a>
+                    <ul>
+                        <li>
+                            <a routerLink="/listAlumneId" routerLinkActive="active">Mostrar per Id</a>
+                        </li>
+                        <li>
+                            <a routerLink="/listAlumneAll" routerLinkActive="active">Mostrar tots els alumnes</a>
+                        </li>
+                    </ul>
+                </li>
+              </ul>
           </li>
        </ul>
     </div>

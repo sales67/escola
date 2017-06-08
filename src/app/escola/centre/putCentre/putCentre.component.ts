@@ -11,7 +11,7 @@ import {Routes,Router} from '@angular/router';
   providers: [putCentreService]
 })
 
-    export class PutCursComponent{
+    export class putCentreComponent{
         
     addId;addName;addTel;addCountry;addMail;values;errorBuit;finished;errorServer;errorId;
         

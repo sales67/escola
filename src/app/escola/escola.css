@@ -34,14 +34,29 @@ button{
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
+    //font-size: 1.1em;
+    font-weight: bolder;
+    font-family: verdana;
+    text-align: center;
 }
 .error{
   color:orangered;
 }
+
+
+label{
+    font-weight: bold;
+}
+
+input[type=checkbox]{
+    width: 5%;
+}
+
 .secundary{
     background-color: aliceblue;
     margin-right: 50%
 }
+    
 .primary{
     background-color: aqua;
     margin-right: 75%;

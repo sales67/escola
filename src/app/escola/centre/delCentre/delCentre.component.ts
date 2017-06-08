@@ -6,21 +6,21 @@ import {Routes,Router} from '@angular/router';
 import {delCentreService} from'../delCentre/delCentre.service';
 
 @Component({
-  selector: 'deleteMarca',
+  selector: 'delCentre',
   templateUrl:'./delCentre.component.html',
   styleUrls: ['../../escola.css'],
-  providers: [delCentreService,delCentreComponent,delCentreService]
+  providers: [delCentreService]
 })
 
     export class delCentreComponent{
         
         deleteId;data;logError;marques;errorBuit;finished;errorServer;
 
-    constructor(private delCentreService: delCentreService, private delCentreComponent:delCentreComponent) { }
+    constructor(private delCentreService: delCentreService) { }
         
      @ViewChild(delCentreComponent) delCentrecomponent;
 
-        deleteMarca(){  
+        deleteCentre(){  
             this.delCentreService.delCentre(this.deleteId) 
             .catch((error: any) => { 
                 console.log(error.status);
@@ -50,5 +50,6 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorServer=false;
         this.errorBuit=false;
         this.finished=false;  
-}
+
+     }
 }
