@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
+
 import { AlumneComponent } from './escola/alumne/alumne.component';
+import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
+'./alumne/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
+
+
+
 import { CursComponent } from './escola/curs/curs.component';
 import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';
 import { PutCursComponent } from './escola/curs/putCurs/putCurs.component';
@@ -20,12 +29,33 @@ import { ConsultarProfeComponent } from './escola/professor/consultar-profe/cons
 import { ModificarProfeComponent } from './escola/professor/modificar-profe/modificar-profe.component';
 import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborrar-profe.component';
 
+import {CentreComponent } from './escola/centre/centre.component';
+import {addCentreComponent } from './escola/centre/addCentre/addCentre.component';
+import {putCentreComponent } from './escola/centre/putCentre/putCentre.component';
+import {delCentreComponent } from './escola/centre/delCentre/delCentre.component';
+import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
+
 const routes: Routes = [
   {
     path: 'alumne',
     component: AlumneComponent,
     children: []
-    },  
+    },
+    {
+    path: 'listAlumne',
+    component: ListAlumneComponent,
+    children: []
+    },
+    {
+    path: 'listAlumneAll',
+    component: ListAlumneAllComponent,
+    children: []
+    }, 
+    {
+    path: 'listAlumneId',
+    component: ListAlumneIdComponent,
+    children: []
+    }, 
   {
       path: 'curs',
       component: CursComponent,
@@ -73,7 +103,26 @@ const routes: Routes = [
     component: EsborrarProfeComponent,
     children: []
   },
-
+   {
+      path: 'centre',
+      component: CentreComponent,
+  },
+  {
+      path: 'listCentre',
+      component: listCentreComponent,
+  },
+  {
+      path: 'putCentre',
+      component: putCentreComponent,
+  },
+  {
+      path: 'delCentre',
+      component: delCentreComponent,
+  },
+  {
+      path: 'addCentre',
+      component: addCentreComponent,
+  }
 ];
 
 @NgModule({
