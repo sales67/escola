@@ -15,3 +15,5 @@ import { Routes, Router } from '@angular/router';
 export class CentreComponent {
     constructor(private centreService: CentreService) { }
 }
+
+

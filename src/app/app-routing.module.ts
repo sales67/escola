@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlumneComponent } from './escola/alumne/alumne.component';
 import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
-'./alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
 
 
