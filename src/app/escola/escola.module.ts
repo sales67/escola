@@ -33,6 +33,8 @@ import {putCentreComponent } from './centre/putCentre/putCentre.component';
 import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
 
+import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
+
 
 @NgModule({
   imports: [
@@ -44,6 +46,8 @@ import {listCentreComponent } from './centre/listCentre/listCentre.component';
   declarations: [
       AlumneModol,
       AlumneComponent,
+      
+      PhpSergiComponent,
 
       ListAlumneIdComponent,
       ListAlumneAllComponent,

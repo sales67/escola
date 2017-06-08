@@ -11,7 +11,6 @@ import { Routes } from '@angular/router';
 })
 
     export class AlumneComponent{
-
            
  constructor(private alumneService: AlumneService) { } 
     }

@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -30,9 +30,14 @@ import {addCentreComponent } from './escola/centre/addCentre/addCentre.component
 import {putCentreComponent } from './escola/centre/putCentre/putCentre.component';
 import {delCentreComponent } from './escola/centre/delCentre/delCentre.component';
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
+import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 
 const routes: Routes = [
   {
+   path: 'phpSergi',
+    component: PhpSergiComponent,
+    children: []
+    },{
     path: 'alumne',
     component: AlumneComponent,
     children: []
