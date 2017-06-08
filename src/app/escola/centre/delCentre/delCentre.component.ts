@@ -20,7 +20,7 @@ import {delCentreService} from'../delCentre/delCentre.service';
         
      @ViewChild(delCentreComponent) delCentrecomponent;
 
-        /*deleteMarca(){  
+        deleteMarca(){  
             this.delCentreService.delCentre(this.deleteId) 
             .catch((error: any) => { 
                 console.log(error.status);
@@ -43,7 +43,7 @@ import {delCentreService} from'../delCentre/delCentre.service';
           value => this.data=value,
           error => {},
           () => {
-              this.delCentreComponent.deleteByMarca(this.deleteId);
+              //this.delCentreComponent.deleteByMarca(this.deleteId);
               this.finished = true;              
           }            
       );        
@@ -51,5 +51,10 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorBuit=false;
         this.finished=false;  
 <<<<<<< HEAD
+<<<<<<< HEAD
      }*/
      }
+=======
+}
+}
+>>>>>>> fdc3b6121d9002a1c5c6bdaf482dece72e4d4aca

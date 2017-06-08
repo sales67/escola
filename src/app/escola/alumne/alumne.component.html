@@ -1,33 +1,34 @@
 <html>
     <body>
     <form name="addMarca" display="block">      
-            <h2>Busca un alumne</h2>		        
-            <label for="content">Entra el nom  </label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addName"><br>
-            <label for="content">Entra el telèfon   </label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addTel"><br>
-            <label for="content">Entra l'e-Mail  </label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addMail"><br>
-            <label for="content">Entra el país</label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addCountry"><br><br>
-		        <button (click)="addMarcaPost()" type="submit" class="btn btn-default">Envia per introduïr una marca</button>
+            <h2>Busca un alumne per la id</h2>		        
+            <label for="content">Entra la id</label><br>		        
+		        <input type="text" name="findAlumn" [(ngModel)]="id"><br><br>
+		        <button (click)="getAlumneId()" type="submit" class="btn btn-default">Envia per buscar un alumne</button>
+        <div class="primary" *ngFor='let alumne of alumneId'>
+            nom = {{alumne.nom}}
+            <div class="secundary" *ngFor='let hobbies of alumne.hobby'>
+                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>  
+                        Nom: {{hobbies.nom}} <br>                       
+                            </div>
+                    </div>
     </form>	
         
         
         ----------------------------------------------------------------------------<br>
         
         <button (click)="listAlumnes()" type="submit" class="btn btn-default">Llista tots els alumnes amb els seus respectus hobbies</button>
-        <div *ngFor='let alumne of alumnes'>
+        <div class="primary" *ngFor='let alumne of alumnes'>
                         <p style="margin-bottom:0%">Alumne {{alumne.ida}}</p>
                         ------------------------------------  <br> 
-                        Nom: {{alumne.nom}} <br>
-                        Hobbie {{alumne.hooby.nom}}
-                        <div *ngFor='let hobbies of hobbie'>
-                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>
-                        ------------------------------------  <br> 
-                        Nom: {{hpobies.nom}} <br>                       
+                        Nom: {{alumne.nom}} <br>                        
+                        <div class="secundary" *ngFor='let hobbies of alumne.hobby'>
+                            <p style="margin-bottom:0%">Hobbie {{hobbies.idh}}</p>  
+                        Nom: {{hobbies.nom}} <br>                       
                             </div>
-                    </div>	
+                    </div>	<br>
+        
+        ----------------------------------------------------------------------------<br>
         
     </body>
 </html>
