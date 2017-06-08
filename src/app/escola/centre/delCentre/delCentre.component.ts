@@ -50,5 +50,39 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorServer=false;
         this.errorBuit=false;
         this.finished=false;  
+<<<<<<< HEAD
         }
 }
+=======
+<<<<<<< HEAD
+      }
+}
+=======
+<<<<<<< HEAD
+
+     }
+}
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 12f02ade4103033fa3c55741c6ace6fdf9347794
+     
+     }*/
+}
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}*/
+    }
+
+>>>>>>> a4173ea1eac25dcd1ba538104604c8275a8d9520
+>>>>>>> 12f02ade4103033fa3c55741c6ace6fdf9347794
+>>>>>>> 62802fda020c4ad1ba2aeee0bfd176bd135a9890
+>>>>>>> c7f11e3c61054ec63b7995d3b6f5d13dbc9019fb
+>>>>>>> a6fcc4bd3a98c398abadd7fb692481319ab46203
