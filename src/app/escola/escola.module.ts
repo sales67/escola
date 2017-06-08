@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -34,6 +34,8 @@ import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
 import { BotoComponent } from './professor/boto/boto.component';
 
+import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
+
 
 @NgModule({
   imports: [
@@ -45,6 +47,8 @@ import { BotoComponent } from './professor/boto/boto.component';
   declarations: [
       AlumneModol,
       AlumneComponent,
+      
+      PhpSergiComponent,
 
       ListAlumneIdComponent,
       ListAlumneAllComponent,
