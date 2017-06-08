@@ -1,1 +1,24 @@
-<p>LISTCENTRE</p>
+<html>
+<body>
+<button (click)="listCentre()" class="btn btn-default">Mostrar centres
+</button>
+
+
+  <div class="primary" *ngFor='let centre of centres'>
+    <!--cursos fa ref. a components data-->
+    ----------------------------
+    <p>Centre: {{centre.id}}</p>
+    ----------------------------
+    <p>
+      Nom: {{centre.nom}}
+    </p>
+   
+    <div class="secundary" *ngFor='let editorial of centre.editorial'>
+      <p  style="margin-bottom:0%">Editorial {{editorial.id}}</p>
+      Nom: {{editorial.nom}} <br>
+    </div>
+    <br><br>
+  </div>
+<br><br>
+</body>
+</html>
