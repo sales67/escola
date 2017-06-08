@@ -1,4 +1,4 @@
-
+<?php
 <html>
 	<body>
         
@@ -7,3 +7,4 @@
         <button routerLink="../listAlumneId" routerLinkActive="active">Buscar un alumne per Id</button>        
     </body>
 </html>
+?>
