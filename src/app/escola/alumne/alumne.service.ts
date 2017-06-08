@@ -9,16 +9,21 @@ import 'rxjs/add/operator/map'
 @Injectable()
 
 export class AlumneService{
-private listUrl = 'http://172.17.0.98:8080/escola/listAlumne';
+private listAlumne = 'http://172.17.0.98:8080/escola/listAlumne';
+private listAlumneId = 'http://172.17.0.98:8080/escola/listAlumneId';
 
 
 constructor(private http: Http){}
 
 
     getAlumnes() {        
-      var a = this.http.get(this.listUrl)
-                .map(res => res.json());
-        console.log(a);
+      var a = this.http.get(this.listAlumne)
+                .map(res => res.json());        
       return a;
-  }
+    }
+    getAlumneId(id){
+        var a = this.http.get(this.listAlumneId+"?id="+id)
+            .map(res => res.json());        
+        return a;
+    }  
 }

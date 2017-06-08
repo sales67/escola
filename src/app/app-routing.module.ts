@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AlumneComponent } from './escola/alumne/alumne.component';
@@ -49,6 +49,7 @@ const routes: Routes = [
   {
       path: 'listCurs',
       component: ListCursComponent,
+
   },   
     {
     path: 'professor',
