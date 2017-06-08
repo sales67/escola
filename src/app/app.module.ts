@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +16,7 @@ import { EscolaModule } from './escola/escola.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    EscolaModule
+    EscolaModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

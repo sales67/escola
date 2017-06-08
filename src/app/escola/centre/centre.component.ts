@@ -5,13 +5,14 @@ import { Routes, Router } from '@angular/router';
 
 
 @Component({
-    selector: 'centre',
-    templateUrl: './centre.component.html',
-    styleUrls: ['../escola.css'],
-    providers: [CentreService]
+
+ selector: 'centre',
+ templateUrl:'./centre.component.html',
+ styleUrls: ['../escola.css'],
+ providers: [CentreService]
+
 })
-
-
 export class CentreComponent {
     constructor(private centreService: CentreService) { }
 }
+
