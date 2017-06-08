@@ -9,6 +9,11 @@ import {FormsModule} from '@angular/forms';
 
 
 import { AlumneComponent } from './alumne/alumne.component';
+import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
+
+
 import { CursComponent } from './curs/curs.component';
 import { DelCursComponent } from './curs/delCurs/delCurs.component';
 import { PutCursComponent } from './curs/putCurs/putCurs.component';
@@ -34,6 +39,10 @@ import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-prof
   ],
   declarations: [
       AlumneComponent,
+      ListAlumneIdComponent,
+      ListAlumneAllComponent,
+      ListAlumneComponent,
+      
 
       CursComponent,
       DelCursComponent,

@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
+
 import { AlumneComponent } from './escola/alumne/alumne.component';
+import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
+'./alumne/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
+
+
+
 import { CursComponent } from './escola/curs/curs.component';
 import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';
 import { PutCursComponent } from './escola/curs/putCurs/putCurs.component';
@@ -22,7 +31,22 @@ const routes: Routes = [
     path: 'alumne',
     component: AlumneComponent,
     children: []
-    },  
+    },
+    {
+    path: 'listAlumne',
+    component: ListAlumneComponent,
+    children: []
+    },
+    {
+    path: 'listAlumneAll',
+    component: ListAlumneAllComponent,
+    children: []
+    }, 
+    {
+    path: 'listAlumneId',
+    component: ListAlumneIdComponent,
+    children: []
+    }, 
   {
       path: 'curs',
       component: CursComponent,
