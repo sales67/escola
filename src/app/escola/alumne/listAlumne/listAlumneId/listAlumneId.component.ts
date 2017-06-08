@@ -4,7 +4,7 @@ import { Http, Headers, Response } from '@angular/http';
 import { Routes } from '@angular/router';
 
 @Component({
-  selector: 'alumne',
+  selector: 'listAlumneId',
   templateUrl:'./listAlumneId.component.html',
   styleUrls: ['../../../escola.css'],
   providers: [ListAlumneIdService]
