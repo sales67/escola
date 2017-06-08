@@ -13,10 +13,6 @@ import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAl
 import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4be65af2a13143fcb2744cccafc1f2f8a7149422
 import { CursComponent } from './curs/curs.component';
 import { DelCursComponent } from './curs/delCurs/delCurs.component';
 import { PutCursComponent } from './curs/putCurs/putCurs.component';
