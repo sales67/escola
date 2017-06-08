@@ -51,5 +51,11 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorBuit=false;
         this.finished=false;  
 <<<<<<< HEAD
+<<<<<<< HEAD
 }*/
     }
+=======
+     
+     }
+}*/}
+>>>>>>> 4be65af2a13143fcb2744cccafc1f2f8a7149422
