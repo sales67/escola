@@ -1,7 +1,11 @@
 <html>
 <body>
 <button (click)="listCurs()" class="btn btn-default">Mostrar cursos</button>
-
+<button (click)="provaphp()" class="btn btn-default">Prova php</button>
+    <div>   
+        <p>php: {{prova}}</p>
+    </div>
+    
 
   <div class="primary" *ngFor='let curs of cursos'>
     <!--cursos fa ref. a components data-->

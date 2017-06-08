@@ -34,7 +34,7 @@ import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
 
 import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
-
+import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
 
 @NgModule({
   imports: [
@@ -48,6 +48,7 @@ import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
       AlumneComponent,
       
       PhpSergiComponent,
+      PhpDavidComponent,
 
       ListAlumneIdComponent,
       ListAlumneAllComponent,
