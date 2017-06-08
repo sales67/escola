@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -7,18 +7,20 @@ import {FormsModule} from '@angular/forms';
 
 
 import { AlumneComponent } from './alumne/alumne.component';
+<<<<<<< HEAD
 import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
 import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
 
 
+=======
+>>>>>>> fd63fb335926d9cb6ed818b2aa1e45244aed86e8
 import { CursComponent } from './curs/curs.component';
 import { DelCursComponent } from './curs/delCurs/delCurs.component';
 import { PutCursComponent } from './curs/putCurs/putCurs.component';
 import { AddCursComponent } from './curs/addCurs/addCurs.component';
 import { ListCursComponent } from './curs/listCurs/listCurs.component';
-
 
 
 import { ProfessorComponent } from './professor/professor.component';
@@ -45,16 +47,19 @@ import {listCentreComponent } from './centre/listCentre/listCentre.component';
   declarations: [
       AlumneModol,
       AlumneComponent,
+<<<<<<< HEAD
       ListAlumneIdComponent,
       ListAlumneAllComponent,
       ListAlumneComponent,      
+=======
+>>>>>>> fd63fb335926d9cb6ed818b2aa1e45244aed86e8
 
       CursComponent,
       DelCursComponent,
       ListCursComponent,
       AddCursComponent,
       PutCursComponent,
-
+      
 
       ProfessorComponent,
       EsportComponent,
