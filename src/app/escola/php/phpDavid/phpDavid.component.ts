@@ -14,4 +14,12 @@ import { Routes, Router } from '@angular/router';
 })
 export class PhpDavidComponent {
     constructor(private centreService: PhpDavidService) { }
+    prova;
+      
+         provaphp(){
+        this.centreService.provaphp()
+            .subscribe(
+            data => (this.prova = data, console.log(data))
+                    
+      );    }
 }

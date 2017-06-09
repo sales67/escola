@@ -13,22 +13,25 @@ import { Routes, Router } from '@angular/router';
 
 })
 export class PhpSergiComponent {
-<<<<<<< HEAD
-    consultardades;psswd;user;
+
+    consultardades;psswd;user;finished;data;errorUser;
     
     constructor(private phpSergiService: PhpSergiService) { }
-    consultar_db(){
-         this.phpSergiService.consultar()
-           .subscribe(
-               data => (this.consultardades = data))
-    }
     
     login(){       
-         this.phpSergiService.login(this.psswd,this.user)
+         this.phpSergiService.login(this.psswd,this.user)        
            .subscribe(
-               data => (this.consultardades = data))
-             }
-=======
-    constructor(private centreService: PhpSergiService) { }
->>>>>>> ec3aef7a21b8381c27e47fc5cd7df9e76e69f5e8
+          data => {
+              this.data=data;
+              if (data=="Connected successfully"){
+                      this.finished=true;
+                  }
+              else{
+                  this.errorUser=true;
+              }
+          })       
+        this.finished=false;  
+        this.errorUser=false;
+        }
 }
+
