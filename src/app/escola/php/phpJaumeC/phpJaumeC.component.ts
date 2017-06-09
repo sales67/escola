@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { PhpDavidService } from './phpDavid.service';
+import { PhpJaumeCService } from './phpJaumeC.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes, Router } from '@angular/router';
 
 
 @Component({
 
- selector: 'phpDavid',
- templateUrl:'./phpDavid.component.html',
+ selector: 'phpJaumeC',
+ templateUrl:'./phpJaumeC.component.html',
  //styleUrls: ['../escola.css'],
- providers: [PhpDavidService]
+ providers: [PhpJaumeCService]
 
 })
-export class PhpDavidComponent {
-    constructor(private centreService: PhpDavidService) { }
+export class PhpJaumeCComponent {
+    constructor(private centreService: PhpJaumeCService) { }
     prova;
       
          provaphp(){
@@ -23,3 +23,4 @@ export class PhpDavidComponent {
                     
       );    }
 }
+
