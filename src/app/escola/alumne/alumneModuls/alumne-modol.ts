@@ -3,7 +3,8 @@ import { Routes, RouterModule, } from '@angular/router';
 
 @Component({
   selector: 'alumne-modol',
-  templateUrl: 'alumne-modol.html'
+  templateUrl: 'alumne-modol.html',
+    styleUrls:['alumne-modol.css']
 })
 export class AlumneModol{
 

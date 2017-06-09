@@ -8,6 +8,6 @@ import 'rxjs/add/operator/map'
 export class PhpSergiService{  
     constructor(private http: Http){}
     consultar() {
-       return this.http.get('http://localhost/projectes/php/escola/index.php').map(res => res.text());
+       return this.http.get('http://172.17.0.98/projectes/escola/src/app/php/escola/index.php').map(res => res.text());
    }
 }
