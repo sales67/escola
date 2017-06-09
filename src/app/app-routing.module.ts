@@ -32,8 +32,14 @@ import {delCentreComponent } from './escola/centre/delCentre/delCentre.component
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
+import { FormulariComponent } from './formulari/formulari.component';
 
 const routes: Routes = [
+    {
+   path: 'formulari',
+    component: FormulariComponent,
+    children: []
+    },
   {
    path: 'phpSergi',
     component: PhpSergiComponent,
