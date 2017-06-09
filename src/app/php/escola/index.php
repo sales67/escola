@@ -1,8 +1,11 @@
 <?php
 
+
+
+
 $servername = "127.0.0.1";
-$username = "springuser";
-$password = "ThePassword";
+$username =  htmlspecialchars($_GET["user"]);
+$password =  htmlspecialchars($_GET["psswd"]);
 $db = "escola";
 
 // Create connection
@@ -14,4 +17,7 @@ if ($conn->connect_error) {
 } else{
     echo "Connected successfully";
 }
+
+$conn= mysql_connect($servername,$username,$password);
+
 ?>

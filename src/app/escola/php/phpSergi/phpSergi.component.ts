@@ -8,12 +8,12 @@ import { Routes, Router } from '@angular/router';
 
  selector: 'phpSergi',
  templateUrl:'./phpSergi.component.html',
- //styleUrls: ['../escola.css'],
+ styleUrls: ['../../escola.css'],
  providers: [PhpSergiService]
 
 })
 export class PhpSergiComponent {
-    consultardades;
+    consultardades;psswd;user;
     
     constructor(private phpSergiService: PhpSergiService) { }
     consultar_db(){
@@ -21,4 +21,10 @@ export class PhpSergiComponent {
            .subscribe(
                data => (this.consultardades = data))
     }
+    
+    login(){       
+         this.phpSergiService.login(this.psswd,this.user)
+           .subscribe(
+               data => (this.consultardades = data))
              }
+}
