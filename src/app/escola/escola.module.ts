@@ -18,6 +18,7 @@ import { DelCursComponent } from './curs/delCurs/delCurs.component';
 import { PutCursComponent } from './curs/putCurs/putCurs.component';
 import { AddCursComponent } from './curs/addCurs/addCurs.component';
 import { ListCursComponent } from './curs/listCurs/listCurs.component';
+import { CursModol } from './curs/cursModuls/curs-modol';
 
 
 import { ProfessorComponent } from './professor/professor.component';
@@ -46,6 +47,7 @@ import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
   declarations: [
       AlumneModol,
       AlumneComponent,
+      CursModol,
       
       PhpSergiComponent,
       PhpDavidComponent,

@@ -16,7 +16,7 @@ import {addCentreService} from './addCentre.service';
         addid;addnom;addidlocalitat;values;error;finished;errorBuit;errorServer;
            
  constructor(private addCentreService: addCentreService) { } 
-        
+    /*    
      addCursPost(){        this.addCentreService.addCentrePost(this.addid,this.addnom,this.addidlocalitat)
                /*.catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
@@ -34,7 +34,7 @@ import {addCentreService} from './addCentre.service';
                 else {                    
                    return error.json();                    
                 }            
-        })*/.subscribe(
+        }).subscribe(
           value => this.values=value,
           error => {},
           () => this.finished = true         
@@ -42,5 +42,5 @@ import {addCentreService} from './addCentre.service';
         this.errorBuit=false;
         this.errorServer=false;
         this.finished=false;   
-     } 
+     } */
 }

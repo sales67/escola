@@ -7,7 +7,7 @@ import { Routes, Router } from '@angular/router';
 @Component({
 
  selector: 'phpSergi',
- //templateUrl:'./phpSergi.component.html',
+ templateUrl:'./phpSergi.component.html',
  //styleUrls: ['../escola.css'],
  providers: [PhpSergiService]
 
