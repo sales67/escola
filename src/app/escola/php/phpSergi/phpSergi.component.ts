@@ -8,10 +8,30 @@ import { Routes, Router } from '@angular/router';
 
  selector: 'phpSergi',
  templateUrl:'./phpSergi.component.html',
- //styleUrls: ['../escola.css'],
+ styleUrls: ['../../escola.css'],
  providers: [PhpSergiService]
 
 })
 export class PhpSergiComponent {
-    constructor(private centreService: PhpSergiService) { }
+
+    consultardades;psswd;user;finished;data;errorUser;
+    
+    constructor(private phpSergiService: PhpSergiService) { }
+    
+    login(){       
+         this.phpSergiService.login(this.psswd,this.user)        
+           .subscribe(
+          data => {
+              this.data=data;
+              if (data=="Connected successfully"){
+                      this.finished=true;
+                  }
+              else{
+                  this.errorUser=true;
+              }
+          })       
+        this.finished=false;  
+        this.errorUser=false;
+        }
 }
+

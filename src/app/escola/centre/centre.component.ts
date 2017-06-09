@@ -6,6 +6,7 @@ import { Routes, Router } from '@angular/router';
 
 @Component({
 
+
  selector: 'centre',
  templateUrl:'./centre.component.html',
  styleUrls: ['../escola.css'],

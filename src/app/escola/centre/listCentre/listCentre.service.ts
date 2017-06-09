@@ -18,4 +18,7 @@ listCentre() {
       return a;
   }
 
+test() {
+       return this.http.get('http://localhost/prova/School/src/app/escola/centre/php/test.php').map(res => res.text());
+   }
 }
