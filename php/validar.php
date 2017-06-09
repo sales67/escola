@@ -40,11 +40,17 @@
         // header('Location: http://localhost/school/php/hola.html');
         
         $sum = 0;
+        $token = 300;
         $array = array();
         $array = str_split($name);
+        
         foreach($array as $i) {
             $sum += ord($i);
         }
+        
+        //echo "l'usuari es:   " . $sum;
+        
+        $sum = $sum + $token;
         
         $array2 = array();
         $array2['status'] = 'OK';
@@ -55,6 +61,11 @@
         exit;
         
     } else {
+        $array2 = array();
+        $array2['status'] = 'FAIL';
+        $array2['token'] = 0;
+        
+        echo json_encode($array2);
         // 
         // echo "Usuari incorrecte";
     }

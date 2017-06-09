@@ -5,7 +5,10 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class FormulariService {
-
+    
+    myURL = 'http://172.17.0.191:8080/escola';
+    urlJava = '/java?token=';
+    
     constructor(private http: Http) { }
 
     validar(name, pass) {
@@ -13,5 +16,12 @@ export class FormulariService {
                    .get('http://localhost/school/php/validar.php?name=' + name + '&pass=' + pass)
                    //.map(res => res.text());
                      .map(res => res.json());
+    }
+    
+
+    java(token) {
+        return this.http
+                   .get(this.myURL + this.urlJava + token)
+                   .map(res => res.json());
     }
 }
