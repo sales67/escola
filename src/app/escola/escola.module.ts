@@ -18,6 +18,7 @@ import { DelCursComponent } from './curs/delCurs/delCurs.component';
 import { PutCursComponent } from './curs/putCurs/putCurs.component';
 import { AddCursComponent } from './curs/addCurs/addCurs.component';
 import { ListCursComponent } from './curs/listCurs/listCurs.component';
+import { CursModol } from './curs/cursModuls/curs-modol';
 
 
 import { ProfessorComponent } from './professor/professor.component';
@@ -32,9 +33,10 @@ import {addCentreComponent } from './centre/addCentre/addCentre.component';
 import {putCentreComponent } from './centre/putCentre/putCentre.component';
 import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
+import { BotoComponent } from './professor/boto/boto.component';
 
 import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
-
+import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
 
 @NgModule({
   imports: [
@@ -46,8 +48,10 @@ import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
   declarations: [
       AlumneModol,
       AlumneComponent,
+      CursModol,
       
       PhpSergiComponent,
+      PhpDavidComponent,
 
       ListAlumneIdComponent,
       ListAlumneAllComponent,
@@ -72,7 +76,8 @@ import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
       addCentreComponent,
       putCentreComponent,
       delCentreComponent,
-      listCentreComponent
+      listCentreComponent,
+      BotoComponent
 
   ]
 })

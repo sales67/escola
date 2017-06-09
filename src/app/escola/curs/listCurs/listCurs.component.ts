@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ListCursService} from '../listCurs/listCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -13,13 +13,21 @@ import {Routes,Router} from '@angular/router';
     export class ListCursComponent{
 
     constructor(private listCursService: ListCursService) { }
-        cursos; 
+        cursos; prova;
 
         
     listCurs(){
         this.listCursService.listCurs()
             .subscribe(
             data => (this.cursos = data, console.log(data))
+                    
+      );    
+    }
+        
+         provaphp(){
+        this.listCursService.provaphp()
+            .subscribe(
+            data => (this.prova = data, console.log(data))
                     
       );    
     }

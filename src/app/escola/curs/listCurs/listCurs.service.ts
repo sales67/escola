@@ -1,4 +1,4 @@
-﻿import {Injectable}  from '@angular/core';
+import {Injectable}  from '@angular/core';
 import {Http,Headers}  from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
@@ -17,5 +17,12 @@ listCurs() {
                 .map(res => res.json())
       return a;
   }
+
+provaphp() {
+      var a = this.http.get('http://localhost/provaphp.php')
+                .map(res => res.text())
+      return a;
+  }
+
 
 }

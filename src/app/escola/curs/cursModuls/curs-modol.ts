@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule, } from '@angular/router';
 
 @Component({
-  selector: 'alumne-modol',
-  templateUrl: 'alumne-modol.html',
-    styleUrls:['alumne-modol.css']
+  selector: 'curs-modol',
+  templateUrl: 'curs-modol.html'
 })
-export class AlumneModol{
+export class CursModol{
 
   constructor() {}
 

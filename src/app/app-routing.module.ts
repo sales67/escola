@@ -31,13 +31,20 @@ import {putCentreComponent } from './escola/centre/putCentre/putCentre.component
 import {delCentreComponent } from './escola/centre/delCentre/delCentre.component';
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
+import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 const routes: Routes = [
   {
    path: 'phpSergi',
     component: PhpSergiComponent,
     children: []
-    },{
+    },
+     {
+   path: 'phpDavid',
+    component: PhpDavidComponent,
+    children: []
+    },
+    {
     path: 'alumne',
     component: AlumneComponent,
     children: []
