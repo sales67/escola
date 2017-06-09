@@ -8,18 +8,29 @@ import { Routes, Router } from '@angular/router';
 
  selector: 'phpDavid',
  templateUrl:'./phpDavid.component.html',
- //styleUrls: ['../escola.css'],
+ styleUrls: ['../../escola.css'],
  providers: [PhpDavidService]
 
 })
 export class PhpDavidComponent {
-    constructor(private centreService: PhpDavidService) { }
-    prova;
-      
-         provaphp(){
-        this.centreService.provaphp()
-            .subscribe(
-            data => (this.prova = data, console.log(data))
-                    
-      );    }
+   consultardades;psswd;user;finished;data;errorUser;
+    
+    constructor(private phpDavidService: PhpDavidService) { }
+    
+    login(){       
+         this.phpDavidService.login(this.psswd,this.user)        
+           .subscribe(
+             
+          data => {
+              this.data=data,console.log(data);
+              if (data=="Connected successfully"){
+                      this.finished=true;
+                  }
+              else{
+                  this.errorUser=true;
+              }
+          })       
+        this.finished=false;  
+        this.errorUser=false;
+        }
 }

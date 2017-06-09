@@ -1,27 +1,22 @@
-<html lang="en">
+<html>
 
-
-<body>
-<button (click)="provaphp()" class="btn btn-default">CONSULTAR</button>
-   <p>Dades: {{prova}}</p>
+	<body>       
+        
+                <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+   	<strong>Correcte! </strong>Connectat Correctament!
+</div>
+        
+ <div *ngIf="errorUser" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Usuari o Contrasenya no trobats:$
+</div>
     
-<h1>Login de Usuarios</h1>
-<hr />
-
-<form action="checklogin.php" method="post" >
-
-<label>Nombre Usuario:</label><br>
-<input name="username" type="text" id="username" required>
-<br><br>
-
-<label>Password:</label><br>
-<input name="password" type="password" id="password" required>
-<br><br>
-
-<input type="submit" name="Submit" value="LOGIN">
-
-</form>
-<hr />
-
- </body>
+    
+    <div>
+<form action="" method="post" class="login">
+    <div><label>Username</label><input   [(ngModel)]="user" name="user" type="text" ></div><br>
+    <div><label>Password</label><input   [(ngModel)]="psswd" name="password" type="password"></div>
+    <button (click)="login()" name="login" type="submit" value="login">Endevant!</button>
+</form>        
+</div>         
+    </body>
 </html>
