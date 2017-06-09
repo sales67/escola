@@ -15,6 +15,7 @@ import {Routes,Router} from '@angular/router';
     constructor(private listCentreService: listCentreService) { }
         centres; 
 
+        test;
         
     listCentre(){
      this.listCentreService.listCentre()
@@ -23,4 +24,10 @@ import {Routes,Router} from '@angular/router';
                   console.log(data))
       );    
     }
-    }
+  testCentre() {
+         this.listCentreService.test()
+             .subscribe(
+                 data => (this.test = data)
+             );
+           }
+}
