@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 export class FormulariService {
     
     myURL = 'http://172.17.0.191:8080/escola';
-    urlJava = '/java?token=';
+    urlJava = '/java?usuari=';
     
     constructor(private http: Http) { }
 
@@ -19,9 +19,9 @@ export class FormulariService {
     }
     
 
-    java(token) {
+    java(usuari, usuarit) {
         return this.http
-                   .get(this.myURL + this.urlJava + token)
+                   .get(this.myURL + this.urlJava + usuari + '&usuarit=' + usuarit)
                    .map(res => res.json());
     }
 }

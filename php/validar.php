@@ -39,22 +39,26 @@
         //header('Location: http://localhost/school/src/app/escola/app.component.html');
         // header('Location: http://localhost/school/php/hola.html');
         
-        $sum = 0;
+        $usuari = 0;
+        $usuarit = 0;
         $token = 300;
         $array = array();
         $array = str_split($name);
         
         foreach($array as $i) {
-            $sum += ord($i);
+            $usuari += ord($i);
         }
         
         //echo "l'usuari es:   " . $sum;
         
-        $sum = $sum + $token;
+        $usuarit = $usuari;
+        $usuarit = $usuarit + $token;
         
         $array2 = array();
         $array2['status'] = 'OK';
-        $array2['token'] = $sum;
+        //$array2['token'] = $sum;
+        $array2['usuari'] = $usuari;
+        $array2['usuarit'] = $usuarit;
         
         echo json_encode($array2);
         
@@ -63,7 +67,9 @@
     } else {
         $array2 = array();
         $array2['status'] = 'FAIL';
-        $array2['token'] = 0;
+        //$array2['token'] = 0;
+        $array2['usuari'] = 0;
+        $array2['usuarit'] = 0;
         
         echo json_encode($array2);
         // 

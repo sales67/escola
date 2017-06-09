@@ -29,7 +29,7 @@ export class FormulariComponent implements OnInit {
                     // S T A T U S  -  O K
                     if(data['status'] == 'OK') {
                         
-                        this.formulariService.java(data['token'])
+                        this.formulariService.java(data['usuari'], data['usuarit'])
                             .subscribe(
                                 data2 => {
                                     // this.resultat2 = data2;
@@ -46,7 +46,7 @@ export class FormulariComponent implements OnInit {
                     
                     // 
                     if(data['status'] == 'FAIL') {
-                        this.formulariService.java(data['token'])
+                        this.formulariService.java(data['usuari'], data['usuarit'])
                             .subscribe(
                                 data2 => {
                                     // this.resultat2 = data2;
