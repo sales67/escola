@@ -1,10 +1,14 @@
-<?php
 <html>
-<<<<<<< HEAD
-	<body>       
-               
 
-   <p> {{consultardades}}</p>
+	<body>       
+        
+                <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+   	<strong>Correcte! </strong>Connectat Correctament!
+</div>
+        
+ <div *ngIf="errorUser" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Usuari o Contrasenya no trobats:$
+</div>
     
     
     <div>
@@ -12,18 +16,9 @@
     <div><label>Username</label><input   [(ngModel)]="user" name="user" type="text" ></div><br>
     <div><label>Password</label><input   [(ngModel)]="psswd" name="password" type="password"></div>
     <button (click)="login()" name="login" type="submit" value="login">Endevant!</button>
-</form>
-</div>
-    </body>
-    
-</html>
-=======
-	<body>
-        
-        <h2>Com els vols mostrar?</h2>  
-       <button routerLink="../listAlumneAll" routerLinkActive="active">Mostrar tots els alumnes</button>
-        <button routerLink="../listAlumneId" routerLinkActive="active">Buscar un alumne per Id</button>        
+</form>        
+</div>         
     </body>
 </html>
-?>
->>>>>>> ec3aef7a21b8381c27e47fc5cd7df9e76e69f5e8
+
+

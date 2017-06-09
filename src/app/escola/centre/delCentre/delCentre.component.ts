@@ -50,14 +50,5 @@ import {delCentreService} from'../delCentre/delCentre.service';
         this.errorServer=false;
         this.errorBuit=false;
         this.finished=false;  
-<<<<<<< HEAD
+        }
 }
-}
-=======
-<<<<<<< HEAD
-        }}
-=======
-        
-        }}
->>>>>>> ba5436d90438f15f095accc1c1ebb9c3e37205f6
->>>>>>> 71299aba1ce747a0640211b543042e02305be991
