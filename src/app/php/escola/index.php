@@ -6,7 +6,7 @@ $password = "ThePassword";
 $db = "escola";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password,$db);
+$conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
 if ($conn->connect_error) {
