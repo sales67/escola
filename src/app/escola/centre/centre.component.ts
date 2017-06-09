@@ -5,6 +5,10 @@ import { Routes, Router } from '@angular/router';
 
 
 @Component({
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71299aba1ce747a0640211b543042e02305be991
 
  selector: 'centre',
  templateUrl:'./centre.component.html',

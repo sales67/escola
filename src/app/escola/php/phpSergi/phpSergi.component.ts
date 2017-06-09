@@ -13,6 +13,7 @@ import { Routes, Router } from '@angular/router';
 
 })
 export class PhpSergiComponent {
+<<<<<<< HEAD
     consultardades;psswd;user;
     
     constructor(private phpSergiService: PhpSergiService) { }
@@ -27,4 +28,7 @@ export class PhpSergiComponent {
            .subscribe(
                data => (this.consultardades = data))
              }
+=======
+    constructor(private centreService: PhpSergiService) { }
+>>>>>>> ec3aef7a21b8381c27e47fc5cd7df9e76e69f5e8
 }
