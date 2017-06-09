@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
+import { FormulariComponent } from './formulari/formulari.component'; // cal??
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormulariComponent
   ],
   imports: [
     BrowserModule,

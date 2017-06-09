@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { PhpJaumeCService } from './phpJaumeC.service';
+import { Http, Headers, Response } from '@angular/http';
+import { Routes, Router } from '@angular/router';
+
+
+@Component({
+
+ selector: 'phpJaumeC',
+ templateUrl:'./phpJaumeC.component.html',
+ //styleUrls: ['../escola.css'],
+ providers: [PhpJaumeCService]
+
+})
+export class PhpJaumeCComponent {
+    constructor(private centreService: PhpJaumeCService) { }
+    prova;
+      
+         provaphp(){
+        this.centreService.provaphp()
+            .subscribe(
+            data => (this.prova = data, console.log(data))
+                    
+      );    }
+}
+

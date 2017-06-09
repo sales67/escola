@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -37,7 +37,12 @@ import { BotoComponent } from './professor/boto/boto.component';
 
 import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
+<<<<<<< HEAD
 
+
+=======
+import { PhpJaumeCComponent } from './php/phpJaumeC/phpJaumeC.component';
+>>>>>>> b974e90081909bef8d5e1dccdf4de2ed7e6bec2a
 @NgModule({
   imports: [
     BrowserModule,
@@ -52,7 +57,7 @@ import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
       
       PhpSergiComponent,
       PhpDavidComponent,
-
+      PhpJaumeCComponent,
       ListAlumneIdComponent,
       ListAlumneAllComponent,
       ListAlumneComponent,      
