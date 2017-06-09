@@ -13,6 +13,7 @@ export class ProfessorService {
     myURL = 'http://172.17.0.191:8080/escola';
     urlCrearProfe = '/addPtoC?';
     urlGetProfe = '/unProfe?id=';
+    urlDelProfe = '/delProfe?id=';
 
     constructor(private http: Http) { }
 
@@ -33,13 +34,34 @@ export class ProfessorService {
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // C O N S U L T A R   U N   P R O F E S S O R
+    // C O N S U L T A R   U N   P R O F E S S O R ( JAVA i PHP)
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    consultarProfe(id) {
-        const profe = this.http.get(this.myURL + this.urlGetProfe + id)
-        .map(res => res.json());
+    consultarProfeJava(id) {
+        const profe = this.http
+                          .get(this.myURL + this.urlGetProfe + id)
+                          .map(res => res.json());
 
         return profe;
+    }
+
+    consultarProfePhp(id) {
+        return this.http
+                   .get('http://localhost/school/php/unProfe.php?id=' + id)
+                   .map(res => res.json());
+    }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // E S B O R R A R   U N   P R O F E S S O R
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    esborrarProfe(id){
+        return this.http.delete(this.myURL + this.urlDelProfe + id)
+        .map(res => res.json());
+    }
+
+    consultar() {
+        return this.http.get('http://localhost/usuaris/').map(res => res.text());
     }
 }
