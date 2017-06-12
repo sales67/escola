@@ -17,7 +17,7 @@ $t = $username*50*100*2/20;
 
     $conn = new mysqli($servername, $username, $password,$db);
 
-<<<<<<< HEAD
+
 
 
 /*
@@ -26,8 +26,6 @@ $conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
 
-=======
->>>>>>> b0e495b6ff26412b4d35a9247e275501ad939d9e
 if ($conn->connect_error) {
     echo("error");
 }

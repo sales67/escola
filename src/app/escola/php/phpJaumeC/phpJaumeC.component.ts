@@ -14,7 +14,7 @@ import { Routes, Router } from '@angular/router';
 })
 export class PhpJaumeCComponent {
 
-    consultardades;psswd;user;finished;data;errorUser;
+    consultardades;psswd;user;finished;data;errorUser;token;notfinished;status;
     
     constructor(private phpJaumeCService: PhpJaumeCService) { }
     
@@ -24,19 +24,31 @@ export class PhpJaumeCComponent {
            .subscribe(
           data => {
               this.data=data;
+              this.token=data["token"];
+              this.status=data["status"];
               console.log(this.data);
-              if (data=="Connected successfully"){
-                      this.finished=true;
-                  }
+              if (this.phpJaumeCService.validar(this.user,this.token)&&this.status=="ok"){
+                  this.finished=true;
+              }
               else{
                   this.errorUser=true;
               }
-          })       
-        this.finished=false;  
-        this.errorUser=false;
+          })  
+          this.finished=false;
+          this.notfinished=false;     
         }
 }
 
+/*
+this.data=data;
+              this.token=data["token"];
+              this.status=data["status"];
+              
+              if (this.phpDavidService.validar(this.token,this.user)&&this.status=="ok"){
+                  this.finished=true;
+              }
+                  else this.notfinished=true;
+*/
 
 /*import { Component, OnInit } from '@angular/core';
 import { PhpJaumeCService } from './phpJaumeC.service';
