@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -32,8 +32,17 @@ import {delCentreComponent } from './escola/centre/delCentre/delCentre.component
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
+<<<<<<< HEAD
 import { FormulariComponent } from './formulari/formulari.component';
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+=======
+
+import { FormulariComponent } from './formulari/formulari.component';
+
+
+import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+
+>>>>>>> 27ad2907e19e7f30f18105d888987aa546dd92e5
 const routes: Routes = [
     {
    path: 'formulari',
