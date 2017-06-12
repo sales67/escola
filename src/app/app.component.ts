@@ -13,14 +13,6 @@ export class AppComponent {
  
     constructor(private http:Http){
     }
- 
-    ngOnInit(){
-    	this.getData();
-    }
- 
-    getData(){
-        this.http.get('http://localhost/AngularWithPhpTest/')
-        		.subscribe(res => this.data = res.json());
-    }
+
 }
 
