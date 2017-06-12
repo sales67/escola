@@ -32,17 +32,9 @@ import {delCentreComponent } from './escola/centre/delCentre/delCentre.component
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
-<<<<<<< HEAD
-=======
 
->>>>>>> 3fa6a0cd9e5a8eed1b8f6d87ce56815aab9d8626
 import { FormulariComponent } from './formulari/formulari.component';
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3fa6a0cd9e5a8eed1b8f6d87ce56815aab9d8626
 const routes: Routes = [
     {
    path: 'formulari',
