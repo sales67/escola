@@ -5,6 +5,8 @@
     <label for="idProfeMod">Introdueix l'ID del professor</label>
     <input type="text" name="idProfeMod" id="idProfeMod" [(ngModel)]="idProfeMod">
     
+    <br> <br>
+    
     <label for="selectCamp">Selecciona el camp que vols modificar </label>
     <select id="selectCamp" name="selectCamp" [(ngModel)]="camp">
         <option *ngFor="let c of camps" [value]="c.value">  
@@ -12,7 +14,7 @@
         </option>
     </select>
     
-    <br> <br>
+    <br> <br> <br>
     
     <!-- dades a modificiar nomès visibles a l'escollir un camp -->
     <div id="modValor" [hidden]="true">
@@ -24,6 +26,29 @@
     <div id="modValorData" [hidden]="true">
         <label>Selecciona la data de naixement</label>
         <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+        <br> <br>
+    </div>
+    
+    <div id="modEsport" [hidden]="true">
+        
+        <!-- afegir esport -->
+        <label>Afegeix aquest esport</label>
+        <select id="nouValor" name="nouValor" [(ngModel)]="nouValor">
+            <option *ngFor="let e of esports" [value]="e.nom">
+                {{e.nom}}
+            </option>
+        </select>
+        <br> <br>
+        
+        <!-- treure esport -->
+        <!--<label>Treu aquest esport</label>
+        <select id="nouValor" name="nouValor" [(ngModel)]="nouValor">
+            <option *ngFor="let e of esports" [value]="e.nom">
+                {{e.nom}}
+            </option>
+        </select>
+        <br> <br>-->
+        
     </div>
     
     <button (click)="modProfe()" type="submit" class="btn btn-success">Modificar</button>
