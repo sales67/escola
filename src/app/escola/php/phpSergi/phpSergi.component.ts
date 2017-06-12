@@ -14,32 +14,29 @@ import { Routes, Router } from '@angular/router';
 })
 export class PhpSergiComponent {
 
-    psswd;user;finished;data;errorUser;data2
+    psswd;user;finished;data;errorUser;token;status;
     
     constructor(private phpSergiService: PhpSergiService) { }
     
     login(){       
-         this.phpSergiService.login(this.psswd,this.user)        
+         this.phpSergiService.login(this.psswd,this.user)         
            .subscribe(
-          data => {
-             this.data=data;
+          data => { 
+                  this.data=data;   
+                  this.token=data["token"];
+                  this.status=data["status"];              
               
-             console.log(this.data);
-             console.log(this.user,this.data["token"]);  
+                  if (this.phpSergiService.token(this.user,this.token) && this.status=="ok")
+                  {
+                      this.finished=true;
+                  }    
+                  else{
+                      this.errorUser=true;
+                  }        
         
-        
-        });/*
-        if (this.data["status"]=="ok") {   
-            this.finished=true;/*
-                  this.phpSergiService.token(this.user,this.data["token"])
-                  .subscribe(                      
-                    data2 => {
-                        this.data2=data2;
-                        
-                    });}}
-        
+        });
         this.finished=false;  
-        this.errorUser=false;*/
+        this.errorUser=false;
+    }
 }
-             }
              
