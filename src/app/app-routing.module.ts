@@ -34,11 +34,44 @@ import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 
+<<<<<<< HEAD
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+=======
+import { JsDavidComponent } from './escola/JS/JsDavid/JsDavid.component';
+import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
+import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
+import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
+
+import { FormulariComponent } from './formulari/formulari.component';
+import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+
+
+>>>>>>> 88e4884076e3ff20088820c6a5184ff3144a053f
 
 const routes: Routes = [
+    {
+   path: 'JsDavid',
+    component: JsDavidComponent,
+    children: []
+    },
+    {
+   path: 'JsSergi',
+    component: JsSergiComponent,
+    children: []
+    },
+    {
+   path: 'JsJaumeM',
+    component: JsJaumeMComponent,
+    children: []
+    },
+    {
+   path: 'JsJaumeC',
+    component: JsJaumeCComponent,
+    children: []
+    },
+    
     {
    path: 'formulari',
     component: FormulariComponent,

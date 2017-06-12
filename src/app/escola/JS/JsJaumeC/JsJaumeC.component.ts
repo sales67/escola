@@ -14,7 +14,7 @@ import { Routes, Router } from '@angular/router';
  providers: [JsJaumeCService]
 
 })
-export class JsJaumeComponent {
+export class JsJaumeCComponent {
 /*
     psswd;user;finished;data;errorUser;data2
     
