@@ -13,7 +13,7 @@ import { Routes, Router } from '@angular/router';
  providers: [JsJaumeMService]
 
 })
-export class JsJaumeMomponent {
+export class JsJaumeMComponent {
 /*
     psswd;user;finished;data;errorUser;data2
     

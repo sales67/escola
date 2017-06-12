@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -37,11 +37,13 @@ import { BotoComponent } from './professor/boto/boto.component';
 
 import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
-<<<<<<< HEAD
-=======
 
->>>>>>> 10da7584de74d11ba2dd98487437fbcea4922939
 import { PhpJaumeCComponent } from './php/phpJaumeC/phpJaumeC.component';
+
+import { JsDavidComponent } from './JS/JsDavid/JsDavid.component';
+import { JsSergiComponent } from './JS/JsSergi/JsSergi.component';
+import { JsJaumeMComponent } from './JS/JsJaumeM/JsJaumeM.component';
+import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
 
 @NgModule({
   imports: [
@@ -68,6 +70,11 @@ import { PhpJaumeCComponent } from './php/phpJaumeC/phpJaumeC.component';
       ListCursComponent,
       AddCursComponent,
       PutCursComponent,
+      
+      JsDavidComponent,
+      JsJaumeCComponent,
+      JsJaumeMComponent,
+      JsSergiComponent,
       
 
       ProfessorComponent,
