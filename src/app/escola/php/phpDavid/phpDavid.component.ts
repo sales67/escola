@@ -13,7 +13,7 @@ import { Routes, Router } from '@angular/router';
 
 })
 export class PhpDavidComponent {
-   consultardades;psswd;user;finished;data;errorUser;
+   consultardades;psswd;user;finished;data;errorUser;username;tokenfet;
     
     constructor(private phpDavidService: PhpDavidService) { }
     
@@ -22,7 +22,7 @@ export class PhpDavidComponent {
            .subscribe(
              
           data => {
-              this.data=data,console.log(data);
+              this.data=data,console.log(data),console.log(data['status']);;
               if (data=="Connected successfully"){
                       this.finished=true;
                   }
@@ -33,4 +33,12 @@ export class PhpDavidComponent {
         this.finished=false;  
         this.errorUser=false;
         }
+    
+    validar(){
+         this.phpDavidService.validar(this.tokenfet,this.username)
+         .subscribe(
+             
+          data => {
+              this.data=data})
+    }
 }
