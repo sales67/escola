@@ -7,7 +7,11 @@ import 'rxjs/add/operator/map'
 
 export class PhpDavidService{  
     constructor(private http: Http){}
-    provaphp() {
-       return this.http.get('http://172.17.0.161/projectes/escola/src/app/php/escola/index.php').map(res => res.text());//cadascu la seva ip pq funcioni
-   }
-}
+     login(psswd,user){        
+        return this.http.get('http://172.17.0.161/projectes/escola/david/index.php?psswd='+psswd+'&user='+user).map(res => res.json());     
+    }
+    
+    validar(tokenfet,username){        
+        return this.http.get('http://localhost:8080/escola/token?username='+username+'&tokenfet='+tokenfet).map(res => res.json());     
+    }
+} 
