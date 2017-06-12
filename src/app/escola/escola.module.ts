@@ -37,7 +37,14 @@ import { BotoComponent } from './professor/boto/boto.component';
 
 import { PhpSergiComponent } from './php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 27ad2907e19e7f30f18105d888987aa546dd92e5
+>>>>>>> eeac08bc319a9677bf7617c4405f6d7ec5704b79
 import { PhpJaumeCComponent } from './php/phpJaumeC/phpJaumeC.component';
 
 @NgModule({
