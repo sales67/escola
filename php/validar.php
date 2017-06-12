@@ -75,4 +75,6 @@
         // 
         // echo "Usuari incorrecte";
     }
+
+    $conn->close();
 ?>
