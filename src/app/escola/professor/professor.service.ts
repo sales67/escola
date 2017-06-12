@@ -15,6 +15,7 @@ export class ProfessorService {
     urlGetProfe = '/unProfe?id=';
     urlDelProfe = '/delProfe?id=';
     urlModProfe = '/modProfe?id=';
+    urlEsports = '/allEsportsProfes';
 
     constructor(private http: Http) { }
 
@@ -81,22 +82,15 @@ export class ProfessorService {
     }
 
 
-    /*
-    modEq(id, parametre, valor) {
-        
-        var creds = 'id=' + id + '&parametre=' + parametre + '&valor=' + valor;
-        
-        var headers = new Headers();
-        headers.append('Access-Control-Allow-Origin', '*'); 
-        // headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        
-        var a = this.http.put(this.myURL + '/demo/put?id=' + id + '&parametre=' + parametre + '&valor=' + valor, creds, {
-            headers:headers
-        }).map(res => res.json()).catch(this.handleError);
-      
-        return a;
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // C O N S U L T A R   T O T S   E L S   E S P O R T S
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    consultarEsports() {
+        return this.http
+                   .get(this.myURL + this.urlEsports)
+                   .map(res => res.json());
     }
-    */
 
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
