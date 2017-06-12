@@ -9,18 +9,11 @@ $username =  htmlspecialchars($_GET["user"]);
 $password =  htmlspecialchars($_GET["psswd"]);
 $db = "escola";
 
-<<<<<<< HEAD
+
 $t = $username*50*100*2/20;
 
 
     $conn = new mysqli($servername, $username, $password,$db);
-
-
-
-=======
-// Create connection
-$conn = new mysqli($servername, $username, $password, $db);
->>>>>>> 615f6cde09681d8b433f61ead04b5ccdb59e91de
 
 if ($conn->connect_error) {
     echo("error");

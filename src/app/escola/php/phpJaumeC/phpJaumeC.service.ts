@@ -7,11 +7,11 @@ import 'rxjs/add/operator/map'
 
 export class PhpJaumeCService{  
     constructor(private http: Http){}
-    consultar() {
-       return this.http.get('http://172.17.0.242/prova/School/src/app/php/escola/index.php').map(res => res.text());
+    validar(id,token) {
+       return this.http.get('http://172.17.0.242/centre/token/?id='+id+'&token='+token).map(res => res.text());
    }
     login(psswd,user){        
-        return this.http.get('http://172.17.0.242/prova/School/src/app/php/escola/index.php?psswd='+psswd+"&user="+user).map(res => res.text());
+        return this.http.get('http://172.17.0.242/prova/School/src/app/php/escola/index.php?psswd='+psswd+"&user="+user).map(res => res.json());
         
     }
 }

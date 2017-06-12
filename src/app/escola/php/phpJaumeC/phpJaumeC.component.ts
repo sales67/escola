@@ -18,11 +18,13 @@ export class PhpJaumeCComponent {
     
     constructor(private phpJaumeCService: PhpJaumeCService) { }
     
-    login(){       
+    login(){   
+
          this.phpJaumeCService.login(this.psswd,this.user)        
            .subscribe(
           data => {
               this.data=data;
+              console.log(this.data);
               if (data=="Connected successfully"){
                       this.finished=true;
                   }
