@@ -36,6 +36,10 @@ import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 =======
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
 import { FormulariComponent } from './formulari/formulari.component';
@@ -64,7 +68,9 @@ import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 >>>>>>> e92249e69e704aa68ece21c7ae0af5688e824ce7
 >>>>>>> 8ec9b01d01c3b4e5ea7819284cc9805cf511c0ed
 
+>>>>>>> 8ec9b01d01c3b4e5ea7819284cc9805cf511c0ed
 import { FormulariComponent } from './formulari/formulari.component';
+
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
 
