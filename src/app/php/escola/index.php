@@ -1,23 +1,31 @@
 <?php
+//include_once('http.php');
 
 
-
+$login_link = "http://localhost:8080/login?user=";
 
 $servername = "127.0.0.1";
 $username =  htmlspecialchars($_GET["user"]);
 $password =  htmlspecialchars($_GET["psswd"]);
 $db = "escola";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password,$db);
+$t = $username*50*100*2/20;
 
-// Check connection
+
+    $conn = new mysqli($servername, $username, $password,$db);
+
+
+
+
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else{
-    echo "Connected successfully";
+    echo("error");
 }
-
-$conn= mysql_connect($servername,$username,$password);
+else{$correcte = [
+    'status' => 'ok',
+    'token' => $t,
+];
+    echo json_encode($correcte);
+    $conn= mysql_connect($servername,$username,$password);
+    }
 
 ?>
