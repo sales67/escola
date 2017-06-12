@@ -7,7 +7,11 @@ import 'rxjs/add/operator/map'
 
 export class PhpJaumeCService{  
     constructor(private http: Http){}
-    provaphp() {
-       return this.http.get('http://172.17.0.242/demo/School/src/app/php/escola/index.php').map(res => res.text());//cadascu la seva ip pq funcioni
+    consultar() {
+       return this.http.get('http://172.17.0.242/prova/School/src/app/php/escola/index.php').map(res => res.text());
    }
+    login(psswd,user){        
+        return this.http.get('http://172.17.0.242/prova/School/src/app/php/escola/index.php?psswd='+psswd+"&user="+user).map(res => res.text());
+        
+    }
 }
