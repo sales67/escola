@@ -1,14 +1,13 @@
 <html>
 
 	<body>       
-        <!--<div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+   	<strong>Correcte! </strong>Connectat Correctament!
+</div>
+         <div *ngIf="notfinished" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
    	<strong>Correcte! </strong>Connectat Correctament!
 </div>
         
- <div *ngIf="errorUser" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Error!</strong> Usuari o Contrasenya no trobats:$
-</div>-->
-    
     
     <div>
 <form action="" method="post" class="login">
@@ -19,3 +18,17 @@
 </div>         
     </body>
 </html>
+
+<!--<div *ngIf=finished; thenBlock else elseBlock>
+</div>
+        
+<ng-template #thenBlock>
+<div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Correcte! </strong>Connectat Correctament! </div>
+</ng-template>
+            
+<ng-template #elseBlock>     
+<div class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+<strong>Error!</strong> Usuari o Contrasenya no trobats:$
+</div>
+</ng-template>-->

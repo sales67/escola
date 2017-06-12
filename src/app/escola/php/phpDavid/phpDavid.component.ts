@@ -13,12 +13,34 @@ import { Routes, Router } from '@angular/router';
 
 })
 export class PhpDavidComponent {
-   consultardades;psswd;user;finished;data;errorUser;username;tokenfet;
+   consultardades;psswd;user;finished;data;errorUser;token;notfinished;status;
     
     constructor(private phpDavidService: PhpDavidService) { }
     
     login(){       
-         this.phpDavidService.login(this.psswd,this.user)        
+         this.phpDavidService.login(this.psswd,this.user)    
+         .subscribe(
+          data => {
+              this.data=data;
+              this.token=data["token"];
+              this.status=data["status"];
+              
+              if (this.phpDavidService.validar(this.token,this.user)&&this.status=="ok"){
+                  this.finished=true;
+              }
+                  else this.notfinished=true;
+            
+             console.log(this.data);
+             console.log(this.user,this.data["token"]);  
+              
+          }
+             
+           )
+          this.finished=false;
+          this.notfinished=false;
+
+    };
+        /*
            .subscribe(
              
           data => {
@@ -32,13 +54,6 @@ export class PhpDavidComponent {
           })       
         this.finished=false;  
         this.errorUser=false;
-        }
-    
-    validar(){
-         this.phpDavidService.validar(this.tokenfet,this.username)
-         .subscribe(
-             
-          data => {
-              this.data=data})
-    }
+        }*/
+
 }

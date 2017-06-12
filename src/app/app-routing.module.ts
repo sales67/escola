@@ -34,21 +34,14 @@ import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 import { FormulariComponent } from './formulari/formulari.component';
-<<<<<<< HEAD
-=======
-import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
-=======
-
-import { FormulariComponent } from './formulari/formulari.component';
->>>>>>> eeac08bc319a9677bf7617c4405f6d7ec5704b79
-
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
-<<<<<<< HEAD
-=======
->>>>>>> 27ad2907e19e7f30f18105d888987aa546dd92e5
->>>>>>> eeac08bc319a9677bf7617c4405f6d7ec5704b79
+
+
+
+
+
 const routes: Routes = [
     {
    path: 'formulari',
