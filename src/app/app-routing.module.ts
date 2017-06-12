@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -32,9 +32,41 @@ import {delCentreComponent } from './escola/centre/delCentre/delCentre.component
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
+<<<<<<< HEAD
 import { FormulariComponent } from './formulari/formulari.component';
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { FormulariComponent } from './formulari/formulari.component';
+
+import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+
+
+
+
+
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e92249e69e704aa68ece21c7ae0af5688e824ce7
+
+import { FormulariComponent } from './formulari/formulari.component';
+import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3fa6a0cd9e5a8eed1b8f6d87ce56815aab9d8626
+>>>>>>> b0e495b6ff26412b4d35a9247e275501ad939d9e
+>>>>>>> e92249e69e704aa68ece21c7ae0af5688e824ce7
+>>>>>>> 10da7584de74d11ba2dd98487437fbcea4922939
 const routes: Routes = [
     {
    path: 'formulari',

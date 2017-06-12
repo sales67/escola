@@ -14,6 +14,8 @@ export class ProfessorService {
     urlCrearProfe = '/addPtoC?';
     urlGetProfe = '/unProfe?id=';
     urlDelProfe = '/delProfe?id=';
+    urlModProfe = '/modProfe?id=';
+    urlEsports = '/allEsportsProfes';
 
     constructor(private http: Http) { }
 
@@ -60,6 +62,41 @@ export class ProfessorService {
         return this.http.delete(this.myURL + this.urlDelProfe + id)
         .map(res => res.json());
     }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // M O D I F I C A R   U N   P R O F E S S O R
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    modProfe(id, camp, valor) {
+        const creds = 'id=' + id + '&parametre=' + camp + '&valor=' + valor;
+        // const creds = 'id=' + id + '&parametre=' + camp + '&valor=' + '01/08/1950';
+        
+        var headers = new Headers();
+        headers.append('Access-Control-Allow-Origin', '*'); 
+        
+        
+        return this.http.put(this.myURL + this.urlModProfe + id + '&parametre=' + camp + '&valor=' + valor, creds, {headers:headers})
+        //return this.http.put(this.myURL + this.urlModProfe + id + '&parametre=' + camp + '&valor=' + '01/08/1950', creds, {headers:headers})
+                        .map(res => res.json())
+    }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // C O N S U L T A R   T O T S   E L S   E S P O R T S
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    consultarEsports() {
+        return this.http
+                   .get(this.myURL + this.urlEsports)
+                   .map(res => res.json());
+    }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // C O N S U L T A R   A L U M N E S
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
 
     consultar() {
         return this.http.get('http://localhost/usuaris/').map(res => res.text());

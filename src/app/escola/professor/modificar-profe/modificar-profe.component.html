@@ -1,3 +1,78 @@
-<p>
-  modificar-profe works!
-</p>
+<br>
+
+<form name="modProfeForm">
+    
+    <label for="idProfeMod">Introdueix l'ID del professor</label>
+    <input type="text" name="idProfeMod" id="idProfeMod" [(ngModel)]="idProfeMod">
+    
+    <br> <br>
+    
+    <label for="selectCamp">Selecciona el camp que vols modificar </label>
+    <select id="selectCamp" name="selectCamp" [(ngModel)]="camp">
+        <option *ngFor="let c of camps" [value]="c.value">  
+            {{c.display}}
+        </option>
+    </select>
+    
+    <br> <br> <br>
+    
+    <!-- dades a modificiar nomès visibles a l'escollir un camp -->
+    <div id="modValor" [hidden]="true">
+        <label>Introdueix la nova informació</label>
+        <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+        <br> <br>
+    </div>
+    
+    <div id="modValorData" [hidden]="true">
+        <label>Selecciona la data de naixement</label>
+        <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+        <br> <br>
+    </div>
+    
+    <div id="modEsport" [hidden]="true">
+        
+        <!-- afegir esport -->
+        <label>Afegeix aquest esport</label>
+        <select id="nouValor" name="nouValor" [(ngModel)]="nouValor">
+            <option *ngFor="let e of esports" [value]="e.nom">
+                {{e.nom}}
+            </option>
+        </select>
+        <br> <br>
+        
+        <!-- treure esport -->
+        <!--<label>Treu aquest esport</label>
+        <select id="nouValor" name="nouValor" [(ngModel)]="nouValor">
+            <option *ngFor="let e of esports" [value]="e.nom">
+                {{e.nom}}
+            </option>
+        </select>
+        <br> <br>-->
+        
+    </div>
+    
+    <button (click)="modProfe()" type="submit" class="btn btn-success">Modificar</button>
+    
+</form>
+
+<br>
+
+<!--
+
+<div id="noEsBoolea" [hidden]="true">
+        <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+        <label> Introdueix el nou valor </label>
+        <br> <br>
+    </div>
+    
+    <div id="esBoolea" [hidden]="true">
+        <select name="esBoolea" [(ngModel)]="nouValor">
+            <option *ngFor="let cf of certFals" [value]="cf.value">  
+                {{cf.display}}
+            </option>
+        </select>
+        <label>Ho vols afegir o treure de l'equipament?</label>
+        <br> <br>
+    </div>
+
+-->
