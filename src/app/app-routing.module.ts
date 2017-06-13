@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -33,14 +33,6 @@ import {listCentreComponent } from './escola/centre/listCentre/listCentre.compon
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
-<<<<<<< HEAD
-import { FormulariComponent } from './formulari/formulari.component';
-import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
-<<<<<<< HEAD
-=======
-
-=======
-
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
@@ -50,11 +42,6 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-
-
->>>>>>> 62783ccd3842190aa13802cb60adcf717ccefb84
-
->>>>>>> 252dd1ba4af9ab455d0eaf9f2c602c8e1a305c07
 const routes: Routes = [
     {
    path: 'JsDavid',
