@@ -33,12 +33,6 @@ import {listCentreComponent } from './escola/centre/listCentre/listCentre.compon
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
-<<<<<<< HEAD
-import { FormulariComponent } from './formulari/formulari.component';
-import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
-
-=======
-
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
@@ -50,7 +44,7 @@ import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
 
->>>>>>> 62783ccd3842190aa13802cb60adcf717ccefb84
+
 
 const routes: Routes = [
     {

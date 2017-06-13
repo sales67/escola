@@ -20,6 +20,7 @@ export class ConsultarProfeComponent implements OnInit {
 
     constructor(private professorService: ProfessorService) { }
 
+    //ngOnInit() { this.profes=[]; this.profes['nom']=""; this.profes['cognoms']="";}
     ngOnInit() { }
 
     consultarProfeJava() {
@@ -38,6 +39,7 @@ export class ConsultarProfeComponent implements OnInit {
                 data => {
                     this.profes = data;
                     this.profes = Array.of(this.profes); // després de llegir el JSON al service el transformem en un array
+                    console.log(this.profes);
                 }
             );
     }

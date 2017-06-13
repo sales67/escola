@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-
-// import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-// import { sprintf } from "sprintf-js";
-// import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class ProfessorService {
@@ -51,6 +47,13 @@ export class ProfessorService {
         return this.http
                    .get('http://localhost/school/php/unProfe.php?id=' + id)
                    .map(res => res.json());
+    }
+
+    consultarProfeNode(id) {
+        return this.http
+                   //.get('http://localhost/school/js/escola.js?id=' + id)
+                    .get(this.myURL + this.urlGetProfe + id)
+                    .map(res => res.json());
     }
 
 
