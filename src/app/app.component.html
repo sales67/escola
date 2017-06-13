@@ -31,10 +31,14 @@ html {background-color: skyblue;}
           </li>
           <li>
             <a  routerLink="/centre" routerLinkActive="active">Centres</a>
-          <li>
+          <li class="has-sub">
             <a routerLink="/alumne" routerLinkActive="active">Alumnes</a>
               <ul>
-                <li>
+                  <li>
+                    <a routerLink="/addAlumne" routerLinkActive="active">Afegir alumnes</a>
+                  </li>
+                <li class="has-sub">                    
+                    
                     <a routerLink="/listAlumne" routerLinkActive="active">Mostrar alumnes</a>
                     <ul>
                         <li>
@@ -45,6 +49,12 @@ html {background-color: skyblue;}
                         </li>
                     </ul>
                 </li>
+                  <li>
+                    <a routerLink="/updateAlumne" routerLinkActive="active">Actualitzar alumnes</a>
+                  </li>
+                  <li>
+                    <a class="delete" routerLink="/delAlumne" routerLinkActive="active">Esborrar alumnes</a>
+                  </li>                  
               </ul>
           </li>
           <li>

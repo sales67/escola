@@ -7,6 +7,9 @@ import { AlumneComponent } from './escola/alumne/alumne.component';
 import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './escola/alumne/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './escola/alumne/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './escola/alumne/addAlumne/addAlumne.component';
 
 
 
@@ -86,6 +89,18 @@ const routes: Routes = [
     {
     path: 'alumne',
     component: AlumneComponent,
+    children: []
+    },{
+    path: 'updateAlumne',
+    component: UpdateAlumneComponent,
+    children: []
+    },{
+    path: 'delAlumne',
+    component: DelAlumneComponent,
+    children: []
+    },{
+    path: 'addAlumne',
+    component: AddAlumneComponent,
     children: []
     },
     {

@@ -15,13 +15,13 @@ import { Routes, Router } from '@angular/router';
 
 })
 export class JsSergiComponent {
-/*
+
     psswd;user;finished;data;errorUser;data2
     
-    constructor(private phpSergiService: PhpSergiService) { }
+    constructor(private jsSergiService: JsSergiService) { }
     
     login(){       
-         this.phpSergiService.login(this.psswd,this.user)        
+         this.jsSergiService.login(this.psswd,this.user)        
            .subscribe(
           data => {
              this.data=data;
@@ -30,18 +30,19 @@ export class JsSergiComponent {
              console.log(this.user,this.data["token"]);  
         
         
-        });/*
+        });
         if (this.data["status"]=="ok") {   
-            this.finished=true;/*
-                  this.phpSergiService.token(this.user,this.data["token"])
+            this.finished=true;
+                  this.jsSergiService.token(this.user,this.data["token"])
                   .subscribe(                      
                     data2 => {
                         this.data2=data2;
                         
-                    });}}
+                    });}
         
         this.finished=false;  
         this.errorUser=false;
-}*/
-             }
+    }
+}
+
              
