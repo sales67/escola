@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -45,13 +45,6 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 2fc014a652fc1be69c5e6b73c76ca8fb8fbaab29
 const routes: Routes = [
     {
    path: 'JsDavid',
