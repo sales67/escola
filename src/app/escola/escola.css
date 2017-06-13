@@ -18,6 +18,13 @@ button{
     cursor: pointer;
 }
 
+button:hover{
+    background-color: cadetblue;
+    color: green;
+    border: 1px solid green;
+
+}
+
 .alert-success {
     color: #3c763d;
     background-color: #dff0d8;
@@ -57,4 +64,12 @@ input[type=checkbox]{
 .primary{
     background-color: aqua;
     margin-right: 75%;
+}
+.delete{
+    background-color: red;
+}
+.delete:hover{
+    background-color: darkred;
+    color: white;
+    border: 1px solid black;
 }

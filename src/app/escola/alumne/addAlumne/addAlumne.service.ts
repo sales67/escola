@@ -1,0 +1,29 @@
+import {Injectable}  from '@angular/core';
+import {Http,Headers,Response}  from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+
+
+
+@Injectable()
+
+export class AddAlumneService{
+private addUrl = 'http://172.17.0.161:8080/escola/addCurs';
+
+
+constructor(private http: Http){}
+
+
+addAlumne(addid,addnom,addidcentre,addnomcentre){     
+        var creds = "id=" + addid + "&nom=" + addnom + "idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
+
+        
+          var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        
+        return this.http.post(this.addUrl,creds,{
+            headers:headers
+        })
+           .map((response: Response) => {})
+           
+    }
+}

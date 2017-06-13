@@ -11,6 +11,9 @@ import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
 import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './alumne/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './alumne/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './alumne/addAlumne/addAlumne.component';
 
 
 import { CursComponent } from './curs/curs.component';
@@ -62,7 +65,10 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       PhpJaumeCComponent,
       ListAlumneIdComponent,
       ListAlumneAllComponent,
-      ListAlumneComponent,      
+      ListAlumneComponent,
+      AddAlumneComponent,
+      DelAlumneComponent,
+      UpdateAlumneComponent,
 
 
       CursComponent,

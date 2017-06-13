@@ -54,9 +54,11 @@ padding: 16px 20px;
 
 #cssmenu ul ul li .delete{
     background-color: red;
+    border-color: darkred;
 }
 #cssmenu ul ul li .delete:hover{
     background-color: darkred;
+    border-color: darkred;
 }
 
 #cssmenu ul ul li:first-child > a { border-top: 1px solid #0082e7; }
