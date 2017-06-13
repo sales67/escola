@@ -25,6 +25,12 @@ export class ModificarProfeComponent implements OnInit {
     nouValor;
     idProfeMod;
 
+    finished;
+    errorId;
+    errorServer;
+
+    retorn;
+
     constructor(private professorService: ProfessorService) { }
 
     ngOnInit() {
@@ -55,7 +61,7 @@ export class ModificarProfeComponent implements OnInit {
                     break;
             }
         });
-        
+
         // funció automàtica per saber tots els esports
         this.professorService.consultarEsports()
             .subscribe(
@@ -65,13 +71,39 @@ export class ModificarProfeComponent implements OnInit {
             );
     }
 
-    modProfe() {
 
+    modProfe() {
         this.professorService.modProfe(this.idProfeMod, this.camp, this.nouValor)
+            .catch((error: any) => {
+               if (error.status === 0 || error.status === "0") {
+                    console.log("Servidor Aturat"); 
+                    this.errorServer = true;
+               }
+               else if (error.status === 500 || error.status === "500")
+               {
+                   console.log("Error genèric - no troba les dades a la BD");
+                   this.errorServer = true;
+               }
+               else {
+                   return error.json();
+               }
+            })
             .subscribe(
-                data => (this.idProfeMod = data),
-                () => console.log('Professor amb id ' + this.idProfeMod + ' modificat')
+                data => {
+                    this.retorn = data;
+                    // java ens retona un array amb professor/s o un array buit, per tant s'ha de mirar la llargada de l'array per saber si hi ha profes
+                    if(this.retorn == 1) {
+                        this.errorId = true;
+                    }
+                },
+                () => {
+                    this.finished = true;
+                    console.log('Professor amb id ' + this.idProfeMod + ' modificat');
+                }
             );
+            this.errorId = false;
+            this.errorServer = false;
+            this.finished = false;
     }
 
 }

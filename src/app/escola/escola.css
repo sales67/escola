@@ -25,6 +25,16 @@ button:hover{
 
 }
 
+button:disabled{
+    background-color: grey;
+    opacity: 0.5;
+    border: 1px solid black;
+}
+
+button:disabled:hover{
+    color: white;
+}
+
 .alert-success {
     color: #3c763d;
     background-color: #dff0d8;

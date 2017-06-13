@@ -1,4 +1,4 @@
-// Los componentes son los bloques de construcción de Angular 2 que representan regiones de la pantalla
+// Los componentes son los bloques de construcción de Angular 2 que representan regiones de la pantalla (vista)
 
 // Las aplicaciones se definen como árboles de componentes
 
@@ -12,6 +12,11 @@
 // 2. La clase controladora: En ES6 usaremos clases para declarar los controladores que exponen datos y funcionalidad a la vista
 
 // 3. Metadata: Se declara como un decorador, una función especial de TypeScript, que recibe un objeto de configuración. Esto acompaña al controlador en un fichero de extensión .ts (app.component.ts)
+
+
+// El componente define propiedades y métodos que están disponibles en su template, pero eso no te da licencia para meter ahí todo lo que te parezca
+
+// És importante extraer toda la lógica en servicios para que el controlador solo se encargue de gestionar una única cosa: la vista
 
 import { Component } from '@angular/core';
 

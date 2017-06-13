@@ -24,7 +24,7 @@
         
         <form name="baixaProfeForm">
             <input type="text" name="delProfe" id="delProfe" [(ngModel)]="delProfe">
-            <button (click)="esborrarProfe()" type="submit" class="btn btn-default">BAIXA PROFESSOR</button>
+            <button (click)="esborrarProfe()" type="submit" class="btn btn-default" [disabled]="!delProfe">BAIXA PROFESSOR</button>
         </form>
         
     </body>

@@ -1,3 +1,9 @@
+// Es el módulo principal de Angular. Por convenio se le llama AppModule y se encuentra en el archivo app.module.ts.
+
+// La clase AppModule sirve para cargar la aplicación e indicar todas sus dependencias. Como el resto de módulos, se declara con el decorador NgModule
+
+
+
 // Las aplicaciones Angular2 están pensadas para crecer, para ello es fundamental cierto grado de modularidad
 
 // Un módulo no es más que una clase contenedora
@@ -11,6 +17,7 @@
 // Toda aplicación de Angular tiene al menos un módulo de Angular, el módulo principal (o root module).
 
 // El módulo raíz declara un componente especial para el arranque de la aplicación: El componente raíz
+
 
 
 // Librerías de Angular
@@ -42,6 +49,7 @@ import { FormulariComponent } from './formulari/formulari.component'; // cal??
     // - exports: Conjunto de declaraciones que deben ser accesibles para templates de componentes de otros módulos
     // - imports: Otros NgModules, cuyas clases exportadas son requeridas por templates de componentes de este módulo
     // - providers: Los servicios que necesita este módulo, y que estarán disponibles para toda la aplicación.
+                    // Gracias a esta propiedad, podré pasar el servicio "xxx" a cualquiera de mis componentes por Inyección de Dependencia
     // - bootstrap: Define la vista raíz. Utilizado solo por el root module.
 
 @NgModule({
@@ -57,6 +65,10 @@ import { FormulariComponent } from './formulari/formulari.component'; // cal??
     EscolaModule    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // El componente asignado será el componente raíz de la app. De él penderá cualquier otro componente que se utilice.
 })
 export class AppModule { }
+
+// Como he dicho antes, este módulo es el root module porque sus metadatos incluyen la propiedad bootstrap.
+// A partir de aquí Angular se hace cargo de la app, presentando su contenido en el navegador y
+// respondiendo a las interacciones del usuario en base a las instrucciones que le haya dado.
