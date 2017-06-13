@@ -6,15 +6,15 @@ import 'rxjs/add/operator/map'
 @Injectable()
 
 export class JsDavidService{  
-    /*
+    
     constructor(private http: Http){}
-    consultar() {
+    /*consultar() {
        return this.http.get('http://172.17.0.98/projectes/escola/src/app/php/escola/index.php').map(res => res.text());
-   }
+   }*/
     login(psswd,user){        
-        return this.http.get('http://172.17.0.98/projectes/escola/src/app/php/escola/index.php?psswd='+psswd+"&user="+user).map(res => res.json());
+        return this.http.get('http://172.17.0.161/projectes/escola/src/app/php/escola/index.php?psswd='+psswd+"&user="+user).map(res => res.json());
         
-    }
+    }/*
     loggedIn;
    token(user,token){      
        

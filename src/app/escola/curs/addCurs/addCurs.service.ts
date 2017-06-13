@@ -1,4 +1,4 @@
-﻿import {Injectable}  from '@angular/core';
+import {Injectable}  from '@angular/core';
 import {Http,Headers,Response}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
@@ -14,7 +14,7 @@ constructor(private http: Http){}
 
 
 addCursPost(addid,addnom,addidcentre,addnomcentre){     
-        var creds = "id=" + addid + "&nom=" + addnom + "idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
+        var creds = "id=" + addid + "&nom=" + addnom + "&idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
 
         
           var headers = new Headers();

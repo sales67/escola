@@ -11,16 +11,13 @@ $username =  htmlspecialchars($_GET["user"]);
 $password =  htmlspecialchars($_GET["psswd"]);
 $db = "escola";
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 10da7584de74d11ba2dd98487437fbcea4922939
 $t = $username*50*100*2/20;
 
 
 $db = new mysqli($servername, $username, $password,$db);
 
-<<<<<<< HEAD
+
 ob_end_clean();
 //$db = mysqli_connect($servername, $username, $password,$db);
 
@@ -33,8 +30,6 @@ if ($db->connect_error) {
 }
 else{
     $correcte = [
-=======
-<<<<<<< HEAD
 
 
 /*
