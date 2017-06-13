@@ -16,6 +16,7 @@
 import { Component } from '@angular/core';
 
 // Función decoradora que registra un componente
+// Lo que hace es asociar al controlador una plantilla HTML app.component.html y un selector para ser invocado desde otra vista <app-root></app-root>.
 @Component({
   selector: 'app-root',                 // elemento html consumidor
   templateUrl: './app.component.html',  // ruta relativa a la vista
