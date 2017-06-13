@@ -7,6 +7,9 @@ import { AlumneComponent } from './escola/alumne/alumne.component';
 import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
 import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './escola/alumne/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './escola/alumne/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './escola/alumne/addAlumne/addAlumne.component';
 
 
 
@@ -33,8 +36,11 @@ import {listCentreComponent } from './escola/centre/listCentre/listCentre.compon
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
@@ -44,10 +50,13 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -92,6 +101,18 @@ const routes: Routes = [
     {
     path: 'alumne',
     component: AlumneComponent,
+    children: []
+    },{
+    path: 'updateAlumne',
+    component: UpdateAlumneComponent,
+    children: []
+    },{
+    path: 'delAlumne',
+    component: DelAlumneComponent,
+    children: []
+    },{
+    path: 'addAlumne',
+    component: AddAlumneComponent,
     children: []
     },
     {
