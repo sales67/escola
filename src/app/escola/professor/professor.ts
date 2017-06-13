@@ -4,12 +4,5 @@ export class Professor {
 	public cognoms: string;
 	public dni: string;
 	
-    // public Curs curs;
-    
-    /*
-    
-    @ElementCollection
-	private Set<Esport> esports = new HashSet<Esport>();
-    
-    */
+    // ...
 }

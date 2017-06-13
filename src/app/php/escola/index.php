@@ -16,7 +16,14 @@ $t = $username*50*100*2/20;
 
 $db = new mysqli($servername, $username, $password,$db);
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 5307ff10fc2305408fe9e9463436a0664b7c2275
 ob_end_clean();
 
 
@@ -27,6 +34,7 @@ if ($db->connect_error) {
 ];
    echo json_encode($fail);
 }
+<<<<<<< HEAD
 else{$correcte = [
 
     'status' => 'ok',
@@ -35,6 +43,13 @@ else{$correcte = [
     echo json_encode($correcte);
 
 }
+=======
+else{
+    $correcte = [
+=======
+<<<<<<< HEAD
+>>>>>>> 252dd1ba4af9ab455d0eaf9f2c602c8e1a305c07
+>>>>>>> 5307ff10fc2305408fe9e9463436a0664b7c2275
 
 
 /*
@@ -43,8 +58,11 @@ $conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 5307ff10fc2305408fe9e9463436a0664b7c2275
 if ($conn->connect_error) {
     echo("error");
 }

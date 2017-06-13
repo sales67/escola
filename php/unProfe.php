@@ -18,9 +18,13 @@
     $id = $_GET['id'];
 
     // demana el nom d'un professor a partir de l'ID
-    $sql = "SELECT *
-            FROM db_escola.professor as p, db_escola.curs as c
-            WHERE p.curs = c.id AND p.id=" . $id;
+    $sql = "SELECT p.nom as 'profe.nom', p.cognoms as 'profe.cognoms', p.dni as 'profe.dni', c.nom as 'profe.curs.nom', c.credits as 'profe.curs.credits'
+            FROM db_escola.professor as p, db_escola.curs as c, db_escola.esport as e, db_escola.practica as pr
+            WHERE
+                p.id='$id' AND
+                p.curs = c.id AND
+                p.id = pr.idprofe AND
+                pr.idesport = e.id";
 
   /*  $sql = "SELECT *
             FROM db_escola.professor

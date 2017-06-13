@@ -1,20 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+// component professor
 
-import { ProfessorService } from './professor.service';
-
-// import { Professor } from './professor';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-professor',
     templateUrl: './professor.component.html',
-    styleUrls: ['./professor.component.css'],
-    providers: [ ProfessorService ]
+    styleUrls: ['../escola.css']
 })
-export class ProfessorComponent implements OnInit {
-
-  constructor( private professorService: ProfessorService) { }
-
-  ngOnInit() {
-  }
-
-}
+export class ProfessorComponent { }
