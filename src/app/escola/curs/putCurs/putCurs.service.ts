@@ -1,4 +1,4 @@
-﻿import {Injectable}  from '@angular/core';
+import {Injectable}  from '@angular/core';
 import {Http,Headers,RequestOptions,URLSearchParams,Response}  from '@angular/http';
 import 'rxjs/add/operator/map';
 //import { Cotxe } from './cotxe';
@@ -14,7 +14,7 @@ private updateUrl = 'http://172.17.0.161:8080/escola/putCurs?';
 
 constructor(private http: Http){}
 
-putCurs(addid,addnom,addidcentre,addnomcentre){     
+putCurs(putid,putnom,putidcentre,putnomcentre){     
    
     /*
     var creds = "id=" + addId +  "&name=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
@@ -30,10 +30,10 @@ putCurs(addid,addnom,addidcentre,addnomcentre){
     */
     
         let params: URLSearchParams = new URLSearchParams();
-params.set('id', addid);
-params.set('name', addnom);
-params.set('telefon', addidcentre);
-params.set('pais', addnomcentre);
+params.set('id', putid);
+params.set('nom', putnom);
+params.set('idcentre', putidcentre);
+params.set('nomcentre', putnomcentre);
 
 
     let options = new RequestOptions({ headers: headers });

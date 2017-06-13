@@ -36,6 +36,11 @@ import {listCentreComponent } from './escola/centre/listCentre/listCentre.compon
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
@@ -45,6 +50,13 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 const routes: Routes = [
     {
    path: 'JsDavid',

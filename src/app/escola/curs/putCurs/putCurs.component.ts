@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PutCursService} from '../putCurs/putCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -13,12 +13,12 @@ import {Routes,Router} from '@angular/router';
 
     export class PutCursComponent{
         
-    addId;addName;addTel;addCountry;addMail;values;errorBuit;finished;errorServer;errorId;
+    putid;putnom;putidcentre;putnomcentre;values;errorBuit;finished;errorServer;errorId;
         
 
     constructor(private putCursService: PutCursService) { }
                             
-        putCurs(){              this.putCursService.putCurs(this.addId,this.addName,this.addTel,this.addCountry)
+        putCurs(){              this.putCursService.putCurs(this.putid,this.putnom,this.putidcentre,this.putnomcentre)
                   .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {                   
                     this.errorServer=true;
