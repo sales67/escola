@@ -12,3 +12,6 @@ if (environment.production) {
 
 // arranque de la aplicación invocando al módulo raíz
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+// En este momento, Angular se hace cargo de la app, presentando nuestro contenido en el navegador,
+// y respondiendo a las interacciones del usuario en base a las instrucciones que le hemos dado.

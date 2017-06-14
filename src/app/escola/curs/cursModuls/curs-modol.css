@@ -1,3 +1,52 @@
-h1{
-    font-family: fantasy     
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+  background: #030321;
+  font-family: Arial;
+}
+
+svg {
+    
+    font: 230px 'Montserrat';
+    width: 300px;
+    height: 100px;
+   
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 10% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 100%;
+    animation: stroke-offset 1.3s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #FF0000;
+	animation-delay: -0.5s;
+}
+
+.text-copy:nth-child(2){
+	stroke: #FFFF00;
+	animation-delay: -1s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #FF0000;
+	animation-delay: -1.5s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #FFFF00;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FF8C00;
+	animation-delay: -2.5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
 }
