@@ -98,9 +98,10 @@ right: 0;
   float:right;
   margin-right:100px; 
 }
+
 h1{
     
-    color:#0A2AF7;letter-spacing:3pt;word-spacing:6pt;font-size:23px;font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
+    color:#0A2AF7;letter-spacing:1pt;word-spacing:3pt;font-size:23px;font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
     margin-bottom: 24px;
     
 }
