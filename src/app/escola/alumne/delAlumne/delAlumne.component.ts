@@ -41,7 +41,8 @@ import {Routes,Router} from '@angular/router';
                 }            
         }).subscribe(
           value => this.data=value,
-          error => {}         
+          error => {},
+          () => this.finished = true
       );        
         this.errorServer=false;
         this.errorBuit=false;

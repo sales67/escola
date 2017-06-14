@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 
 export class DelAlumneService{
-private delUrl = 'http://172.17.0.161:8080/escola/delCurs';
+private delUrl = 'http://172.17.0.98:8080/escola/delAlumne';
 
 constructor(private http: Http){}
 

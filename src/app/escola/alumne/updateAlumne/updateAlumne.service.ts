@@ -10,7 +10,7 @@ import {sprintf} from "sprintf-js";
 @Injectable()
 
 export class UpdateAlumneService{
-private updateUrl = 'http://172.17.0.161:8080/escola/updateAlumne?';
+private updateUrl = 'http://172.17.0.98:8080/escola/updateAlumne?';
 
 constructor(private http: Http){}
 
@@ -32,7 +32,8 @@ putCurs(addid,addnom,addidcentre,addnomcentre){
         let params: URLSearchParams = new URLSearchParams();
     params.set('id', addid);
     params.set('name', addnom);
-    params.set('telefon', addidcentre);
+    params.set('idEscola', addidcentre);
+    params.set('nomEscola', addnomcentre);
 
     let options = new RequestOptions({ headers: headers });
     let body = params.toString();
