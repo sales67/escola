@@ -1,6 +1,7 @@
 <html>
 <body>
     <curs-modol></curs-modol>
+    
     <p>Aqui es poden llistar cursos</p>
 <button (click)="listCurs()" class="btn btn-default">Mostrar cursos</button>
 <button (click)="provaphp()" class="btn btn-default">Prova php</button>
@@ -25,6 +26,18 @@
     <br><br>
   </div>
 <br><br>
+    <form name="listid" display="block">      	        
+            <label for="content">Entra la id del curs</label><br>		        
+		        <input type="text" name="findCurs" [(ngModel)]="id"><br><br>
+		        <button (click)="getCursId()" type="submit" class="btn btn-default">Enviar</button>
+        <div class="primary" *ngFor='let curs of cursId'>
+            nom = {{curs.nom}}
+            <div class="secundary" *ngFor='let aula of curs.aula'>
+                            <p style="margin-bottom:0%">Nom {{aula.nom}}</p>  
+                        <br>                       
+                            </div>
+                    </div>
+        </form>	
 </body>
 </html>
           

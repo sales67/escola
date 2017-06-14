@@ -1,4 +1,4 @@
-﻿import {Component, OnInit,ViewChild} from '@angular/core';
+import {Component, OnInit,ViewChild} from '@angular/core';
 import {DelCursService} from '../delCurs/delCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
@@ -14,8 +14,8 @@ import {Routes,Router} from '@angular/router';
 
     export class DelCursComponent{
         
-        delid;data;logError;marques;errorBuit;finished;errorServer;
-
+        delid;data;logError;marques;errorBuit;errorServer;finished;
+        //finished=true;
     constructor(private delCursService: DelCursService) { }
         
     // @ViewChild(deleteModelComponent) deleteModelcomponent;
@@ -27,18 +27,23 @@ import {Routes,Router} from '@angular/router';
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 
                     this.errorServer=true;
+                   
                     }   
                 else if (error.status === 400 || error.status === "400")
                     {                        
                         this.errorBuit = true; 
+                       
                     }
                 else if (error.status === 500 || error.status === "500")
                     {
                         this.errorBuit = true; 
+                       
                     }
-                else {                    
-                   return error.json();                    
-                }            
+                else {
+                   this.finished=true;
+                   return error.json();  
+                }
+                     
         }).subscribe(
           value => this.data=value,
           error => {}         

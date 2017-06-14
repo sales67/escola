@@ -9,6 +9,7 @@ import {sprintf} from "sprintf-js";
 
 export class ListCursService{
 private listUrl = 'http://172.17.0.161:8080/escola/allCurs';
+private listCursId = 'http://172.17.0.161:8080/escola/allCursId';
 
 constructor(private http: Http){}
 
@@ -23,6 +24,11 @@ provaphp() {
                 .map(res => res.text())
       return a;
   }
+getCursId(id){
+        var a = this.http.get(this.listCursId+"?id="+id)
+            .map(res => res.json());        
+        return a;
+    }  
 
 
 }

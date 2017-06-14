@@ -14,26 +14,14 @@ private updateUrl = 'http://172.17.0.98:8080/escola/updateAlumne?';
 
 constructor(private http: Http){}
 
-putCurs(addid,addnom,addidcentre,addnomcentre){     
+updateAlumne(id,camp,resposta){     
    
-    /*
-    var creds = "id=" + addId +  "&name=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
-        
-        var headers = new Headers();       
-        headers.append('Access-Control-Allow-Origin', '*');       
 
-        var a = this.http.put(this.updateUrl+creds,{
-            headers:headers
-        })
-                    .map(res => res.json());
-    return a;
-    */
     
-        let params: URLSearchParams = new URLSearchParams();
-    params.set('id', addid);
-    params.set('name', addnom);
-    params.set('idEscola', addidcentre);
-    params.set('nomEscola', addnomcentre);
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('id', id);
+    params.set('camp', camp);
+    params.set('resposta', resposta);
 
     let options = new RequestOptions({ headers: headers });
     let body = params.toString();
@@ -44,4 +32,5 @@ putCurs(addid,addnom,addidcentre,addnomcentre){
     .map((response: Response) => {})
            
     }
+
 }

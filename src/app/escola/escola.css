@@ -9,7 +9,7 @@ input{
 }
 button{
 	width: 40%;
-    background-color: #4CAF50;
+    background: url(../dd.jpg);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -19,10 +19,9 @@ button{
 }
 
 button:hover{
-    background-color: cadetblue;
-    color: green;
+    color: white;
     border: 1px solid green;
-
+    opacity:0.4;
 }
 
 button:disabled{
