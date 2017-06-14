@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -47,19 +47,6 @@ import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 81405e35901e4f2aa16cd4a3ec04cad8ab7898ef
->>>>>>> bc2da4fda1cf3d7a646a3b379d7688598a28962d
->>>>>>> 206f3ec27c6da2812c105de03dbd9861fd49f940
->>>>>>> 51fda6c756959dff9aa59972f9d0b51f62b655e1
 const routes: Routes = [
     {
    path: 'JsDavid',
