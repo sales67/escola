@@ -17,33 +17,33 @@ svg {
     fill: none;
     stroke: white;
     stroke-dasharray: 10% 29%;
-    stroke-width: 5px;
+    stroke-width: 7px;
     stroke-dashoffset: 100%;
     animation: stroke-offset 1.3s infinite linear;
 }
 
 .text-copy:nth-child(1){
-	stroke: #FF0000;
+	stroke: black;
 	animation-delay: -0.5s;
 }
 
 .text-copy:nth-child(2){
-	stroke: #FFFF00;
+	stroke: black;
 	animation-delay: -1s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #FF0000;
+	stroke: white;
 	animation-delay: -1.5s;
 }
 
 .text-copy:nth-child(4){
-	stroke: #FFFF00;
+	stroke: purple;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(5){
-	stroke: #FF8C00;
+	stroke: purple;
 	animation-delay: -2.5s;
 }
 
