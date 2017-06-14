@@ -1,18 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {AlumneToolsService} from './alumneTools.service';
+import {HobbyToolsService} from './hobbyTools.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes } from '@angular/router';
 
 @Component({
-  selector: 'alumneTools',
-  templateUrl:'./alumneTools.component.html',
+  selector: 'hobbyTools',
+  templateUrl:'./hobbyTools.component.html',
   styleUrls: ['../../escola.css'],
-  providers: [AlumneToolsService],  
+  providers: [HobbyToolsService],  
 })
 
-    export class AlumneToolsComponent{
+    export class HobbyToolsComponent{
            
- constructor(private alumneToolsService: AlumneToolsService) { } 
+ constructor(private hobbyToolsService: HobbyToolsService) { } 
     }
         
     
