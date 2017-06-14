@@ -4,6 +4,10 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 @Injectable()
 
-export class AlumneService{
+export class AlumneToolsService{
+private listAlumne = 'http://172.17.0.98:8080/escola/listAlumne';
+private listAlumneId = 'http://172.17.0.98:8080/escola/listAlumneId';
+
+
 constructor(private http: Http){}
 }

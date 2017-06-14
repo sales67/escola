@@ -6,7 +6,7 @@ import { Routes } from '@angular/router';
 @Component({
   selector: 'listAlumneId',
   templateUrl:'./listAlumneId.component.html',
-  styleUrls: ['../../../escola.css'],
+  styleUrls: ['../../../../escola.css'],
   providers: [ListAlumneIdService]
 })
 

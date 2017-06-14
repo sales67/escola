@@ -1,0 +1,39 @@
+<html>       
+    <body>
+        <alumne-modol></alumne-modol>
+        <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Hi ha algún camp buit
+</div>
+        <div *ngIf="errorId" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> La id introduïda no s'ha trobat o hi ha algún camp buit
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Server not Works!
+</div>
+      <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Correcte! </strong>S'han actualitzat les dades
+</div>
+    <form name="updateMarca" display="block">      
+            <h2>Actulatiza un alumne</h2>
+            	<label for="content">id de l'alumne</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="id"><br>
+		    <h3>Que vols Actualitzar?</h3>   
+            <select (change)="select(this.option)">                
+                <option  id="gg" class="gg" value="0" name="gg" >Nom de l'alumne</option>               
+                <option  id="ff" class="ff" value="1">Centre </option>
+            </select><br>
+        <div *ngIf="nom">
+            <label for="content">nom de l'alumne</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="nomAlumne"><br>
+             <button (click)="updateNom()" type="submit" class="btn btn-default">Enviar</button>
+        </div>
+            <div *ngIf="escola" >
+            <label for="content">id del centre</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="idEscola"><br>
+                 <button (click)="updateEscola()" type="submit" class="btn btn-default">Enviar</button>
+        </div>            
+    
+		       
+    </form> 
+    </body>
+</html>

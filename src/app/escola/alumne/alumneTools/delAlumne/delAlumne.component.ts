@@ -8,7 +8,7 @@ import {Routes,Router} from '@angular/router';
 @Component({
   selector: 'delAlumne',
   templateUrl:'./delAlumne.component.html',
-  styleUrls: ['../../escola.css'],
+  styleUrls: ['../../../escola.css'],
   providers: [DelAlumneService]
 })
 

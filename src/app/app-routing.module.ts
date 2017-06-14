@@ -4,12 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { AlumneComponent } from './escola/alumne/alumne.component';
-import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
-import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
-import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
-import { UpdateAlumneComponent } from './escola/alumne/updateAlumne/updateAlumne.component';
-import { DelAlumneComponent } from './escola/alumne/delAlumne/delAlumne.component';
-import { AddAlumneComponent } from './escola/alumne/addAlumne/addAlumne.component';
+import { AlumneToolsComponent } from './escola/alumne/alumneTools/alumneTools.component';
+import { ListAlumneIdComponent } from './escola/alumne/alumneTools/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './escola/alumne/alumneTools/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './escola/alumne/alumneTools/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './escola/alumne/alumneTools/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './escola/alumne/alumneTools/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './escola/alumne/alumneTools/addAlumne/addAlumne.component';
 
 
 
@@ -91,6 +92,10 @@ const routes: Routes = [
     {
     path: 'alumne',
     component: AlumneComponent,
+    children: []
+    },{
+    path: 'alumneTools',
+    component: AlumneToolsComponent,
     children: []
     },{
     path: 'updateAlumne',
