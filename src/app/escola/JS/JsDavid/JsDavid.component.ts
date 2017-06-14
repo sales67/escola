@@ -18,19 +18,19 @@ export class JsDavidComponent {
 /*
     psswd;user;finished;data;errorUser;data2
     
-    constructor(private phpSergiService: PhpSergiService) { }
+    constructor(private jsDavidService: JsDavidService) { }
     
     login(){       
-         this.phpSergiService.login(this.psswd,this.user)        
+         this.jsDavidService.login(this.psswd,this.user)        
            .subscribe(
           data => {
              this.data=data;
               
              console.log(this.data);
-             console.log(this.user,this.data["token"]);  
+             //console.log(this.user,this.data["token"]);  
         
         
-        });/*
+        });
         if (this.data["status"]=="ok") {   
             this.finished=true;/*
                   this.phpSergiService.token(this.user,this.data["token"])

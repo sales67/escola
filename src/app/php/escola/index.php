@@ -23,7 +23,11 @@ $db = new mysqli($servername, $username, $password,$db);
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> 5307ff10fc2305408fe9e9463436a0664b7c2275
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 ob_end_clean();
 
 
@@ -46,10 +50,13 @@ else{$correcte = [
 =======
 else{
     $correcte = [
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> 252dd1ba4af9ab455d0eaf9f2c602c8e1a305c07
 >>>>>>> 5307ff10fc2305408fe9e9463436a0664b7c2275
+>>>>>>> d2daeb0672e0f3d3ceb141e4544886b745f31639
 
 
 /*

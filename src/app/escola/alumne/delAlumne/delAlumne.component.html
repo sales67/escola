@@ -6,14 +6,14 @@
 </div>
         
         <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Error!</strong> La id introduïda no existeix
+    <strong>Error!</strong> L'alumne introduït no existeix
 </div>
         <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Correcte! </strong>s'ha eliminat la marca correctament
+    <strong>Correcte! </strong>S'ha eliminat l'alumne correctament
 </div>
     <form name="updateMarca" display="block">      
-            <h2>Eliminar un Curs</h2>
-            	<label for="content">id</label><br>
+            <h2>Eliminar un Alumne</h2>
+            	<label for="content">Id de l'alumne</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="delid"><br>
 		        <button (click)="delAlumne()" type="submit" class="btn btn-default">Enviar</button>
     </form>        

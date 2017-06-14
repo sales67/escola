@@ -2,7 +2,7 @@
     <body>
         <alumne-modol></alumne-modol>
         <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Molt be!</strong> Nou Curs afegit Correctament
+    <strong>Molt be!</strong> Nou Alumne afegit Correctament
 </div>
          <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
     <strong>Error!</strong> Hi ha algún camp buit
@@ -11,7 +11,7 @@
     <strong>Error!</strong> Server not Works!
 </div>
     <form name="addMarca" display="block">      
-            <h2>Introdueix una nou Curs</h2>		        
+            <h2>Introdueix una nou Alumne</h2>		        
             <label for="content">id</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addid"><br>
             <label for="content">nom</label><br>
