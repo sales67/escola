@@ -13,7 +13,7 @@ import {Routes,Router} from '@angular/router';
     export class ListCursComponent{
 
     constructor(private listCursService: ListCursService) { }
-        cursos; prova;
+        cursos; prova; cursId; id; errorBuit;finished;errorServer;
 
         
     listCurs(){
@@ -31,4 +31,12 @@ import {Routes,Router} from '@angular/router';
                     
       );    
     }
+            
+        getCursId(){
+            this.listCursService.getCursId(this.id)
+                .subscribe(
+                data => { this.cursId = data;console.log(this.cursId);},
+                err => console.error(err),
+                () => console.log('done')
+      );}
     }

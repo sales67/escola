@@ -1,4 +1,4 @@
-﻿import {Component, OnInit,ViewChild} from '@angular/core';
+import {Component, OnInit,ViewChild} from '@angular/core';
 import {DelCursService} from '../delCurs/delCurs.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
