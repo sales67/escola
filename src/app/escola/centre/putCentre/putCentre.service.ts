@@ -14,7 +14,7 @@ private updateUrl = 'http://172.17.0.242:8080/centre/put?';
 
 constructor(private http: Http){}
 
-putCentre(addid,addnom,addidcentre,addnomcentre){     
+putCentre(addid,addnom,addlocalitat){     
    
     /*
     var creds = "id=" + addId +  "&name=" + addName + "&telefon=" + addTel + "&pais=" + addCountry + "&correu=" + addMail;
@@ -31,9 +31,8 @@ putCentre(addid,addnom,addidcentre,addnomcentre){
     
         let params: URLSearchParams = new URLSearchParams();
 params.set('id', addid);
-params.set('name', addnom);
-params.set('telefon', addidcentre);
-params.set('pais', addnomcentre);
+params.set('name', addlocalitat);
+params.set('telefon', addnom);
 
 
     let options = new RequestOptions({ headers: headers });
