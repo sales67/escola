@@ -40,7 +40,7 @@ import {Routes,Router} from '@angular/router';
                        
                     }
                 else {
-                     this.finished=true;
+                   this.finished=true;
                    return error.json();  
                 }
                      

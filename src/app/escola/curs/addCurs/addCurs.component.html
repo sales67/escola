@@ -10,8 +10,11 @@
         <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
     <strong>Error!</strong> Server not Works!
 </div>
+        <div *ngIf="errorN" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> error 500
+</div>
     <form name="addMarca" display="block">      
-            <h2>Introdueix una nou Curs</h2>		        
+            <h2>Introdueix un nou Curs</h2>		        
             <label for="content">id</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addid"><br>
             <label for="content">nom</label><br>

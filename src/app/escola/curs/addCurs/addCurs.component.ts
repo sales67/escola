@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CursService} from '../curs.service';
 import {AddCursService} from './addCurs.service';
 
@@ -13,8 +13,9 @@ import {AddCursService} from './addCurs.service';
 
     export class AddCursComponent{
         
-        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
-           
+        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;errorN;
+        
+        
  constructor(private addCursService: AddCursService) { } 
         
      addCursPost(){        this.addCursService.addCursPost(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
@@ -29,7 +30,7 @@ import {AddCursService} from './addCurs.service';
                     }
                 else if (error.status === 500 || error.status === "500")
                     {
-                        this.errorBuit = true; 
+                        this.errorN = true; 
                     }
                 else {                    
                    return error.json();                    
@@ -42,5 +43,6 @@ import {AddCursService} from './addCurs.service';
         this.errorBuit=false;
         this.errorServer=false;
         this.finished=false;   
+        this.errorN=false;
      } 
 }
