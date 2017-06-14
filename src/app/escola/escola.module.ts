@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -8,12 +8,14 @@ import {FormsModule} from '@angular/forms';
 
 import { AlumneComponent } from './alumne/alumne.component';
 import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
-import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
-import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
-import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
-import { UpdateAlumneComponent } from './alumne/updateAlumne/updateAlumne.component';
-import { DelAlumneComponent } from './alumne/delAlumne/delAlumne.component';
-import { AddAlumneComponent } from './alumne/addAlumne/addAlumne.component';
+import { HobbyModol } from './alumne/hobbyModuls/hobby-modol';
+import { AlumneToolsComponent } from './alumne/alumneTools/alumneTools.component';
+import { ListAlumneIdComponent } from './alumne/alumneTools/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './alumne/alumneTools/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './alumne/alumneTools/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './alumne/alumneTools/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './alumne/alumneTools/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './alumne/alumneTools/addAlumne/addAlumne.component';
 
 
 import { CursComponent } from './curs/curs.component';
@@ -36,6 +38,7 @@ import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-prof
 
 import {CentreComponent } from './centre/centre.component';
 import {addCentreComponent } from './centre/addCentre/addCentre.component';
+import {addLocalitatComponent} from './centre/addLocalitat/addLocalitat.component';
 import {putCentreComponent } from './centre/putCentre/putCentre.component';
 import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
@@ -66,12 +69,15 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       PhpSergiComponent,
       PhpDavidComponent,
       PhpJaumeCComponent,
+      
+      
       ListAlumneIdComponent,
       ListAlumneAllComponent,
       ListAlumneComponent,
       AddAlumneComponent,
       DelAlumneComponent,
       UpdateAlumneComponent,
+      AlumneToolsComponent,
 
 
       CursComponent,
@@ -96,6 +102,7 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
 
       CentreComponent,
       addCentreComponent,
+      addLocalitatComponent,
       putCentreComponent,
       delCentreComponent,
       listCentreComponent,

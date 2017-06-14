@@ -1,24 +1,26 @@
 <html>
-    <body>       
-        
+    <body>
+        <alumne-modol></alumne-modol>
         <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
-    Afegit correctament
+    <strong>Molt be!</strong> Nou Alumne afegit Correctament
 </div>
          <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-    Hi ha algun camp buit
+    <strong>Error!</strong> Hi ha algún camp buit
 </div>
         <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-    Error de servidor
+    <strong>Error!</strong> Server not Works!
 </div>
     <form name="addMarca" display="block">      
-            <h2>Dades del nou centre:</h2>		        
+            <h2>Introdueix una nou Alumne</h2>		        
             <label for="content">id</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addid"><br>
             <label for="content">nom</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addnom"><br>
-            <label for="content">id localitat</label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addidlocalitat"><br>
-		        <button (click)="addCentrePost()" type="submit" class="btn btn-default">Enviar</button>
+            <label for="content">id centre</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addidcentre"><br>
+            <label for="content">nom centre</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addnomcentre"><br><br>
+		        <button (click)="addAlumne()" type="submit" class="btn btn-default">Enviar</button>
     </form>	
     </body>
 </html>

@@ -1,22 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {AddAlumneService} from './addAlumne.service';
+import {CentreService} from '../centre.service';
+import {addLocalitatService} from './addLocalitat.service';
 
 
 
 @Component({
-  selector: 'addAlumne',
-  templateUrl:'./addAlumne.component.html',
+  selector: 'addCentre',
+  templateUrl:'./addLocalitat.component.html',
   styleUrls: ['../../escola.css'],
-  providers: [AddAlumneService]
+  providers: [addLocalitatService]
 })
 
-    export class AddAlumneComponent{
+    export class addLocalitatComponent{
         
-        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
+        addid;addlocalitat;values;error;finished;errorBuit;errorServer;
            
- constructor(private addAlumneService: AddAlumneService) { } 
-        
-     addAlumne(){        this.addAlumneService.addAlumne(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
+ constructor(private addLocalitatService: addLocalitatService) { }
+
+ 	addLocalitatPost(){        this.addLocalitatService.addLocalitatPost(this.addid,this.addlocalitat)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 
@@ -36,10 +37,10 @@ import {AddAlumneService} from './addAlumne.service';
         }).subscribe(
           value => this.values=value,
           error => {},
-          () => this.finished = true
+          () => this.finished = true         
       );
         this.errorBuit=false;
         this.errorServer=false;
-        this.finished=false;
+        this.finished=false;   
      } 
-}
+ } 

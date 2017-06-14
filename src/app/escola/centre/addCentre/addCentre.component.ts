@@ -15,7 +15,35 @@ import {addCentreService} from './addCentre.service';
         
         addid;addnom;addidlocalitat;values;error;finished;errorBuit;errorServer;
            
- constructor(private addCentreService: addCentreService) { } 
+ constructor(private addCentreService: addCentreService) { }
+
+ 	addCentrePost(){        this.addCentreService.addCentrePost(this.addid,this.addnom,this.addidlocalitat)
+               .catch((error: any) => {               
+               if (error.status === 0 || error.status === "0") {
+                   console.log("Servidor Parat"); 
+                    this.errorServer=true;
+                    }   
+                else if (error.status === 400 || error.status === "400")
+                    {
+                        this.errorBuit = true; 
+                    }
+                else if (error.status === 500 || error.status === "500")
+                    {
+                        this.errorBuit = true; 
+                    }
+                else {                    
+                   return error.json();                    
+                }            
+        }).subscribe(
+          value => this.values=value,
+          error => {},
+          () => this.finished = true         
+      );
+        this.errorBuit=false;
+        this.errorServer=false;
+        this.finished=false;   
+     } 
+ } 
     /*    
      addCursPost(){        this.addCentreService.addCentrePost(this.addid,this.addnom,this.addidlocalitat)
                /*.catch((error: any) => {               
@@ -43,4 +71,3 @@ import {addCentreService} from './addCentre.service';
         this.errorServer=false;
         this.finished=false;   
      } */
-}
