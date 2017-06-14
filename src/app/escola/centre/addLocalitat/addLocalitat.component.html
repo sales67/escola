@@ -11,14 +11,12 @@
     Error de servidor
 </div>
     <form name="addMarca" display="block">      
-            <h2>Dades del nou centre:</h2>		        
+            <h2>Dades de la nova Localitat:</h2>		        
             <label for="content">id</label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addid"><br>
-            <label for="content">nom</label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addnom"><br>
-            <label for="content">id localitat</label><br>
-		        <input type="text" name="addMarca" [(ngModel)]="addidlocalitat"><br>
-		        <button (click)="addCentrePost()" type="submit" class="btn btn-default">Enviar</button>
+		        <input type="text" name="addLocalitat" [(ngModel)]="addid"><br>
+            <label for="content">nom localitat</label><br>
+		        <input type="text" name="addLocalitat" [(ngModel)]="addlocalitat"><br>
+		        <button (click)="addLocalitatPost()" type="submit" class="btn btn-default">Enviar</button>
     </form>	
     </body>
 </html>

@@ -30,6 +30,7 @@ import { EsborrarProfeComponent } from './escola/professor/esborrar-profe/esborr
 
 import {CentreComponent } from './escola/centre/centre.component';
 import {addCentreComponent } from './escola/centre/addCentre/addCentre.component';
+import {addLocalitatComponent} from './escola/centre/addLocalitat/addLocalitat.component';
 import {putCentreComponent } from './escola/centre/putCentre/putCentre.component';
 import {delCentreComponent } from './escola/centre/delCentre/delCentre.component';
 import {listCentreComponent } from './escola/centre/listCentre/listCentre.component';
@@ -46,23 +47,6 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 81405e35901e4f2aa16cd4a3ec04cad8ab7898ef
->>>>>>> bc2da4fda1cf3d7a646a3b379d7688598a28962d
->>>>>>> 206f3ec27c6da2812c105de03dbd9861fd49f940
->>>>>>> 51fda6c756959dff9aa59972f9d0b51f62b655e1
->>>>>>> 45f270a80fb8165e2dfdedfffa46584dafcb9f69
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -202,6 +186,10 @@ const routes: Routes = [
   {
       path: 'addCentre',
       component: addCentreComponent,
+  },
+  {
+      path: 'addLocalitat',
+      component: addLocalitatComponent,
   }
 ];
 

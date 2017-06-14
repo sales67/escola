@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -33,6 +33,7 @@ import { EsborrarProfeComponent } from './professor/esborrar-profe/esborrar-prof
 
 import {CentreComponent } from './centre/centre.component';
 import {addCentreComponent } from './centre/addCentre/addCentre.component';
+import {addLocalitatComponent} from './centre/addLocalitat/addLocalitat.component';
 import {putCentreComponent } from './centre/putCentre/putCentre.component';
 import {delCentreComponent } from './centre/delCentre/delCentre.component';
 import {listCentreComponent } from './centre/listCentre/listCentre.component';
@@ -92,6 +93,7 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
 
       CentreComponent,
       addCentreComponent,
+      addLocalitatComponent,
       putCentreComponent,
       delCentreComponent,
       listCentreComponent,
