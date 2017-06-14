@@ -14,8 +14,21 @@ export class ProfessorService {
     urlDelProfe2 = '/delProfe2?id=';
     urlModProfe = '/modProfe?id=';
     urlEsports = '/allEsportsProfes';
+    urlGetId = '/id';
 
     constructor(private http: Http) { }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // A C O N S E G U I R   L ' I D   A C T U A L + 1
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    getIdActual() {
+        return this.http
+                   .get(this.myURL + this.urlGetId)
+                   .map(res => res.json());
+    }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // C R E A R   U N   P R O F E S S O R
