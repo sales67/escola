@@ -93,14 +93,13 @@ right: 0;
     left: auto;
     right: 99.5%;
   }
-.title .ii{
+.button .ii{
   width:200px;
   float:right;
   margin-right:100px; 
 }
 
-h1{
-    
+h1{    
     color:#0A2AF7;letter-spacing:1pt;word-spacing:3pt;font-size:23px;font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
     margin-bottom: 24px;
     

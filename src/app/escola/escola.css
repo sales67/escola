@@ -19,10 +19,9 @@ button{
 }
 
 button:hover{
-    background-color: cadetblue;
     color: white;
     border: 1px solid green;
-
+    opacity:0.4;
 }
 
 button:disabled{
