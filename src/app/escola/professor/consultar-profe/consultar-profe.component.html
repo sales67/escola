@@ -7,25 +7,51 @@
     
     
     <div *ngIf="error" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-        <span class="error">Aquest ID no existeix</span> <br> <br>
+        <span class="error">No s'ha trobat cap professor a partir d'aquesta informació</span> <br> <br>
     </div>
     
     <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
         <span class="error">Error al servidor</span> <br> <br>
     </div>
     
-    <div *ngIf="idProfe == null && finished == true" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-        <span class="error">Falta l'identificador!!</span> <br> <br>
+    <div *ngIf="nouValor == null && finished == true" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+        <span class="error">Falten dades!!</span> <br> <br>
     </div>
     
-    
-
-    <h2>Introdueix l'ID d'un professor per consultar les seves dades:</h2>
-    
     <form name="consultarUnProfeForm">
-        <label for="idProfe">ID</label>
+        
+        <h2>Comença la cerca a partir d'aquestes dades:</h2>
+        
+        <label for="selectCamp">Selecciona un camp </label>
+        <select id="selectCamp" name="selectCamp" [(ngModel)]="camp">
+            <option *ngFor="let c of camps" [value]="c.value">  
+                {{c.display}}
+            </option>
+        </select>
+        
+        
+        
+        <!-- nom, cognoms, dni -->
+        <div id="modValor" [hidden]="true">
+            <br><br>
+            <label>Introdueix {{camp}}</label>
+            <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+            <br> <br>
+        </div>
+        
+        <!-- data naixement -->
+        <div id="modValorData" [hidden]="true">
+            <br><br>
+            <label>Selecciona la data de naixement</label>
+            <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+            <br> <br>
+        </div>
+        
+        
+        
+        <!--<label for="idProfe">ID</label>
         <input type="text" name="idProfe" id="idProfe" [(ngModel)]="idProfe">
-        <br><br>
+        <br><br>-->
 
         <h2>Selecciona la informació que vols visualitzar:</h2>
 
@@ -51,8 +77,8 @@
         <input type="checkbox" name="boolIncidencies" [(ngModel)]="boolIncidencies">
         <br>
 
-        <button (click)="consultarProfeJava()" type="submit" class="btn btn-default" [disabled]="!idProfe">CERCAR PROFESSOR (Java)</button>
-        <button (click)="consultarProfePhp()" type="submit" class="btn btn-default" [disabled]="!idProfe">CERCAR PROFESSOR (PHP)</button>
+        <button (click)="consultarProfeJava()" type="submit" class="btn btn-default" [disabled]="!nouValor">CERCAR PROFESSOR (Java)</button>
+        <button (click)="consultarProfePhp()" type="submit" class="btn btn-default" [disabled]="!nouValor">CERCAR PROFESSOR (PHP)</button>
         <br><br>
     </form>
     

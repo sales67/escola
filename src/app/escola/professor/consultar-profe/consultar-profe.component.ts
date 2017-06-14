@@ -10,6 +10,19 @@ import { BotoComponent } from '../boto/boto.component';
 })
 export class ConsultarProfeComponent implements OnInit {
 
+    camp: string;
+    nouValor;
+    
+    public camps = [
+        {value: 'id', display: 'ID'},
+        {value: 'nom', display: 'Nom'},
+        {value: 'cognoms', display: 'Cognoms'},
+        {value: 'dni', display: 'DNI'},
+        {value: 'naixement', display: 'Data de naixement'},
+        {value: 'curs', display: 'Curs impartit'},
+        {value: 'esport', display: 'Esport practicat'}
+    ];
+    
     consultardades: string;
     consultar;
     idProfe: number;
@@ -30,12 +43,28 @@ export class ConsultarProfeComponent implements OnInit {
 
     constructor(private professorService: ProfessorService) { }
 
-    //ngOnInit() { this.profes=[]; this.profes['nom']=""; this.profes['cognoms']="";}
-    ngOnInit() { }
+    ngOnInit() {
+        const selectCamp = <HTMLInputElement>document.body.querySelector('#selectCamp');
+        const modValor = <HTMLElement>document.body.querySelector('#modValor');
+        const modValorData = <HTMLElement>document.body.querySelector('#modValorData');
+        
+        selectCamp.addEventListener('change', () => {
 
+            switch (selectCamp.value) {
+                case 'naixement':
+                    modValorData.hidden = false;
+                    modValor.hidden = true;
+                    break;
+                default:
+                    modValor.hidden = false;
+                    modValorData.hidden = true;
+                    break;
+            }
+        });
+    }
 
     consultarProfeJava() {
-        this.professorService.consultarProfeJava(this.idProfe)
+        this.professorService.consultarProfeJava(this.camp, this.nouValor)
             .catch((error: any) => {
                if (error.status === 0 || error.status === "0") {
                     console.log("Servidor Aturat"); 
@@ -64,6 +93,38 @@ export class ConsultarProfeComponent implements OnInit {
             this.errorServer = false;
             this.finished = false;
     }
+
+    // nomès per ID
+    /*consultarProfeJava() {
+        this.professorService.consultarProfeJava(this.idProfe)
+            .catch((error: any) => {
+               if (error.status === 0 || error.status === "0") {
+                    console.log("Servidor Aturat"); 
+                    this.errorServer = true;
+               }
+               else if (error.status === 500 || error.status === "500")
+               {
+                   console.log("Error genèric - no troba les dades a la BD");
+                   this.errorServer = true;
+               }
+               else {
+                   return error.json();
+               }
+            })
+            .subscribe(
+                data => {
+                    this.profes = data;
+                    // java ens retona un array amb professor/s o un array buit, per tant s'ha de mirar la llargada de l'array per saber si hi ha profes
+                    if(data.length == 0) {
+                        this.error = true;
+                    }
+                },
+                () => this.finished = true
+            );
+            this.error = false;
+            this.errorServer = false;
+            this.finished = false;
+    }*/
 
 
     consultarProfePhp() {
