@@ -18,27 +18,27 @@ svg {
     stroke: white;
     stroke-dasharray: 10% 29%;
     stroke-width: 7px;
-    stroke-dashoffset: 100%;
-    animation: stroke-offset 1.3s infinite linear;
+    stroke-dashoffset: 200%;
+    animation: stroke-offset 15s infinite linear;
 }
 
 .text-copy:nth-child(1){
-	stroke: black;
+	stroke: purple;
 	animation-delay: -0.5s;
 }
 
 .text-copy:nth-child(2){
-	stroke: black;
+	stroke: purple;
 	animation-delay: -1s;
 }
 
 .text-copy:nth-child(3){
-	stroke: white;
+	stroke: purple;
 	animation-delay: -1.5s;
 }
 
 .text-copy:nth-child(4){
-	stroke: purple;
+	stroke: skyblue;
 	animation-delay: -2s;
 }
 

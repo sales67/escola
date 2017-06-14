@@ -27,7 +27,7 @@
 
         <label for="selectCamp">Selecciona el camp que vols modificar </label>
         <select id="selectCamp" name="selectCamp" [(ngModel)]="camp">
-            <option *ngFor="let c of camps" [value]="c.value">  
+            <option *ngFor="let c of camps" [value]="c.value">
                 {{c.display}}
             </option>
         </select>

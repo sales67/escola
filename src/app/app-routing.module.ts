@@ -19,6 +19,7 @@ import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';
 import { PutCursComponent } from './escola/curs/putCurs/putCurs.component';
 import { AddCursComponent } from './escola/curs/addCurs/addCurs.component';
 import { ListCursComponent } from './escola/curs/listCurs/listCurs.component';
+import { AddCursaulaComponent } from './escola/curs/Cursaula/addCursaula.component';
 
 import { ProfessorComponent } from './escola/professor/professor.component';
 
@@ -147,7 +148,11 @@ const routes: Routes = [
       path: 'listCurs',
       component: ListCursComponent,
 
-  },   
+  },
+  {
+      path: 'addCursaula',
+      component: AddCursaulaComponent,
+  },    
     {
     path: 'professor',
     component: ProfessorComponent,

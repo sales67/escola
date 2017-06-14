@@ -20,11 +20,43 @@
             <span class="error">Error al servidor</span> <br><br>
         </div>
         
-        <h2>Introdueix l'ID d'un professor per donar-lo de baixa:</h2>
+        <!--<h2>Introdueix l'ID d'un professor per donar-lo de baixa:</h2>
         
         <form name="baixaProfeForm">
             <input type="text" name="delProfe" id="delProfe" [(ngModel)]="delProfe">
-            <button (click)="esborrarProfe()" type="submit" class="btn btn-default" [disabled]="!delProfe">BAIXA PROFESSOR</button>
+            <button (click)="esborrarProfe2()" type="submit" class="btn btn-default" [disabled]="!delProfe">BAIXA PROFESSOR</button>
+        </form>-->
+        
+        <h2>Introdueix les dades per donar de baixa un o varis professors</h2>
+        
+        <form>
+            <label for="selectCamp">Selecciona el camp</label>
+            <select name="selectCamp" id="selectCamp" [(ngModel)]="camp">
+                <option *ngFor="let c of camps" [value]="c.value">
+                    {{c.display}}
+                </option>
+            </select>
+            
+            <!-- nom, cognoms, dni -->
+            <div id="delValor" [hidden]="true">
+                <br><br>
+                <label>Introdueix {{camp}}</label>
+                <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+                
+            </div>
+
+            <!-- data naixement -->
+            <div id="delValorData" [hidden]="true">
+                <br><br>
+                <label>Selecciona la data de naixement</label>
+                <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+                
+            </div>
+            
+            <br><br>
+            
+            <button (click)="esborrarProfe()" type="submit" class="btn btn-default" [disabled]="!nouValor">BAIXA PROFESSOR</button>
+            
         </form>
         
     </body>
