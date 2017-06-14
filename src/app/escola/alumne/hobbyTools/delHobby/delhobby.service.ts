@@ -4,13 +4,13 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 
-export class DelAlumneService{
+export class DelHobbyService{
 private delUrl = 'http://172.17.0.98:8080/escola/delAlumne';
 
 constructor(private http: Http){}
 
 
-delAlumne(delid){     
+delHobby(delid){     
     
  var crear = "?id=" + delid;
        var headers = new Headers();
