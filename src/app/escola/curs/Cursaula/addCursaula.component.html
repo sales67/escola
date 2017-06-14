@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <curs-modol></curs-modol>
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Molt be!</strong> Nou Curs afegit Correctament
+</div>
+         <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Hi ha algún camp buit
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Server not Works!
+</div>
+        <div *ngIf="errorN" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> error 500
+</div>
+    <form name="addMarca" display="block">      
+            <h2>Introdueix un nou Curs</h2>		        
+            <label for="content">id curs</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addidcurs"><br>
+            <label for="content">id aula</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="addidaula"><br>
+		        <button (click)="addCursaulaPost()" type="submit" class="btn btn-default">Enviar</button>
+    </form>	
+    </body>
+</html>

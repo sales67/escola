@@ -22,6 +22,9 @@ import { PutCursComponent } from './curs/putCurs/putCurs.component';
 import { AddCursComponent } from './curs/addCurs/addCurs.component';
 import { ListCursComponent } from './curs/listCurs/listCurs.component';
 import { CursModol } from './curs/cursModuls/curs-modol';
+import { AddCursaulaComponent } from './curs/Cursaula/addCursaula.component';
+
+
 
 
 import { ProfessorComponent } from './professor/professor.component';
@@ -76,6 +79,7 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       ListCursComponent,
       AddCursComponent,
       PutCursComponent,
+      AddCursaulaComponent,
       
       JsDavidComponent,
       JsJaumeCComponent,
