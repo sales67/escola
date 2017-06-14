@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map'
 @Injectable()
 
 export class JsJaumeCService{  
-    /*
+    
     constructor(private http: Http){}
-    consultar() {
+    /*consultar() {
        return this.http.get('http://172.17.0.98/projectes/escola/src/app/php/escola/index.php').map(res => res.text());
    }
     login(psswd,user){        
@@ -20,4 +20,7 @@ export class JsJaumeCService{
        
          return this.http.get('http://localhost:8080/escola/login?user='+user+'&token='+token).map(res => res.json())        
     }*/
+    consultar(){
+      return this.http.get('http://172.17.0.242:3000/testGet')
+    }
 }

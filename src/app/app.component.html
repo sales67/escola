@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <style>
 html {background-color: skyblue;}
@@ -6,7 +6,7 @@ html {background-color: skyblue;}
     </head>
     <body>        
 <div class="title" >
-  <h1>Escola Otaku <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" /></h1>
+  <h1>{{title}} <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" /></h1>
   </div>   
     <div id="cssmenu">
         <ul>
@@ -31,6 +31,12 @@ html {background-color: skyblue;}
           </li>
           <li>
             <a  routerLink="/centre" routerLinkActive="active">Centres</a>
+            <ul>
+              <li><a routerLink="/addCentre" routerLinkActive="active">Add</a></li>
+              <li><a routerLink="/putCentre" routerLinkActive="active">Put</a></li>
+              <li><a routerLink="/listCentre" routerLinkActive="active">List</a></li>
+              <li><a routerLink="/delCentre" routerLinkActive="active">Del</a></li>
+            </ul>  
           <li class="has-sub">
             <a routerLink="/alumne" routerLinkActive="active">Alumnes</a>
               <ul>

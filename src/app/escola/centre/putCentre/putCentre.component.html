@@ -1,1 +1,27 @@
-<p>putCentre</p>
+<html>       
+    <body>
+        <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Hi ha algún camp buit
+</div>
+        <div *ngIf="errorId" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> La id introduïda no s'ha trobat o hi ha algún camp buit
+</div>
+        <div *ngIf="errorServer" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Error!</strong> Server not Works!
+</div>
+      <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
+    <strong>Correcte! </strong>S'han actualitzat les dades
+</div>
+    <form name="updateCentre" display="block">      
+            <h2>Actulatizar</h2>
+            	<label for="content">id</label><br>
+		        <input type="text" name="addCentre" [(ngModel)]="putid"><br>
+            <label for="content">localitat</label><br>
+		        <input type="text" name="addCentre" [(ngModel)]="putlocalitat"><br>
+            <label for="content">Nom</label><br>
+		        <input type="text" name="addCentre" [(ngModel)]="putnom"><br><br>
+    
+		        <button (click)="putCentre()" type="submit" class="btn btn-default">Enviar</button>
+    </form> 
+    </body>
+</html>

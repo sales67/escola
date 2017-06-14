@@ -13,13 +13,13 @@ import {Routes,Router} from '@angular/router';
 
     export class putCentreComponent{
         
-    addId;addName;addTel;addCountry;addMail;values;errorBuit;finished;errorServer;errorId;
+    addId;addLocalitat;addNom;values;errorBuit;finished;errorServer;errorId;
         
 
     constructor(private putCentreService: putCentreService) { }
                             
-        putCurs(){              this.putCentreService.putCentre(this.addId,this.addName,this.addTel,this.addCountry)
-                  .catch((error: any) => {               
+        putCurs(){this.putCentreService.putCentre(this.addId,this.addLocalitat,this.addNom)
+        	.catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {                   
                     this.errorServer=true;
                     }   

@@ -24,13 +24,14 @@ var app = express();
 
 connection.connect(function(err){
 if(!err) {
-   console.log("Database is connected \n");  
+   console.log("Database is connected \n"); 
+
 } else {
    console.log("Error connecting database \n");  
 }
 });
 
-var queryString = 'SELECT * FROM  centre';
+/*var queryString = 'SELECT * FROM  centre';
 
 connection.query(queryString, function(err, rows, fields) {
    if (err) throw err;
@@ -38,6 +39,12 @@ connection.query(queryString, function(err, rows, fields) {
    
        console.log(rows);
    
+});*/
+var adr = '1';
+var sql = 'SELECT * FROM centre WHERE id = ?';
+connection.query(sql, [adr], function (err, result) {
+  if (err) throw err;
+  console.log(result);
 });
 
 
