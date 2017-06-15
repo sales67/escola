@@ -8,15 +8,14 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 
-export class ListAlumneIdService{
-private listAlumne = 'http://172.17.0.98:8080/escola/listAlumne';
-private listAlumneId = 'http://172.17.0.98:8080/escola/listAlumneId';
-
+export class ListHobbyIdService{
+    
+    listHobbyId="";
 
 constructor(private http: Http){}
 
-    getAlumneId(id){
-        var a = this.http.get(this.listAlumneId+"?id="+id)
+    getHobbyId(id){
+        var a = this.http.get(this.listHobbyId+"?id="+id)
             .map(res => res.json());        
         return a;
     }  

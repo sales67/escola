@@ -1,23 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {ListAlumneIdService} from './listAlumneId.service';
+import {ListHobbyIdService} from './listHobbyId.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes } from '@angular/router';
 
 @Component({
-  selector: 'listAlumneId',
-  templateUrl:'./listAlumneId.component.html',
+  selector: 'listHobbyId',
+  templateUrl:'./listHobbyId.component.html',
   styleUrls: ['../../../../escola.css'],
-  providers: [ListAlumneIdService]
+  providers: [ListHobbyIdService]
 })
 
-    export class ListAlumneIdComponent{
+    export class ListHobbyIdComponent{
         
 
            
- constructor(private listAlumneIdService: ListAlumneIdService) { } 
+ constructor(private listHobbyIdService: ListHobbyIdService) { } 
   alumneId;id;        
         getAlumneId(){
-            this.listAlumneIdService.getAlumneId(this.id)
+            this.listHobbyIdService.getHobbyId(this.id)
                 .subscribe(
                 data => { this.alumneId = data;console.log(this.alumneId);},
                 err => console.error(err),

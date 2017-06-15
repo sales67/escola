@@ -1,14 +1,13 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
 import {FormsModule} from '@angular/forms';
 
-
+//--------------------- SERGI
 
 import { AlumneComponent } from './alumne/alumne.component';
 import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
-import { HobbyModol } from './alumne/hobbyModuls/hobby-modol';
 import { AlumneToolsComponent } from './alumne/alumneTools/alumneTools.component';
 import { ListAlumneIdComponent } from './alumne/alumneTools/listAlumne/listAlumneId/listAlumneId.component';
 import { ListAlumneAllComponent } from './alumne/alumneTools/listAlumne/listAlumneAll/listAlumneAll.component';
@@ -17,6 +16,15 @@ import { UpdateAlumneComponent } from './alumne/alumneTools/updateAlumne/updateA
 import { DelAlumneComponent } from './alumne/alumneTools/delAlumne/delAlumne.component';
 import { AddAlumneComponent } from './alumne/alumneTools/addAlumne/addAlumne.component';
 
+
+import { HobbyModol } from './alumne/hobbyModuls/hobby-modol';
+import { HobbyToolsComponent } from './alumne/hobbyTools/hobbyTools.component';
+import { ListHobbyComponent } from './alumne/hobbyTools/listHobby/ListHobby.component';
+import { ListHobbyAllComponent } from './alumne/hobbyTools/listHobby/listHobbyAll/ListHobbyAll.component';
+import { ListHobbyIdComponent } from './alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
+
+
+//-------------------------------
 
 import { CursComponent } from './curs/curs.component';
 import { DelCursComponent } from './curs/delCurs/delCurs.component';
@@ -61,15 +69,20 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       FormsModule,
       AppRoutingModule
   ],
-  declarations: [
+  declarations: [     
+      
+      
       AlumneModol,
       AlumneComponent,
       CursModol,
+      
+      //---------PHP
       
       PhpSergiComponent,
       PhpDavidComponent,
       PhpJaumeCComponent,
       
+      //------------SERGI
       
       ListAlumneIdComponent,
       ListAlumneAllComponent,
@@ -78,7 +91,14 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       DelAlumneComponent,
       UpdateAlumneComponent,
       AlumneToolsComponent,
+      
 
+      HobbyToolsComponent,
+      ListHobbyComponent,
+      ListHobbyAllComponent,
+      ListHobbyIdComponent,
+      
+      //-----------------
 
       CursComponent,
       DelCursComponent,

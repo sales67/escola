@@ -6,14 +6,14 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 
-export class AddAlumneService{
+export class AddHobbyService{
 private addUrl = 'http://172.17.0.98:8080/escola/addAlumne?';
 
 
 constructor(private http: Http){}
 
 
-addAlumne(addid,addnom,addidcentre,addnomcentre){     
+addHobby(addid,addnom,addidcentre,addnomcentre){     
         var creds = "id=" + addid + "&nom=" + addnom + "&idEscola=" + addidcentre + "&nomEscola=" + addnomcentre;
 
         

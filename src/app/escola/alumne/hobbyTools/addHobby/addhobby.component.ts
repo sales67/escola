@@ -1,22 +1,22 @@
 import {Component, OnInit} from '@angular/core';
-import {AddAlumneService} from './addAlumne.service';
+import {AddHobbyService} from './addHobby.service';
 
 
 
 @Component({
-  selector: 'addAlumne',
-  templateUrl:'./addAlumne.component.html',
+  selector: 'addHobby',
+  templateUrl:'./addHobby.component.html',
   styleUrls: ['../../../escola.css'],
-  providers: [AddAlumneService]
+  providers: [AddHobbyService]
 })
 
-    export class AddAlumneComponent{
+    export class AddHobbyComponent{
         
         addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
            
- constructor(private addAlumneService: AddAlumneService) { } 
+ constructor(private addHobbyService: AddHobbyService) { } 
         
-     addAlumne(){        this.addAlumneService.addAlumne(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
+     addHobby(){        this.addHobbyService.addHobby(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 
