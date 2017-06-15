@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+//------------------------SERGI
 
 
 import { AlumneComponent } from './escola/alumne/alumne.component';
@@ -13,6 +14,13 @@ import { DelAlumneComponent } from './escola/alumne/alumneTools/delAlumne/delAlu
 import { AddAlumneComponent } from './escola/alumne/alumneTools/addAlumne/addAlumne.component';
 
 
+import { HobbyToolsComponent } from './escola/alumne/hobbyTools/hobbyTools.component';
+import { ListHobbyComponent } from './escola/alumne/hobbyTools/listHobby/ListHobby.component';
+import { ListHobbyAllComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyAll/ListHobbyAll.component';
+import { ListHobbyIdComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
+
+
+//---------------------------------
 
 import { CursComponent } from './escola/curs/curs.component';
 import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';

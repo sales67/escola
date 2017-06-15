@@ -1,26 +1,26 @@
 import {Component, OnInit} from '@angular/core';
-import {ListAlumneAllService} from './listAlumneAll.service';
+import {ListHobbyAllService} from './listHobbyAll.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes } from '@angular/router';
 
 @Component({
-  selector: 'listAlumneAll',
-  templateUrl:'./listAlumneAll.component.html',
+  selector: 'listHobbyAll',
+  templateUrl:'./listHobbyAll.component.html',
   styleUrls: ['../../../../escola.css'],
-  providers: [ListAlumneAllService]
+  providers: [ListHobbyAllService]
 })
 
-    export class ListAlumneAllComponent{
+    export class ListHobbyAllComponent{
         
 
            
- constructor(private listAlumneAllService: ListAlumneAllService) { } 
+ constructor(private listHobbyAllService: ListHobbyAllService) { } 
         
-        alumnes;
-  listAlumnes(){
-     this.listAlumneAllService.getAlumnes()
+        hobbies;
+  listHobby(){
+     this.listHobbyAllService.getHobbies()
                 .subscribe(
-                data => { this.alumnes = data;console.log(this.alumnes);},
+                data => { this.hobbies = data},
                 err => console.error(err))
          
                 } 
