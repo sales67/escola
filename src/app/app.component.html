@@ -42,27 +42,59 @@ html {background-color: skyblue;}
           <li class="has-sub">
             <a routerLink="/alumne" routerLinkActive="active">Alumnes</a>
               <ul>
-                  <li>
-                    <a routerLink="/addAlumne" routerLinkActive="active">Afegir alumnes</a>
-                  </li>
-                <li class="has-sub">                    
-                    
-                    <a routerLink="/listAlumne" routerLinkActive="active">Mostrar alumnes</a>
-                    <ul>
-                        <li>
-                            <a routerLink="/listAlumneId" routerLinkActive="active">Mostrar per Id</a>
+                  <li class="has-sub">
+                      <a routerLink="/alumneTools" routerLinkActive="active">Editar alumnes</a>
+                      <ul>
+                      <li>
+                        <a routerLink="/addAlumne" routerLinkActive="active">Afegir alumnes</a>
+                      </li>
+                        <li class="has-sub">                    
+
+                            <a routerLink="/listAlumne" routerLinkActive="active">Mostrar alumnes</a>
+                            <ul>
+                                <li>
+                                    <a routerLink="/listAlumneId" routerLinkActive="active">Mostrar per Id</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/listAlumneAll" routerLinkActive="active">Mostrar tots els alumnes</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <a routerLink="/listAlumneAll" routerLinkActive="active">Mostrar tots els alumnes</a>
-                        </li>
-                    </ul>
-                </li>
-                  <li>
-                    <a routerLink="/updateAlumne" routerLinkActive="active">Actualitzar alumnes</a>
+                      <li>
+                        <a routerLink="/updateAlumne" routerLinkActive="active">Actualitzar alumnes</a>
+                      </li>
+                      <li>
+                        <a class="delete" routerLink="/delAlumne" routerLinkActive="active">Esborrar alumnes</a> 
+                          </li>
+                    </ul>                       
                   </li>
-                  <li>
-                    <a class="delete" routerLink="/delAlumne" routerLinkActive="active">Esborrar alumnes</a>
-                  </li>                  
+                  <li class="has-sub">
+                      <a routerLink="/hobbieTools" routerLinkActive="active">Editar hobbies</a>
+                      <ul>
+                      <li>
+                        <a routerLink="/addHobby" routerLinkActive="active">Afegir hobbies</a>
+                      </li>
+                        <li class="has-sub">                    
+
+                            <a routerLink="/listHobby" routerLinkActive="active">Mostrar hobbies</a>
+                            <ul>
+                                <li>
+                                    <a routerLink="/listHobbyId" routerLinkActive="active">Mostrar per Id</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/listHobbyAll" routerLinkActive="active">Mostrar tots els hobbies</a>
+                                </li>
+                            </ul>
+                        </li>
+                      <li>
+                        <a routerLink="/updateHobby" routerLinkActive="active">Actualitzar hobbies</a>
+                      </li>
+                      <li>
+                        <a class="delete" routerLink="/delHobby" routerLinkActive="active">Esborrar hobbies</a> 
+                          </li>
+                    </ul>                       
+                
+                  </li>
               </ul>
           </li>
           <li>

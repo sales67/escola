@@ -6,16 +6,16 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 
-export class AddCursService{
-private addUrl = 'http://172.17.0.161:8080/escola/addCurs';
+export class AddCursaulaService{
+private addUrl = 'http://172.17.0.161:8080/escola/addCursaula';
 
 
 constructor(private http: Http){}
 
 
-addCursPost(addid,addnom,addidcentre,addnomcentre){    
+addCursaulaPost(addidcurs,addidaula){    
     
-        var creds = "id=" + addid + "&nom=" + addnom + "&idcentre=" + addidcentre + "&nomcentre=" + addnomcentre;
+        var creds = "idcurs=" + addidcurs + "&idaula=" + addidaula;
 
     //console.log(creds);
         

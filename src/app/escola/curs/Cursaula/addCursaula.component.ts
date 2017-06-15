@@ -1,22 +1,24 @@
 import {Component, OnInit} from '@angular/core';
-import {AddAlumneService} from './addAlumne.service';
+import {CursService} from '../curs.service';
+import {AddCursaulaService} from './addCursaula.service';
 
 
 
 @Component({
-  selector: 'addAlumne',
-  templateUrl:'./addAlumne.component.html',
+  selector: 'addCursaula',
+  templateUrl:'./addCursaula.component.html',
   styleUrls: ['../../escola.css'],
-  providers: [AddAlumneService]
+  providers: [AddCursaulaService]
 })
 
-    export class AddAlumneComponent{
+    export class AddCursaulaComponent{
         
-        addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
-           
- constructor(private addAlumneService: AddAlumneService) { } 
+        addid;addnom;addidcurs;addidaula;values;error;finished;errorBuit;errorServer;errorN;
         
-     addAlumne(){        this.addAlumneService.addAlumne(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
+        
+ constructor(private addCursaulaService: AddCursaulaService) { } 
+        
+     addCursaulaPost(){        this.addCursaulaService.addCursaulaPost(this.addidcurs,this.addidaula)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 
@@ -28,7 +30,7 @@ import {AddAlumneService} from './addAlumne.service';
                     }
                 else if (error.status === 500 || error.status === "500")
                     {
-                        this.errorBuit = true; 
+                        this.errorN = true; 
                     }
                 else {                    
                    return error.json();                    
@@ -36,10 +38,11 @@ import {AddAlumneService} from './addAlumne.service';
         }).subscribe(
           value => this.values=value,
           error => {},
-          () => this.finished = true
+          () => this.finished = true         
       );
         this.errorBuit=false;
         this.errorServer=false;
-        this.finished=false;
+        this.finished=false;   
+        this.errorN=false;
      } 
 }

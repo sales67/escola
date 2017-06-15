@@ -1,27 +1,27 @@
 import {Component, OnInit,ViewChild} from '@angular/core';
-import {DelAlumneService} from '../delAlumne/delAlumne.service';
+import {DelHobbyService} from '../delHobby/delHobby.service';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
 //import {deleteModelComponent} from '../../model/delete-model/deleteModel.component';
 //import {deleteModelService} from'../../model/delete-model/deleteModel.service';
 
 @Component({
-  selector: 'delAlumne',
-  templateUrl:'./delAlumne.component.html',
-  styleUrls: ['../../escola.css'],
-  providers: [DelAlumneService]
+  selector: 'delhobby',
+  templateUrl:'./delHobby.component.html',
+  styleUrls: ['../../../escola.css'],
+  providers: [DelHobbyService]
 })
 
-    export class DelAlumneComponent{
+    export class DelHobbyComponent{
         
         delid;data;logError;marques;errorBuit;finished;errorServer;
 
-    constructor(private delAlumneService: DelAlumneService) { }
+    constructor(private delhobbyService: DelHobbyService) { }
         
     // @ViewChild(deleteModelComponent) deleteModelcomponent;
 
-        delAlumne(){  
-            this.delAlumneService.delAlumne(this.delid) 
+        delHobby(){  
+            this.delHobbyService.delHobby(this.delid) 
             .catch((error: any) => { 
                 console.log(error.status);
                if (error.status === 0 || error.status === "0") {

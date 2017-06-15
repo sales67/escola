@@ -8,12 +8,14 @@ import {FormsModule} from '@angular/forms';
 
 import { AlumneComponent } from './alumne/alumne.component';
 import { AlumneModol } from './alumne/alumneModuls/alumne-modol';
-import { ListAlumneIdComponent } from './alumne/listAlumne/listAlumneId/listAlumneId.component';
-import { ListAlumneAllComponent } from './alumne/listAlumne/listAlumneAll/listAlumneAll.component';
-import { ListAlumneComponent } from './alumne/listAlumne/listAlumne.component';
-import { UpdateAlumneComponent } from './alumne/updateAlumne/updateAlumne.component';
-import { DelAlumneComponent } from './alumne/delAlumne/delAlumne.component';
-import { AddAlumneComponent } from './alumne/addAlumne/addAlumne.component';
+import { HobbyModol } from './alumne/hobbyModuls/hobby-modol';
+import { AlumneToolsComponent } from './alumne/alumneTools/alumneTools.component';
+import { ListAlumneIdComponent } from './alumne/alumneTools/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './alumne/alumneTools/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './alumne/alumneTools/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './alumne/alumneTools/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './alumne/alumneTools/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './alumne/alumneTools/addAlumne/addAlumne.component';
 
 
 import { CursComponent } from './curs/curs.component';
@@ -22,6 +24,9 @@ import { PutCursComponent } from './curs/putCurs/putCurs.component';
 import { AddCursComponent } from './curs/addCurs/addCurs.component';
 import { ListCursComponent } from './curs/listCurs/listCurs.component';
 import { CursModol } from './curs/cursModuls/curs-modol';
+import { AddCursaulaComponent } from './curs/Cursaula/addCursaula.component';
+
+
 
 
 import { ProfessorComponent } from './professor/professor.component';
@@ -64,12 +69,15 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       PhpSergiComponent,
       PhpDavidComponent,
       PhpJaumeCComponent,
+      
+      
       ListAlumneIdComponent,
       ListAlumneAllComponent,
       ListAlumneComponent,
       AddAlumneComponent,
       DelAlumneComponent,
       UpdateAlumneComponent,
+      AlumneToolsComponent,
 
 
       CursComponent,
@@ -77,6 +85,7 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       ListCursComponent,
       AddCursComponent,
       PutCursComponent,
+      AddCursaulaComponent,
       
       JsDavidComponent,
       JsJaumeCComponent,

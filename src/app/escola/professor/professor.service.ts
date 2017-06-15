@@ -9,11 +9,26 @@ export class ProfessorService {
     myURL = 'http://172.17.0.191:8080/escola';
     urlCrearProfe = '/addPtoC?';
     urlGetProfe = '/unProfe?id=';
-    urlDelProfe = '/delProfe?id=';
+    urlGetProfe2 = '/unProfe2?camp=';
+    urlDelProfe = '/delProfe?camp=';
+    urlDelProfe2 = '/delProfe2?id=';
     urlModProfe = '/modProfe?id=';
     urlEsports = '/allEsportsProfes';
+    urlGetId = '/id';
 
     constructor(private http: Http) { }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // A C O N S E G U I R   L ' I D   A C T U A L + 1
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    getIdActual() {
+        return this.http
+                   .get(this.myURL + this.urlGetId)
+                   .map(res => res.json());
+    }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // C R E A R   U N   P R O F E S S O R
@@ -35,13 +50,19 @@ export class ProfessorService {
     // C O N S U L T A R   U N   P R O F E S S O R ( JAVA i PHP)
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    consultarProfeJava(id) {
+    consultarProfeJava(camp, valor) {
+        return this.http
+                   .get(this.myURL + this.urlGetProfe2 + camp + '&valor=' + valor)
+                   .map(res => res.json());
+    }
+    
+    /*consultarProfeJava(id) {
         const profe = this.http
                           .get(this.myURL + this.urlGetProfe + id)
                           .map(res => res.json());
 
         return profe;
-    }
+    }*/
 
     consultarProfePhp(id) {
         return this.http
@@ -61,9 +82,14 @@ export class ProfessorService {
     // E S B O R R A R   U N   P R O F E S S O R
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    esborrarProfe(id){
-        return this.http.delete(this.myURL + this.urlDelProfe + id)
+    esborrarProfe(camp, valor){
+        return this.http.delete(this.myURL + this.urlDelProfe + camp + "&valor=" + valor)
         .map(res => res.json());
+    }
+
+    esborrarProfe2(id){
+        return this.http.delete(this.myURL + this.urlDelProfe2 + id)
+                   .map(res => res.json());
     }
 
 

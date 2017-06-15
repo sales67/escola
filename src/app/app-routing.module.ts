@@ -4,12 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { AlumneComponent } from './escola/alumne/alumne.component';
-import { ListAlumneIdComponent } from './escola/alumne/listAlumne/listAlumneId/listAlumneId.component';
-import { ListAlumneAllComponent } from './escola/alumne/listAlumne/listAlumneAll/listAlumneAll.component';
-import { ListAlumneComponent } from './escola/alumne/listAlumne/listAlumne.component';
-import { UpdateAlumneComponent } from './escola/alumne/updateAlumne/updateAlumne.component';
-import { DelAlumneComponent } from './escola/alumne/delAlumne/delAlumne.component';
-import { AddAlumneComponent } from './escola/alumne/addAlumne/addAlumne.component';
+import { AlumneToolsComponent } from './escola/alumne/alumneTools/alumneTools.component';
+import { ListAlumneIdComponent } from './escola/alumne/alumneTools/listAlumne/listAlumneId/listAlumneId.component';
+import { ListAlumneAllComponent } from './escola/alumne/alumneTools/listAlumne/listAlumneAll/listAlumneAll.component';
+import { ListAlumneComponent } from './escola/alumne/alumneTools/listAlumne/listAlumne.component';
+import { UpdateAlumneComponent } from './escola/alumne/alumneTools/updateAlumne/updateAlumne.component';
+import { DelAlumneComponent } from './escola/alumne/alumneTools/delAlumne/delAlumne.component';
+import { AddAlumneComponent } from './escola/alumne/alumneTools/addAlumne/addAlumne.component';
 
 
 
@@ -18,6 +19,7 @@ import { DelCursComponent } from './escola/curs/delCurs/delCurs.component';
 import { PutCursComponent } from './escola/curs/putCurs/putCurs.component';
 import { AddCursComponent } from './escola/curs/addCurs/addCurs.component';
 import { ListCursComponent } from './escola/curs/listCurs/listCurs.component';
+import { AddCursaulaComponent } from './escola/curs/Cursaula/addCursaula.component';
 
 import { ProfessorComponent } from './escola/professor/professor.component';
 
@@ -47,6 +49,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 382b92207d976c6f015dcf27be21ae92e128fd85
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -91,6 +97,10 @@ const routes: Routes = [
     {
     path: 'alumne',
     component: AlumneComponent,
+    children: []
+    },{
+    path: 'alumneTools',
+    component: AlumneToolsComponent,
     children: []
     },{
     path: 'updateAlumne',
@@ -141,7 +151,11 @@ const routes: Routes = [
       path: 'listCurs',
       component: ListCursComponent,
 
-  },   
+  },
+  {
+      path: 'addCursaula',
+      component: AddCursaulaComponent,
+  },    
     {
     path: 'professor',
     component: ProfessorComponent,
