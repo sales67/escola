@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //------------------------SERGI
@@ -18,7 +18,8 @@ import { HobbyToolsComponent } from './escola/alumne/hobbyTools/hobbyTools.compo
 import { ListHobbyComponent } from './escola/alumne/hobbyTools/listHobby/ListHobby.component';
 import { ListHobbyAllComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyAll/ListHobbyAll.component';
 import { ListHobbyIdComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
-
+import { AddHobbyComponent } from './escola/alumne/hobbyTools/addHobby/addHobby.component';
+import { DelHobbyComponent } from './escola/alumne/hobbyTools/delHobby/delHobby.component';
 
 //---------------------------------
 
@@ -57,10 +58,7 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 382b92207d976c6f015dcf27be21ae92e128fd85
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -103,10 +101,46 @@ const routes: Routes = [
     children: []
     },
     {
+    path: 'addHobbyComponent',
+    component: AddHobbyComponent,
+    children: []
+    },
+    {
+    path: 'delHobbyComponent',
+    component: DelHobbyComponent,
+    children: []
+    },
+    {
+    path: 'addHobbyComponent',
+    component: AddHobbyComponent,
+    children: []
+    },
+    {
+    path: 'listHobbyIdComponent',
+    component: ListHobbyIdComponent,
+    children: []
+    },
+    {
+    path: 'listHobbyAllComponent',
+    component: ListHobbyAllComponent,
+    children: []
+    },
+    {
+    path: 'listHobbyComponent',
+    component: ListHobbyComponent,
+    children: []
+    },
+    {
+    path: 'hobbyTools',
+    component: HobbyToolsComponent,
+    children: []
+    },
+    {
     path: 'alumne',
     component: AlumneComponent,
     children: []
-    },{
+    },
+    {
     path: 'alumneTools',
     component: AlumneToolsComponent,
     children: []

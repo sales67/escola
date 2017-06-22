@@ -22,6 +22,8 @@ import { HobbyToolsComponent } from './alumne/hobbyTools/hobbyTools.component';
 import { ListHobbyComponent } from './alumne/hobbyTools/listHobby/ListHobby.component';
 import { ListHobbyAllComponent } from './alumne/hobbyTools/listHobby/listHobbyAll/ListHobbyAll.component';
 import { ListHobbyIdComponent } from './alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
+import { DelHobbyComponent } from './alumne/hobbyTools/delHobby/delHobby.component';
+import { AddHobbyComponent } from './alumne/hobbyTools/addHobby/addHobby.component';
 
 
 //-------------------------------
@@ -97,6 +99,8 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       ListHobbyComponent,
       ListHobbyAllComponent,
       ListHobbyIdComponent,
+      AddHobbyComponent,
+      DelHobbyComponent,
       
       //-----------------
 
