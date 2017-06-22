@@ -10,6 +10,19 @@ import { BotoComponent } from '../boto/boto.component';
 })
 export class ConsultarProfeComponent implements OnInit {
 
+    camp: string;
+    nouValor;
+    
+    public camps = [
+        {value: 'id', display: 'ID'},
+        {value: 'nom', display: 'Nom'},
+        {value: 'cognoms', display: 'Cognoms'},
+        {value: 'dni', display: 'DNI'},
+        {value: 'naixement', display: 'Data de naixement'},
+        {value: 'curs', display: 'Curs impartit'},
+        {value: 'esport', display: 'Esport practicat'}
+    ];
+    
     consultardades: string;
     consultar;
     idProfe: number;
@@ -23,6 +36,7 @@ export class ConsultarProfeComponent implements OnInit {
     boolCurs = true;
     boolEsports = true;
     boolIncidencies = true;
+    // idActual: number;
 
     error;
     errorServer;
@@ -30,12 +44,48 @@ export class ConsultarProfeComponent implements OnInit {
 
     constructor(private professorService: ProfessorService) { }
 
-    //ngOnInit() { this.profes=[]; this.profes['nom']=""; this.profes['cognoms']="";}
-    ngOnInit() { }
+    ngOnInit() {
+        // constants i funció per visualitzar un tipus d'INPUT diferent segons l'opció escollida en el SELECT
+        const selectCamp = <HTMLInputElement>document.body.querySelector('#selectCamp');
+        // const consId = <HTMLElement>document.body.querySelector('#consId');
+        const consValor = <HTMLElement>document.body.querySelector('#consValor');
+        const consValorData = <HTMLElement>document.body.querySelector('#consValorData');
+        
+        selectCamp.addEventListener('change', () => {
 
+            switch (selectCamp.value) {
+                /*case 'id':
+                    consId.hidden = false;
+                    consValorData.hidden = true;
+                    consValor.hidden = true;
+                    this.nouValor = this.idActual;
+                    break;*/
+                case 'naixement':
+                    consValorData.hidden = false;
+                    consValor.hidden = true;
+                    // consId.hidden = true;
+                    break;
+                default:
+                    consValor.hidden = false;
+                    consValorData.hidden = true;
+                    // consId.hidden = true;
+                    break;
+            }
+        });
+        
+        // this.getIdActual();
+    }
+
+    // funció per determinar l'ID més gran de professor
+    /*getIdActual() {
+        this.professorService.getIdActual()
+            .subscribe(
+                data => (this.idActual = data)
+            );
+    }*/
 
     consultarProfeJava() {
-        this.professorService.consultarProfeJava(this.idProfe)
+        this.professorService.consultarProfeJava(this.camp, this.nouValor)
             .catch((error: any) => {
                if (error.status === 0 || error.status === "0") {
                     console.log("Servidor Aturat"); 

@@ -5,5 +5,5 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 
-export class ListAlumneService{  
+export class ListHobbyService{  
 }

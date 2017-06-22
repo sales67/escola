@@ -15,13 +15,46 @@ export class EsborrarProfeComponent implements OnInit {
     errorServer;
     errorBuit;
     values;
+    
+    camp: string;
+    nouValor;
+    
+    public camps = [
+        {value: 'id', display: 'ID'},
+        {value: 'nom', display: 'Nom'},
+        {value: 'cognoms', display: 'Cognoms'},
+        {value: 'dni', display: 'DNI'},
+        {value: 'naixement', display: 'Data de naixement'},
+        {value: 'curs', display: 'Curs impartit'},
+        {value: 'esport', display: 'Esport practicat'}
+    ];
 
     constructor(private professorService: ProfessorService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        const selectCamp = <HTMLInputElement>document.body.querySelector('#selectCamp');
+        const delValor = <HTMLElement>document.body.querySelector('#delValor');
+        const delValorData = <HTMLElement>document.body.querySelector('#delValorData');
+        
+        selectCamp.addEventListener('change', () => {
+
+            switch (selectCamp.value) {
+                case 'naixement':
+                    delValorData.hidden = false;
+                    delValor.hidden = true;
+                    break;
+                default:
+                    delValor.hidden = false;
+                    delValorData.hidden = true;
+                    break;
+            }
+        });
+    }
     
+    // esborrarProfe2(){
     esborrarProfe(){
-        this.professorService.esborrarProfe(this.delProfe)
+        // this.professorService.esborrarProfe2(this.delProfe)
+        this.professorService.esborrarProfe(this.camp, this.nouValor)
             .catch((error: any) => {
             
                if (error.status === 0 || error.status === "0") {
