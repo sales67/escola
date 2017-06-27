@@ -8,24 +8,32 @@
     <div>   
         <p>php: {{prova}}</p>
     </div>
-    
-
+    <form>
+<!--<form id="filter">
+    <label>Filtrar cursos per nom</label>
+    <input type="text" [(ngModel)]="term" />-->
   <div class="primary" *ngFor='let curs of cursos'>
     <!--cursos fa ref. a components data-->
     ^*^*^*^*^*^*^*^*^*^*^*^
     <p>Curs amb Id: {{curs.id}}</p>
     ^*^*^*^*^*^*^*^*^*^*^*^
     <p>
-      Nom: {{curs.nom}}
+      Nom: {{curs.nom}} <br>
+      Aules: {{curs.aula.length}}
     </p>
 
     <div class="secundary" *ngFor='let aula of curs.aula'>
       <p  style="margin-bottom:0%">Aula {{aula.id}}</p>
       Nom: {{aula.nom}} <br>
-    </div>
+        
+    </div>  
+
     <br><br>
+      
   </div>
+</form>
 <br><br>
+    
     <form name="listid" display="block">      	        
             <label for="content">Entra la id del curs</label><br>		        
 		        <input type="text" name="findCurs" [(ngModel)]="id"><br><br>
