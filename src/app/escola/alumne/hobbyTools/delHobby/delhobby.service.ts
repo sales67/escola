@@ -23,5 +23,4 @@ delHobby(delid){
            .map((response: Response) => {})
             
     }
-
 }
