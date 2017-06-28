@@ -15,6 +15,7 @@ export class ModificarProfeComponent implements OnInit {
         {value: 'cognoms', display: 'Cognoms'},
         {value: 'dni', display: 'DNI'},
         {value: 'naixement', display: 'Data de naixement'},
+        {value: 'sexe', display: 'Sexe'},
         {value: 'curs', display: 'Curs'},
         {value: 'esport', display: 'Esport'}
     ];
@@ -38,6 +39,7 @@ export class ModificarProfeComponent implements OnInit {
         const selectCamp = <HTMLInputElement>document.body.querySelector('#selectCamp');
         const modValor = <HTMLElement>document.body.querySelector('#modValor');
         const modValorData = <HTMLElement>document.body.querySelector('#modValorData');
+        const selectSexe = <HTMLInputElement>document.body.querySelector('#selectSexe');
         const selectEsport = <HTMLInputElement>document.body.querySelector('#selectEsport');
         const modEsport = <HTMLElement>document.body.querySelector('#modEsport');
 
@@ -48,9 +50,17 @@ export class ModificarProfeComponent implements OnInit {
                     modValorData.hidden = false;
                     modValor.hidden = true;
                     modEsport.hidden = true;
+                    selectSexe.hidden = true;
                     break;
                 case 'esport':
                     modEsport.hidden = false;
+                    modValorData.hidden = true;
+                    modValor.hidden = true;
+                    selectSexe.hidden = true;
+                    break;
+                case 'sexe':
+                    selectSexe.hidden = false;
+                    modEsport.hidden = true;
                     modValorData.hidden = true;
                     modValor.hidden = true;
                     break;
@@ -58,6 +68,7 @@ export class ModificarProfeComponent implements OnInit {
                     modValor.hidden = false;
                     modEsport.hidden = true;
                     modValorData.hidden = true;
+                    selectSexe.hidden = true;
                     break;
             }
         });
@@ -95,11 +106,8 @@ export class ModificarProfeComponent implements OnInit {
                     if(this.retorn == 1) {
                         this.errorId = true;
                     }
-                },
-                () => {
-                    this.finished = true;
-                    console.log('Professor amb id ' + this.idProfeMod + ' modificat');
-                }
+                },error => {}, // si no el posem no es veuen els missatges d'error o exit a la pantalla
+                () => this.finished = true
             );
             this.errorId = false;
             this.errorServer = false;
