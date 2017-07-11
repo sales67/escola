@@ -8,6 +8,7 @@ import {Observable} from 'rxjs/Observable';
 
 export class AddCursaulaService{
 private addUrl = 'http://172.17.0.161:8080/escola/addCursaula';
+private delUrl = 'http://172.17.0.161:8080/escola/delCursaula'
 
 
 constructor(private http: Http){}
@@ -27,5 +28,19 @@ addCursaulaPost(addidcurs,addidaula){
         })
            .map((response: Response) => {})
            
+    }
+
+delCursaula(delid){     
+    
+ var crear = "?idc=" + delid;
+       var headers = new Headers();
+       headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+
+       return this.http.delete(this.delUrl+ crear, {
+           headers: headers
+       })
+           .map((response: Response) => {})
+            
     }
 }

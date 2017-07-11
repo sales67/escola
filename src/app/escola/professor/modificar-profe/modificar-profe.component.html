@@ -4,7 +4,11 @@
 
     <form name="modProfeForm">
 
-        <div *ngIf="idProfeMod == null && finished == true" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
+        <div *ngIf="finished" class="alert alert-success fade in alert-dismissable">
+            <span class="totb">S'ha modificat correctament el professor</span>
+        </div>
+
+        <div *ngIf="idProfeMod == null && finished" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
             <span class="error">Falta l'identificador!!</span> <br> <br>
         </div>
         
@@ -21,10 +25,10 @@
         <label for="idProfeMod">Introdueix l'ID del professor</label>
         <input type="text" name="idProfeMod" id="idProfeMod" [(ngModel)]="idProfeMod">
 
-
+        
         <br> <br>
 
-
+        
         <label for="selectCamp">Selecciona el camp que vols modificar </label>
         <select id="selectCamp" name="selectCamp" [(ngModel)]="camp">
             <option *ngFor="let c of camps" [value]="c.value">
@@ -48,6 +52,12 @@
             <label>Selecciona la data de naixement</label>
             <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
             <br> <br>
+        </div>
+
+        <div id="selectSexe" [hidden]="true">
+            <label>Selecciona un sexe</label><br>
+            <input type="radio" name="genere" value="home" [(ngModel)]="nouValor"> Home <br>
+            <input type="radio" name="genere" value="dona" [(ngModel)]="nouValor"> Dona <br>
         </div>
 
 

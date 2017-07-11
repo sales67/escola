@@ -52,8 +52,18 @@
     <br>
     <br>
     
-    <label for="crearDni">Data Naixement</label>
+    <label for="crearData">Data Naixement</label>
     <input type="date" name="crearData" id="crearData" [(ngModel)]="crearData">
+    
+    <br>
+    <br>
+
+    <!--<label for="crearSexe">Sexe</label>
+    <input type="text" name="crearSexe" id="crearSexe" [(ngModel)]="crearSexe">-->
+
+    <label for="gender">Sexe</label>
+        <input type="radio" name="gender" value="home" [(ngModel)]="crearSexe"> Home<br>
+        <input type="radio" name="gender" value="dona" [(ngModel)]="crearSexe"> Dona<br>
     
     <br>
     <br>
@@ -64,7 +74,7 @@
     <br>
     <br>
     
-    <button (click)="crearProfe()" type="submit" class="btn btn-default" [disabled]="!crearId || !crearNom || !crearCognoms || !crearDni || !crearData || !crearCurs">ALTA PROFESSOR</button>
+    <button (click)="crearProfe()" type="submit" class="btn btn-default" [disabled]="!crearId || !crearNom || !crearCognoms || !crearDni || !crearData || !crearSexe || !crearCurs">ALTA PROFESSOR</button>
     
     <br>
     <br>

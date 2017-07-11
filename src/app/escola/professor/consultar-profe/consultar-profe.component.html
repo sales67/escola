@@ -28,17 +28,9 @@
                 {{c.display}}
             </option>
         </select>
-        
-        
 
-        <!-- id -->
-        <!--<div id="consId" [hidden]="true">
-            <br><br>
-            <label>Introdueix {{camp}}</label>
-            <input type="text" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
-            <br> <br>
-        </div>-->
-        
+ 
+
         <!-- nom, cognoms, dni -->
         <div id="consValor" [hidden]="true">
             <br><br>
@@ -52,6 +44,16 @@
             <br><br>
             <label>Selecciona la data de naixement</label>
             <input type="date" name="nouValor" id="nouValor" [(ngModel)]="nouValor">
+            <br> <br>
+        </div>
+
+        <!-- sexe/ genere -->
+        <div id="consSexe" [hidden]="true">
+            <br><br>
+            <label for="gender">Selecciona el sexe</label>
+            <input type="radio" name="gender" value="home" [(ngModel)]="nouValor"> Home<br>
+            <input type="radio" name="gender" value="dona" [(ngModel)]="nouValor"> Dona<br>
+
             <br> <br>
         </div>
         
@@ -74,6 +76,12 @@
         <br>
         <label>Data de naixement: </label>
         <input type="checkbox" name="boolData" [(ngModel)]="boolData">
+        <br>
+        <label>Edat: </label>
+        <input type="checkbox" name="boolEdat" [(ngModel)]="boolEdat">
+        <br>
+        <label>Sexe: </label>
+        <input type="checkbox" name="boolSexe" [(ngModel)]="boolSexe">
         <br>
         <label>Curs: </label>
         <input type="checkbox" name="boolCurs" [(ngModel)]="boolCurs">
@@ -98,7 +106,10 @@
     <p *ngIf="boolNom">Nom: {{profe.nom}}</p>
     <p *ngIf="boolCognoms">Cognoms: {{profe.cognoms}}</p>
     <p *ngIf="boolDni">DNI: {{profe.dni}}</p>
-    <p *ngIf="boolData">Data de naixement: {{profe.naixement}}</p>
+    <p *ngIf="boolData">Data de naixement: {{profe.naixement.dayOfMonth}}-{{profe.naixement.monthValue}}-{{profe.naixement.year}}</p>
+    <p *ngIf="boolEdat">Edat: {{profe.edat}}</p>
+    <p *ngIf="boolSexe">Sexe: {{profe.genere}}</p>
+
     <br>
     
     <div *ngIf="boolCurs">
@@ -113,8 +124,10 @@
     <div *ngIf="boolEsports">
         <h3>Esports practicats</h3>
 
-        <div *ngFor = "let e of profe.esport; let i = index">
-            <p>{{i+1}}- {{e.nom}}</p>
+        <!--<div *ngFor = "let e of profe.esport; let i = index">-->
+        <div *ngFor = "let e of profe.esport">
+            <!--<p>{{i+1}}- {{e.nom}}</p>-->
+            <p>- {{e.nom}}</p>
         </div>
         <br>
     </div>

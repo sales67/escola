@@ -9,7 +9,7 @@ export class ProfessorService {
     myURL = 'http://172.17.0.191:8080/escola';
     urlCrearProfe = '/addPtoC?';
     urlGetProfe = '/unProfe?id=';
-    urlGetProfe2 = '/unProfe2?camp=';
+    urlGetProfes = '/profes?camp=';
     urlDelProfe = '/delProfe?camp=';
     urlDelProfe2 = '/delProfe2?id=';
     urlModProfe = '/modProfe?id=';
@@ -34,9 +34,9 @@ export class ProfessorService {
     // C R E A R   U N   P R O F E S S O R
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    crearProfe(id, nom, cognoms, dni, curs, naixement) {
+    crearProfe(id, nom, cognoms, dni, curs, naixement, sexe) {
 
-        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement;
+        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement + '&sexe=' + sexe;
 
         const headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -52,7 +52,7 @@ export class ProfessorService {
 
     consultarProfeJava(camp, valor) {
         return this.http
-                   .get(this.myURL + this.urlGetProfe2 + camp + '&valor=' + valor)
+                   .get(this.myURL + this.urlGetProfes + camp + '&valor=' + valor)
                    .map(res => res.json());
     }
     
