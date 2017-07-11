@@ -19,6 +19,7 @@ export class ConsultarProfeComponent implements OnInit {
         {value: 'cognoms', display: 'Cognoms'},
         {value: 'dni', display: 'DNI'},
         {value: 'naixement', display: 'Data de naixement'},
+        {value: 'sexe', display: 'Sexe'},
         {value: 'curs', display: 'Curs impartit'},
         {value: 'esport', display: 'Esport practicat'}
     ];
@@ -33,10 +34,11 @@ export class ConsultarProfeComponent implements OnInit {
     boolNom = true;
     boolCognoms = true;
     boolData = true;
+    boolEdat = true;
+    boolSexe = true;
     boolCurs = true;
     boolEsports = true;
     boolIncidencies = true;
-    // idActual: number;
 
     error;
     errorServer;
@@ -50,6 +52,8 @@ export class ConsultarProfeComponent implements OnInit {
         // const consId = <HTMLElement>document.body.querySelector('#consId');
         const consValor = <HTMLElement>document.body.querySelector('#consValor');
         const consValorData = <HTMLElement>document.body.querySelector('#consValorData');
+
+        const consSexe = <HTMLInputElement>document.body.querySelector('#consSexe');
         
         selectCamp.addEventListener('change', () => {
 
@@ -63,11 +67,19 @@ export class ConsultarProfeComponent implements OnInit {
                 case 'naixement':
                     consValorData.hidden = false;
                     consValor.hidden = true;
+                    consSexe.hidden = true;
                     // consId.hidden = true;
+                    break;
+                case 'sexe':
+                    // console.log("sexe escollit: " + this.nouValor);
+                    consSexe.hidden = false;
+                    consValorData.hidden = true;
+                    consValor.hidden = true;
                     break;
                 default:
                     consValor.hidden = false;
                     consValorData.hidden = true;
+                    consSexe.hidden = true;
                     // consId.hidden = true;
                     break;
             }
@@ -85,6 +97,7 @@ export class ConsultarProfeComponent implements OnInit {
     }*/
 
     consultarProfeJava() {
+        console.log("sexe escollit: " + this.nouValor);
         this.professorService.consultarProfeJava(this.camp, this.nouValor)
             .catch((error: any) => {
                if (error.status === 0 || error.status === "0") {

@@ -58,6 +58,13 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> afeea13b353d07510465c6db48a592555899a126
+>>>>>>> 267ebc5203c58de8d0569eb1c1c82559978a7fb1
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -100,32 +107,32 @@ const routes: Routes = [
     children: []
     },
     {
-    path: 'addHobbyComponent',
+    path: 'addHobby',
     component: AddHobbyComponent,
     children: []
     },
     {
-    path: 'delHobbyComponent',
+    path: 'delHobby',
     component: DelHobbyComponent,
     children: []
     },
     {
-    path: 'addHobbyComponent',
+    path: 'addHobby',
     component: AddHobbyComponent,
     children: []
     },
     {
-    path: 'listHobbyIdComponent',
+    path: 'listHobbyId',
     component: ListHobbyIdComponent,
     children: []
     },
     {
-    path: 'listHobbyAllComponent',
+    path: 'listHobbyAll',
     component: ListHobbyAllComponent,
     children: []
     },
     {
-    path: 'listHobbyComponent',
+    path: 'listHobby',
     component: ListHobbyComponent,
     children: []
     },
@@ -194,7 +201,7 @@ const routes: Routes = [
 
   },
   {
-      path: 'addCursaula',
+      path: 'cursaula',
       component: AddCursaulaComponent,
   },    
     {

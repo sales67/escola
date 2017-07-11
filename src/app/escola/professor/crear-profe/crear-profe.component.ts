@@ -14,6 +14,7 @@ export class CrearProfeComponent implements OnInit {
     crearDni: string;
     crearCurs: number;
     crearData: Date;
+    crearSexe;
     
     error;
     finished;
@@ -24,7 +25,7 @@ export class CrearProfeComponent implements OnInit {
     constructor(private professorService: ProfessorService) { }
 
     ngOnInit() {
-        this.getIdActual();
+        // this.getIdActual();
     }
     
     // funció per determinar l'ID més gran de professor
@@ -36,7 +37,7 @@ export class CrearProfeComponent implements OnInit {
     }
 
     crearProfe() {
-        this.professorService.crearProfe(this.crearId, this.crearNom, this.crearCognoms, this.crearDni, this.crearCurs, this.crearData)
+        this.professorService.crearProfe(this.crearId, this.crearNom, this.crearCognoms, this.crearDni, this.crearCurs, this.crearData, this.crearSexe)
         .catch((error: any) => {
             
                if (error.status === 0 || error.status === "0") {

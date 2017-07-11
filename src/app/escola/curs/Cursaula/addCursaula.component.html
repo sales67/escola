@@ -14,12 +14,19 @@
     <strong>Error!</strong> error 500
 </div>
     <form name="addMarca" display="block">      
-            <h2>Introdueix un nou Curs</h2>		        
+            <h2>Introdueix un nou Cursaula</h2>		        
             <label for="content">id curs</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addidcurs"><br>
             <label for="content">id aula</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="addidaula"><br>
 		        <button (click)="addCursaulaPost()" type="submit" class="btn btn-default">Enviar</button>
     </form>	
+        <!-------------------------------------------
+          <form name="updateMarca" display="block">      
+            <h2>Eliminar un Cursaula</h2>
+            	<label for="content">id del curs</label><br>
+		        <input type="text" name="addMarca" [(ngModel)]="delid"><br>
+		        <button (click)="delCursaula()" type="submit" class="btn btn-default">Enviar</button>
+    </form>       -->
     </body>
 </html>

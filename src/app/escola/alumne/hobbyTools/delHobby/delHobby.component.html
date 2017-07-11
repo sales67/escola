@@ -6,14 +6,14 @@
 </div>
         
         <div *ngIf="errorBuit" class="alert alert-danger fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Error!</strong> L'alumne introduït no existeix
+    <strong>Error!</strong> EL hobby introduït no existeix
 </div>
         <div *ngIf="finished" class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">     
-    <strong>Correcte! </strong>S'ha eliminat l'alumne correctament
+    <strong>Correcte! </strong>S'ha eliminat el hobby correctament
 </div>
     <form name="updateMarca" display="block">      
-            <h2>Eliminar un Alumne</h2>
-            	<label for="content">Id de l'alumne</label><br>
+            <h2>Eliminar un hobby</h2>
+            	<label for="content">Id de el hobby</label><br>
 		        <input type="text" name="addMarca" [(ngModel)]="delid"><br>
 		        <button (click)="delAlumne()" type="submit" class="btn btn-default">Enviar</button>
     </form>        
