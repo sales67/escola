@@ -21,6 +21,10 @@ import { ListHobbyIdComponent } from './escola/alumne/hobbyTools/listHobby/listH
 import { AddHobbyComponent } from './escola/alumne/hobbyTools/addHobby/addHobby.component';
 import { DelHobbyComponent } from './escola/alumne/hobbyTools/delHobby/delHobby.component';
 
+import { FormulariComponent } from './escola/alumne/formulari/formulari.component';
+
+
+
 //---------------------------------
 
 import { CursComponent } from './escola/curs/curs.component';
@@ -49,7 +53,7 @@ import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 
-import { FormulariComponent } from './formulari/formulari.component';
+//import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
@@ -171,7 +175,11 @@ const routes: Routes = [
     path: 'listAlumneId',
     component: ListAlumneIdComponent,
     children: []
-    }, 
+    }, {
+    path: 'formulariS',
+    component: FormulariComponent,
+    children: []
+    },
   {
       path: 'curs',
       component: CursComponent,

@@ -26,6 +26,11 @@ import { DelHobbyComponent } from './alumne/hobbyTools/delHobby/delHobby.compone
 import { AddHobbyComponent } from './alumne/hobbyTools/addHobby/addHobby.component';
 
 
+import { FormulariComponent } from './alumne/formulari/formulari.component';
+import { Step1Component } from './alumne/formulari/step1/step1.component';
+import { Step2Component } from './alumne/formulari/step2/step2.component';
+
+
 //-------------------------------
 
 import { CursComponent } from './curs/curs.component';
@@ -101,6 +106,10 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       ListHobbyIdComponent,
       AddHobbyComponent,
       DelHobbyComponent,
+      
+      FormulariComponent,
+      Step1Component,
+      Step2Component,
       
       //-----------------
 
