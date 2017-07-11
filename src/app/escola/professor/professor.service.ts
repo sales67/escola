@@ -34,9 +34,9 @@ export class ProfessorService {
     // C R E A R   U N   P R O F E S S O R
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    crearProfe(id, nom, cognoms, dni, curs, naixement, sexe) {
+    crearProfe(id, nom, cognoms, dni, curs, naixement) {
 
-        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement + '&sexe=' + sexe;
+        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement;
 
         const headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');

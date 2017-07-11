@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map'
 
 export class Step2Service{
     
-    hobbies="http://localhost:8080/escola/listHobby";
+    hobbies="http://172.17.0.98:8080/escola/listHobby";
         
     constructor(private http: Http){}
     
