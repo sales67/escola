@@ -66,9 +66,12 @@ import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> afeea13b353d07510465c6db48a592555899a126
 >>>>>>> 267ebc5203c58de8d0569eb1c1c82559978a7fb1
+>>>>>>> 3fe2586fe658cab3b7ecda4a57ba34659ff78099
 const routes: Routes = [
     {
    path: 'JsDavid',
