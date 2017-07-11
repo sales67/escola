@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //------------------------SERGI
@@ -20,6 +20,10 @@ import { ListHobbyAllComponent } from './escola/alumne/hobbyTools/listHobby/list
 import { ListHobbyIdComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
 import { AddHobbyComponent } from './escola/alumne/hobbyTools/addHobby/addHobby.component';
 import { DelHobbyComponent } from './escola/alumne/hobbyTools/delHobby/delHobby.component';
+
+import { FormulariComponent } from './escola/alumne/formulari/formulari.component';
+
+
 
 //---------------------------------
 
@@ -49,7 +53,7 @@ import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 
-import { FormulariComponent } from './formulari/formulari.component';
+//import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
@@ -58,6 +62,16 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> afeea13b353d07510465c6db48a592555899a126
+>>>>>>> 267ebc5203c58de8d0569eb1c1c82559978a7fb1
+>>>>>>> 3fe2586fe658cab3b7ecda4a57ba34659ff78099
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -170,7 +184,11 @@ const routes: Routes = [
     path: 'listAlumneId',
     component: ListAlumneIdComponent,
     children: []
-    }, 
+    }, {
+    path: 'formulariS',
+    component: FormulariComponent,
+    children: []
+    },
   {
       path: 'curs',
       component: CursComponent,

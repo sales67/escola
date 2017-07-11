@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing.module';
@@ -24,6 +24,11 @@ import { ListHobbyAllComponent } from './alumne/hobbyTools/listHobby/listHobbyAl
 import { ListHobbyIdComponent } from './alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
 import { DelHobbyComponent } from './alumne/hobbyTools/delHobby/delHobby.component';
 import { AddHobbyComponent } from './alumne/hobbyTools/addHobby/addHobby.component';
+
+
+import { FormulariComponent } from './alumne/formulari/formulari.component';
+import { Step1Component } from './alumne/formulari/step1/step1.component';
+import { Step2Component } from './alumne/formulari/step2/step2.component';
 
 
 //-------------------------------
@@ -101,6 +106,10 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       ListHobbyIdComponent,
       AddHobbyComponent,
       DelHobbyComponent,
+      
+      FormulariComponent,
+      Step1Component,
+      Step2Component,
       
       //-----------------
 
