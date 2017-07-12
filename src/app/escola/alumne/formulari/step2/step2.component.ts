@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,Output,EventEmitter} from '@angular/core';
 import {Step2Service} from './step2.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes, RouterModule, } from '@angular/router';
@@ -14,11 +14,12 @@ import { Routes, RouterModule, } from '@angular/router';
            
         hobbies;
         marcats:boolean[]=[];
-        llargada;
+        
+@Output() resultat2: EventEmitter<boolean[]> = new EventEmitter<boolean[]>();
         
         
- constructor(private step2Service: Step2Service) { }        
-        
+ constructor(private step2Service: Step2Service) {   
+ }        
 
         noMarcat(id){            
            // var marcats:boolean[this.llargada];
@@ -29,16 +30,16 @@ import { Routes, RouterModule, } from '@angular/router';
             else if (this.marcats[id]==true)
                 {
                     this.marcats[id]=false;
-                }   
-                            
-            console.log(this.marcats);
+                }  
+            this.resultat2.emit(this.marcats);            
         }
         
         ngOnInit(){
             this.step2Service.getHobbies()
                 .subscribe(
                 data => { this.hobbies = data;},
-                err => console.error(err));              
-        }         
-            
+                err => console.error(err));         
+           
+        } 
+        
     }

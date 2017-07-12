@@ -11,7 +11,7 @@ import { Routes, RouterModule, } from '@angular/router';
 })
 
     export class Step1Component{
-           id;
+           id
  constructor(private step1Service: Step1Service) { } 
         
     }
