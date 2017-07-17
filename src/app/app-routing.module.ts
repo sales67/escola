@@ -1,5 +1,6 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {EscolaComponent} from './escola/escola.component';
 
 //------------------------SERGI
 
@@ -20,6 +21,13 @@ import { ListHobbyAllComponent } from './escola/alumne/hobbyTools/listHobby/list
 import { ListHobbyIdComponent } from './escola/alumne/hobbyTools/listHobby/listHobbyId/ListHobbyId.component';
 import { AddHobbyComponent } from './escola/alumne/hobbyTools/addHobby/addHobby.component';
 import { DelHobbyComponent } from './escola/alumne/hobbyTools/delHobby/delHobby.component';
+
+import { FormulariComponent } from './escola/alumne/formulari/formulari.component';
+
+import { LoginComponent } from './login/login/index';
+//import { EscolaComponent } from './home/index';
+import { AuthGuard } from './login/_guards/index';
+
 
 //---------------------------------
 
@@ -49,7 +57,7 @@ import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 
-import { FormulariComponent } from './formulari/formulari.component';
+//import { FormulariComponent } from './formulari/formulari.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
@@ -58,6 +66,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5687b72ff6a78a151cab1069eb4a2d1b04d55051
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -170,7 +182,11 @@ const routes: Routes = [
     path: 'listAlumneId',
     component: ListAlumneIdComponent,
     children: []
-    }, 
+    }, {
+    path: 'formulariS',
+    component: FormulariComponent,
+    children: []
+    },
   {
       path: 'curs',
       component: CursComponent,
@@ -245,7 +261,12 @@ const routes: Routes = [
   {
       path: 'addLocalitat',
       component: addLocalitatComponent,
-  }
+  },
+    { path: 'login', component: LoginComponent },
+    { path: '', component: EscolaComponent, canActivate: [AuthGuard] },
+
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

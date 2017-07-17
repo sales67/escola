@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h3>Segon pas: hobbies</h3>
+        <form>
+          <div *ngFor="let hobby of hobbies" class="form-group">
+            <div  class="checkbox">
+                <label>
+                    <input (change)="noMarcat(hobby.idh)" type="checkbox"> {{hobby.nom}}  
+                </label>                 
+            </div>
+          </div>         
+        </form>        
+    </body>
+</html>

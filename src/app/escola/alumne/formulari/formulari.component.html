@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <alumne-modol></alumne-modol>
+        <div>        
+            <h1>Formulari en dos passos</h1>
+            <div ngSwitch="{{step}}">
+                <p *ngSwitchCase="1"><step1></step1></p>
+                <p *ngSwitchCase="2"><step2 (resultat2)='resultat2($event)'></step2></p>
+                <button *ngIf="final" (click)="first()" type="submit" class="btn btn-default">Enrere</button>               
+                <button *ngIf="!final" (click)="second()" type="submit" class="btn btn-default">Següent</button>
+                <button  style="background:none;background-color:green" *ngIf="final" (click)="Enviar()" type="submit" class="btn btn-default">Enviar</button>   
+            </div>                 
+        </div>           
+</body>       
+</html>

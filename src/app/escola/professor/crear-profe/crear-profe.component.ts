@@ -37,7 +37,7 @@ export class CrearProfeComponent implements OnInit {
     }
 
     crearProfe() {
-        this.professorService.crearProfe(this.crearId, this.crearNom, this.crearCognoms, this.crearDni, this.crearCurs, this.crearData, this.crearSexe)
+        this.professorService.crearProfe(this.crearId, this.crearNom, this.crearCognoms, this.crearDni, this.crearCurs, this.crearData)
         .catch((error: any) => {
             
                if (error.status === 0 || error.status === "0") {
