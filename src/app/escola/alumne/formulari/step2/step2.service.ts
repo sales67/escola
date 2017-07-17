@@ -3,7 +3,7 @@ import {Http,Headers,Response}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {AuthHttp} from 'angular2-jwt/angular2-jwt';
-//@Injectable()
+@Injectable()
 
 export class Step2Service{
     
@@ -11,10 +11,11 @@ export class Step2Service{
         
     constructor( public authHttp: AuthHttp){}
     
-    getHobbies() {        
+    getHobbies() {     
       var a = this.authHttp.get(this.hobbies)
                 .map(res => res.json());        
-      return a;
+      return a; 
+      
     } 
     
 }
