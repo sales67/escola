@@ -24,9 +24,6 @@ import { DelHobbyComponent } from './escola/alumne/hobbyTools/delHobby/delHobby.
 
 import { FormulariComponent } from './escola/alumne/formulari/formulari.component';
 
-import { LoginComponent } from './login/login/index';
-//import { EscolaComponent } from './home/index';
-import { AuthGuard } from './login/_guards/index';
 
 
 //---------------------------------
@@ -66,7 +63,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5687b72ff6a78a151cab1069eb4a2d1b04d55051
 const routes: Routes = [
     {
    path: 'JsDavid',
@@ -258,12 +258,7 @@ const routes: Routes = [
   {
       path: 'addLocalitat',
       component: addLocalitatComponent,
-  },
-    { path: 'login', component: LoginComponent },
-    { path: '', component: EscolaComponent, canActivate: [AuthGuard] },
-
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+  }
 ];
 
 @NgModule({
