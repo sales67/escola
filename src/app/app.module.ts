@@ -40,7 +40,9 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
-import { FormulariComponent } from './formulari/formulari.component'; // cal??
+import { FormulariComponent } from './formulari/formulari.component';
+import { LoginComponent } from './login/index';
+// cal??
 
 
 // NgModule es un decorador que recibe un objeto de metadatos que definen el módulo 
@@ -55,7 +57,8 @@ import { FormulariComponent } from './formulari/formulari.component'; // cal??
 @NgModule({
   declarations: [
     AppComponent,
-    FormulariComponent
+    FormulariComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
