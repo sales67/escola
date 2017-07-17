@@ -63,7 +63,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5687b72ff6a78a151cab1069eb4a2d1b04d55051
 const routes: Routes = [
     {
    path: 'JsDavid',
