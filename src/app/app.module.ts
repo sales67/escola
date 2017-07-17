@@ -40,7 +40,15 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
-import { FormulariComponent } from './formulari/formulari.component'; // cal??
+import { FormulariComponent } from './formulari/formulari.component';
+import { EscolaComponent } from './escola/escola.component';
+
+//Login
+
+import { LoginComponent } from './login/login/index';
+import { AuthenticationService, UserService } from './login/_services/index';
+import { AuthGuard } from './login/_guards/index';
+// cal??
 
 
 // NgModule es un decorador que recibe un objeto de metadatos que definen el módulo 
@@ -55,16 +63,20 @@ import { FormulariComponent } from './formulari/formulari.component'; // cal??
 @NgModule({
   declarations: [
     AppComponent,
-    FormulariComponent
+    FormulariComponent,
+    LoginComponent,
+      EscolaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    EscolaModule    
+    EscolaModule,    
   ],
-  providers: [],
+  providers: [AuthenticationService,
+             AuthGuard
+             ],
   bootstrap: [AppComponent] // El componente asignado será el componente raíz de la app. De él penderá cualquier otro componente que se utilice.
 })
 export class AppModule { }
