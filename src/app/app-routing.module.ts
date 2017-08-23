@@ -63,7 +63,23 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
+<<<<<<< HEAD
+=======
+import {HomeComponent} from './home/home.component';
+
+
+>>>>>>> 45fed6f526c329508e2bdbe152ea6ef42c048766
 const routes: Routes = [
+    {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+    },
+    {
+   path: 'home',
+    component: HomeComponent,
+    children: []
+    },
     {
    path: 'JsDavid',
     component: JsDavidComponent,

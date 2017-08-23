@@ -41,6 +41,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
 import { FormulariComponent } from './formulari/formulari.component';
+import {HomeComponent} from './home/home.component'
 
 //Login
 
@@ -61,6 +62,7 @@ import { FormulariComponent } from './formulari/formulari.component';
   declarations: [
     AppComponent,
     FormulariComponent,
+      HomeComponent,
   ],
   imports: [
     BrowserModule,
