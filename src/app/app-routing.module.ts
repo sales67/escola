@@ -64,7 +64,9 @@ import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
+
 import { HomeComponent } from './home/home.component';
+
 
 import { LoginComponent } from './login/login/login.component';
 

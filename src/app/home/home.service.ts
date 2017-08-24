@@ -30,7 +30,6 @@ export class HomeService {
 
         return this.http.post(this.authUrl,creds,options)
             .map((response: Response) => { 
-                 console.log("dasdada");
                 // login successful if there's a jwt token in the response        
                 let token = response.json().data && response.json().token;
                 if (token) {
@@ -47,6 +46,7 @@ export class HomeService {
             //console.log(a);
             //return a;
     }
+
 
 
     /*getToken(): String {

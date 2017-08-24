@@ -40,8 +40,6 @@ export class HomeComponent {
                     this.router.navigate(['/consultar-profe']);
 
                     console.log(result);
-                    // login successful
-                    //this.router.navigate(['home']);
 
                 } else {
                     // login failed                    
