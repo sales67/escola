@@ -21,13 +21,13 @@ export class HomeService {
 
     login(username: string, password: string): Observable<boolean>{
         
-        let creds = JSON.stringify({'username':username, 'password':password});
+        //let creds = JSON.stringify({'username':username, 'password':password});
         
         
        // headers.append('Content-Type', 'application/x-www-form-urlencoded');         
-        let options = new RequestOptions({headers: this.headers});
+       // let options = new RequestOptions({headers: this.headers});
 
-        return this.http.post(this.authUrl,creds,options)
+        return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
             .map((response: Response) => { 
                 // login successful if there's a jwt token in the response        
                 let token = response.json().data && response.json().token;
@@ -45,12 +45,12 @@ export class HomeService {
             //console.log(a);
             //return a;
     }
-/*
+
     getToken(): String {
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";
-    }*/
+    }
 
     logout(): void {
         // clear token remove user from local storage to log user out

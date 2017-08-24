@@ -9,19 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
     providers: [ HomeService ]
 })
-export class HomeComponent {
+export class HomeComponent{
     //constructor(private homeService: HomeService) { }
     
    model: any = {};
     loading = false;
     error = '';
-    token:any;
     constructor(
         private router: Router,
-        private homeService: HomeService) {
-        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        this.token = currentUser && currentUser.token;
-         }
+        private homeService: HomeService) {}
 
     ngOnInit() {
         // reset login status
