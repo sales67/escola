@@ -19,6 +19,7 @@
 // És importante extraer toda la lógica en servicios para que el controlador solo se encargue de gestionar una única cosa: la vista
 
 import { Component } from '@angular/core';
+import {Http} from '@angular/http';
 
 // Función decoradora que registra un componente
 // Lo que hace es asociar al controlador una plantilla HTML app.component.html y un selector para ser invocado desde otra vista <app-root></app-root>.
@@ -29,9 +30,21 @@ import { Component } from '@angular/core';
 })
 // Esta clase es todo lo que se exporta en este fichero
 // y esto se importará en app.module.ts para ser incorporado al módulo raíz
-export class AppComponent {
+export class AppComponent{
     // las propiedades de la clase representan el modelo de datos
     // son accesibles desde la vista
     title = 'Escola Otaku';
+    prova;
+
+    constructor(private http:Http){}
+
+    getProva() {
+      this.prova = this.http.get("http://localhost:8080/helloWorld/world")
+        .map(res => res.text())
+        .subscribe(
+            value => this.prova = value,
+            error => {},
+        );        
+    }        
 }
 
