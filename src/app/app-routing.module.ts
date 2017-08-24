@@ -63,15 +63,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-import {HomeComponent} from './home/home.component';
+import { HomeComponent } from './home/home.component';
 
-=======
+import { LoginComponent } from './login/login/login.component';
 
-import {HomeComponent} from './home/home.component';
-
-
->>>>>>> b4ab1e6f6b2835c024116e66b1fee0031ecd227d
 const routes: Routes = [
     {
     path: '',
@@ -81,6 +76,7 @@ const routes: Routes = [
     {
    path: 'home',
     component: HomeComponent,
+    //component: LoginComponent,
     children: []
     },
     {

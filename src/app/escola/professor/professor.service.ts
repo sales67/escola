@@ -6,7 +6,8 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ProfessorService {
 
-    myURL = 'http://172.17.0.191:8080/escola';
+    //myURL = 'http://172.17.0.191:8080/escola';
+    myURL = 'http://172.17.0.191:8080/demo';
     urlCrearProfe = '/addPtoC?';
     urlGetProfe = '/unProfe?id=';
     urlGetProfes = '/profes?camp=';
