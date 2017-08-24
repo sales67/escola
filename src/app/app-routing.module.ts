@@ -63,12 +63,11 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-=======
+
 import { HomeComponent } from './home/home.component';
 
 import { LoginComponent } from './login/login/login.component';
->>>>>>> 6f7992c85a7c566351a5bcf7e9ff2126beb15030
+
 
 const routes: Routes = [
     {

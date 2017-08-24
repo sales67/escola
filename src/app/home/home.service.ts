@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-home.service.ts
-=======
+
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
@@ -50,11 +48,11 @@ export class HomeService {
             //return a;
     }
 
-<<<<<<< HEAD
+
     /*getToken(): String {
-=======
+
    /* getToken(): String {
->>>>>>> b5cbbb0b6358dcd6dbc2e17b243d78f8000d20de
+
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";
@@ -65,4 +63,3 @@ export class HomeService {
         localStorage.removeItem('currentUser');
     }
 }
->>>>>>> 6f7992c85a7c566351a5bcf7e9ff2126beb15030
