@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
@@ -46,7 +47,6 @@ export class HomeService {
 
         return this.http.post(this.authUrl,creds,options)
             .map((response: Response) => { 
-                 console.log("dasdada");
                 // login successful if there's a jwt token in the response        
                 let token = response.json().data && response.json().token;
                 if (token) {
@@ -64,7 +64,16 @@ export class HomeService {
             //return a;
     }*/
 
+<<<<<<< HEAD
     getToken(): String {
+=======
+
+
+    /*getToken(): String {
+
+   /* getToken(): String {
+
+>>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";

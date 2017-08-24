@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
 import { Router } from '@angular/router';
@@ -36,6 +37,7 @@ export class HomeComponent {
         this.homeService.login(this.model.username, this.model.password)
             .subscribe(result => {
                 if (result === true) {
+<<<<<<< HEAD
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
                 } else {
@@ -59,6 +61,14 @@ export class HomeComponent {
                     console.log(result);
                     // login successful
                     //this.router.navigate(['home']);
+=======
+
+                    console.log("el resultat es true");
+                    this.router.navigate(['/consultar-profe']);
+
+                    console.log(result);
+
+>>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
                 } else {
                     // login failed                    
                     this.error = 'Username or password is incorrect';
@@ -69,5 +79,11 @@ export class HomeComponent {
               this.loading = false;
               this.error = error;
             });
+<<<<<<< HEAD
     }*/
 }
+=======
+    }
+}
+
+>>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
