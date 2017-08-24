@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+
 @Injectable()
 export class HomeService {
 
@@ -16,14 +17,21 @@ export class HomeService {
     }
 
     private authUrl = 'http://localhost:8080/auth';
-    private headers = new Headers({'Content-Type': 'application/json'});
+    private headers = new Headers({'Content-Type': 'application/json'});    
 
-    login(username: string, password: string): Observable<boolean> {
-        console.log(password);
-        return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
-            .map((response: Response) => {
-                // login successful if there's a jwt token in the response
-                let token = response.json() && response.json().token;
+    login(username: string, password: string): Observable<boolean>{
+        
+        let creds = JSON.stringify({'username':username, 'password':password});
+        
+        
+       // headers.append('Content-Type', 'application/x-www-form-urlencoded');         
+        let options = new RequestOptions({headers: this.headers});
+
+        return this.http.post(this.authUrl,creds,options)
+            .map((response: Response) => { 
+                 console.log("dasdada");
+                // login successful if there's a jwt token in the response        
+                let token = response.json().data && response.json().token;
                 if (token) {
                     // store username and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
@@ -35,9 +43,15 @@ export class HomeService {
                     return false;
                 }
             }).catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+            //console.log(a);
+            //return a;
     }
 
+<<<<<<< HEAD
     /*getToken(): String {
+=======
+   /* getToken(): String {
+>>>>>>> b5cbbb0b6358dcd6dbc2e17b243d78f8000d20de
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";
