@@ -17,10 +17,12 @@ export class HomeService {
     }
 
     private authUrl = 'http://localhost:8080/auth';
-<<<<<<< HEAD
+
     private headers = new Headers({'Content-Type': 'application/json'});
     
-
+    
+    
+/*
     login(username: string, password: string): Observable<boolean> {
         console.log(password);
         return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
@@ -28,14 +30,13 @@ export class HomeService {
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;
-=======
     private headers = new Headers({'Content-Type': 'application/json'});    
-
+*/
     login(username: string, password: string): Observable<boolean>{
         
         let creds = JSON.stringify({'username':username, 'password':password});
         
-        
+           
        // headers.append('Content-Type', 'application/x-www-form-urlencoded');         
         let options = new RequestOptions({headers: this.headers});
 
@@ -44,7 +45,6 @@ export class HomeService {
                  console.log("dasdada");
                 // login successful if there's a jwt token in the response        
                 let token = response.json().data && response.json().token;
->>>>>>> 6f7992c85a7c566351a5bcf7e9ff2126beb15030
                 if (token) {
                     // store username and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
@@ -60,7 +60,6 @@ export class HomeService {
             //return a;
     }
 
-<<<<<<< HEAD
     /*getToken(): String {
 =======
    /* getToken(): String {

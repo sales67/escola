@@ -15,12 +15,12 @@ export class HomeComponent {
    model: any = {};
     loading = false;
     error = '';
-    token:any;
+   // token:any;
     constructor(
         private router: Router,
         private homeService: HomeService) {
-        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        this.token = currentUser && currentUser.token;
+       // var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        //this.token = currentUser && currentUser.token;
          }
 
     ngOnInit() {
@@ -34,14 +34,13 @@ export class HomeComponent {
         this.homeService.login(this.model.username, this.model.password)
             .subscribe(result => {
                 if (result === true) {
-<<<<<<< HEAD
+
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
-=======
+
                     console.log(result);
                     // login successful
-                    //this.router.navigate(['home']);
->>>>>>> b5cbbb0b6358dcd6dbc2e17b243d78f8000d20de
+
                 } else {
                     // login failed                    
                     this.error = 'Username or password is incorrect';
