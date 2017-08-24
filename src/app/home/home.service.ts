@@ -10,10 +10,12 @@ export class HomeService {
     constructor(private http: Http) { }
     private authUrl = 'http://localhost:8080/auth';
     private headers = new Headers({'Content-Type': 'application/json'});
+    
 
     login(username: string, password: string): Observable<boolean> {
         console.log(password);
         return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
+        
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;

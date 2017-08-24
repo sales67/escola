@@ -63,21 +63,10 @@ import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {HomeComponent} from './home/home.component';
-
-=======
->>>>>>> efd7d2734679fae32044f17898da6a203cc6f191
 
 import {HomeComponent} from './home/home.component';
 
 
-<<<<<<< HEAD
-=======
->>>>>>> b4ab1e6f6b2835c024116e66b1fee0031ecd227d
->>>>>>> efd7d2734679fae32044f17898da6a203cc6f191
 const routes: Routes = [
     {
     path: '',
