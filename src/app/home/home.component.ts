@@ -35,7 +35,7 @@ export class HomeComponent {
             .subscribe(result => {
                 if (result === true) {
                     console.log("el resultat es true");
-                    //this.router.navigate(['/consultar-profe']);
+                    this.router.navigate(['/consultar-profe']);
                     console.log(result);
                     // login successful
                     //this.router.navigate(['home']);
