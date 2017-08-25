@@ -1,4 +1,4 @@
-import { HomeService } from '../../home/home.service';
+import { LoginService } from '../../login/login.service';
 
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
@@ -21,16 +21,11 @@ export class ProfessorService {
 
     //constructor(@Inject(HomeService) private homeService: HomeService, private http: Http) { }
     //constructor(private homeService: HomeService, private http: Http) { }
-    constructor(private homeService: HomeService, private http: Http) { }
+    constructor(private loginService: LoginService, private http: Http) { }
 
     private headers = new Headers({
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.homeService.getToken()
-    });
-
-    private headers_post = new Headers({
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + this.homeService.getToken()
+        'Authorization': 'Bearer ' + this.loginService.getToken()
     });
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
