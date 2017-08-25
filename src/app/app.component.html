@@ -140,7 +140,18 @@ html {background-color: skyblue;}
                 <a class="logout" (click)="logout()">Logout</a>
             </li>
        </ul>
-    </div>        
+    </div>  
+        <div id="cssmenu" *ngIf="!logged">
+        <ul>
+           <li>
+              <a routerLink="/home" routerLinkActive="active">Home</a>
+           </li>
+            <li>
+             <a routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+        </ul>
+
+        </div>
 <router-outlet></router-outlet>
     
         </body>
