@@ -16,12 +16,7 @@ export class HomeComponent{
     model: any = {};
     loading = false;
     error = '';
-<<<<<<< HEAD
 
-    //token:any;
-
-=======
->>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
     constructor(
         private router: Router,
         private homeService: HomeService) {}
@@ -39,10 +34,7 @@ export class HomeComponent{
         this.homeService.login(this.model.username, this.model.password)
             .subscribe(result => {
                 if (result === true) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
                     console.log(result);
@@ -94,10 +86,5 @@ export class HomeComponent{
 <<<<<<< HEAD
 <<<<<<< HEAD
     }*/
-=======
-  }*/
-
-    
->>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
 }
 
