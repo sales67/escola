@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
-import { Router } from '@angular/router';
+import { RouterModule,Router } from '@angular/router';
 
 
 @Component({
@@ -34,7 +34,8 @@ export class HomeComponent{
             .subscribe(result => {
                 if (result === true) {
                     console.log("el resultat es true");
-                    this.router.navigate(['/consultar-profe']);
+                    window.location.reload()
+                    this.router.navigate(['consultar-profe']);                    
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';

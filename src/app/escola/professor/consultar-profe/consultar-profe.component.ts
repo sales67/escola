@@ -46,7 +46,7 @@ export class ConsultarProfeComponent implements OnInit {
 
     constructor(private professorService: ProfessorService) { }
 
-    ngOnInit() {
+    ngOnInit() {         
         // constants i funció per visualitzar un tipus d'INPUT diferent segons l'opció escollida en el SELECT
         const selectCamp = <HTMLInputElement>document.body.querySelector('#selectCamp');
         // const consId = <HTMLElement>document.body.querySelector('#consId');
