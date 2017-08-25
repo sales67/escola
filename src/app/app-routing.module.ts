@@ -57,10 +57,23 @@ import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
+<<<<<<< HEAD
+import { JsDavidComponent } from './escola/JS/JsDavid/JsDavid.component';
+import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
+import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
+import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
+
+
+import {HomeComponent} from './home/home.component';
+
+
+import { LoginComponent } from './login/login/login.component';
+=======
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './escola/home/home.component';
 
+>>>>>>> 66564617540507d1fff2e82085f11c39d4299725
 
 
 const routes: Routes = [
