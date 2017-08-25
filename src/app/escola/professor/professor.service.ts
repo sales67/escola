@@ -1,3 +1,5 @@
+import { HomeService } from '../../home/home.service';
+
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -17,8 +19,14 @@ export class ProfessorService {
     urlEsports = '/allEsportsProfes';
     urlGetId = '/id';
 
-    constructor(private http: Http) { }
+    //constructor(@Inject(HomeService) private homeService: HomeService, private http: Http) { }
+    //constructor(private homeService: HomeService, private http: Http) { }
+    constructor(private homeService: HomeService, private http: Http) { }
 
+    private headers = new Headers({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.homeService.getToken()
+    });
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -53,7 +61,8 @@ export class ProfessorService {
 
     consultarProfeJava(camp, valor) {
         return this.http
-                   .get(this.myURL + this.urlGetProfes + camp + '&valor=' + valor)
+                   .get(this.myURL + this.urlGetProfes + camp + '&valor=' + valor, {headers: this.headers})
+                   //.get(this.myURL + this.urlGetProfes + camp + '&valor=' + valor)
                    .map(res => res.json());
     }
     

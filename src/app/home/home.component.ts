@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
 import { Router } from '@angular/router';
@@ -7,19 +8,21 @@ import { Router } from '@angular/router';
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-    providers: [ HomeService ]
+  providers: [ HomeService ]
 })
 export class HomeComponent{
     //constructor(private homeService: HomeService) { }
     
-   model: any = {};
+    model: any = {};
     loading = false;
     error = '';
     constructor(
         private router: Router,
         private homeService: HomeService) {}
+    //token:any;
 
     ngOnInit() {
+        console.log("iniciat");
         // reset login status
         this.homeService.logout();
     }
@@ -32,9 +35,33 @@ export class HomeComponent{
                 if (result === true) {
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
+                } else {
+                    console.log("el resultat es false");
+                    this.error = 'Username or password is incorrect';
+                    this.loading = false;
+                }
+            }, error => {
+              this.loading = false;
+              this.error = error;
+            });
+    }
+    /*login() {
+        this.loading = true;
+        this.homeService.login(this.model.username, this.model.password)
+            .subscribe(result => {
+                if (result === true) {
+
+                    console.log("el resultat es true");
+                    this.router.navigate(['/consultar-profe']);
                     console.log(result);
                     // login successful
                     //this.router.navigate(['home']);
+
+                    console.log("el resultat es true");
+                    this.router.navigate(['/consultar-profe']);
+
+                    console.log(result);
+
                 } else {
                     // login failed                    
                     this.error = 'Username or password is incorrect';
@@ -45,5 +72,8 @@ export class HomeComponent{
               this.loading = false;
               this.error = error;
             });
-    }
+  }*/
+
+    
 }
+
