@@ -10,7 +10,7 @@ export class ProfessorService {
 
     //myURL = 'http://172.17.0.191:8080/escola';
     myURL = 'http://172.17.0.191:8080/demo';
-    urlCrearProfe = '/addPtoC?';
+    urlCrearProfe = '/addProfe?';
     urlGetProfe = '/unProfe?id=';
     urlGetProfes = '/profes?camp=';
     urlDelProfe = '/delProfe?camp=';
@@ -28,6 +28,11 @@ export class ProfessorService {
         'Authorization': 'Bearer ' + this.loginService.getToken()
     });
 
+    private headers_post = new Headers({
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': 'Bearer ' + this.homeService.getToken()
+    });
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // A C O N S E G U I R   L ' I D   A C T U A L + 1
@@ -43,16 +48,16 @@ export class ProfessorService {
     // C R E A R   U N   P R O F E S S O R
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    crearProfe(id, nom, cognoms, dni, curs, naixement) {
+    crearProfe(id, nom, cognoms, dni, curs) {
 
-        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement;
+        //const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni;
+        const creds = 'idc=1' + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni;
 
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        //const headers = new Headers();
+        //headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post(this.myURL + this.urlCrearProfe, creds, {
-            headers: headers
-        }).map(res => {console.log("la resposta és: " + res.json()), res.json()})
+        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers})
+                   .map(res => {console.log("la resposta és: " + res.json()), res.json()})
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

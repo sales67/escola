@@ -15,6 +15,7 @@ export class LoginComponent{
     model: any = {};
     loading = false;
     error = '';
+
     constructor(
         private router: Router,
         private loginService: LoginService) {}
@@ -31,9 +32,25 @@ export class LoginComponent{
             .subscribe(result => {
             console.log(result);
                 if (result === true) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
                     console.log("el resultat es true");
+<<<<<<< HEAD:src/app/login/login.component.ts
                     window.location.reload();
                     this.router.navigate(['consultar-profe']);                    
+=======
+                    this.router.navigate(['/consultar-profe']);
+                    console.log(result);
+                    // login successful
+
+
+
+                    window.location.reload()
+                    this.router.navigate(['consultar-profe']);                   
+                    
+>>>>>>> 893d4ddf52b65ccc3547a258c63b98a759f6f07c:src/app/home/home.component.ts
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
@@ -61,6 +78,11 @@ export class LoginComponent{
 
                     console.log(result);
 
+<<<<<<< HEAD
+>>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
+>>>>>>> c5e2a72e68516af98cb3eff83c4fd7d442b9912b
+=======
+>>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
                 } else {
                     // login failed                    
                     this.error = 'Username or password is incorrect';
@@ -71,8 +93,12 @@ export class LoginComponent{
               this.loading = false;
               this.error = error;
             });
-  }*/
-
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }*/
+<<<<<<< HEAD
+}
+=======
 }
 
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
