@@ -105,7 +105,17 @@ h1{
     
 }
 
+#cssmenu ul .logout{
+    float: right;    
+}
 
+#cssmenu ul li .logout{
+    background-color: #1b9bff;
+}
+#cssmenu ul li .logout:hover{
+    background-color: deepskyblue;
+   
+}
 
 
 
