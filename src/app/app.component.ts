@@ -21,8 +21,12 @@ export class AppComponent implements OnInit{
     constructor(private homeService : HomeService,
                private router:Router){}
 
-    test(){
-        
+
+
+    logout(){ 
+         window.location.reload();
+         this.homeService.logout();  
+         this.router.navigate(['/home']); 
     }
 
     ngOnInit(){
@@ -37,6 +41,7 @@ export class AppComponent implements OnInit{
             this.logged=true;                        
         }
     }
+
            
 }
 
