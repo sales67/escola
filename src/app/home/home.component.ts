@@ -37,7 +37,6 @@ export class HomeComponent {
         this.homeService.login(this.model.username, this.model.password)
             .subscribe(result => {
                 if (result === true) {
-<<<<<<< HEAD
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
                 } else {
@@ -82,8 +81,3 @@ export class HomeComponent {
 <<<<<<< HEAD
     }*/
 }
-=======
-    }
-}
-
->>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc

@@ -64,16 +64,8 @@ export class HomeService {
             //return a;
     }*/
 
-<<<<<<< HEAD
-    getToken(): String {
-=======
 
-
-    /*getToken(): String {
-
-   /* getToken(): String {
-
->>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
+   getToken(): String {
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";
