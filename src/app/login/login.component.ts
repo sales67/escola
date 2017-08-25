@@ -1,40 +1,38 @@
 
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from './home.service';
+import { LoginService } from './login.service';
 import { RouterModule,Router } from '@angular/router';
 
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers: [ HomeService ]
+  selector: 'login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
+  providers: [ LoginService ]
 })
-export class HomeComponent{
-    //constructor(private homeService: HomeService) { }
+export class LoginComponent{
     
     model: any = {};
     loading = false;
     error = '';
     constructor(
         private router: Router,
-        private homeService: HomeService) {}
+        private loginService: LoginService) {}
     //token:any;
 
     ngOnInit() {
-        console.log("iniciat");
-        // reset login status
-        this.homeService.logout();
+        this.loginService.logout(); 
     }
 
 
     login() {
         this.loading = true;
-        this.homeService.login(this.model.username, this.model.password)
+        this.loginService.login(this.model.username, this.model.password)
             .subscribe(result => {
+            console.log(result);
                 if (result === true) {
                     console.log("el resultat es true");
-                    window.location.reload()
+                    window.location.reload();
                     this.router.navigate(['consultar-profe']);                    
                 } else {
                     console.log("el resultat es false");

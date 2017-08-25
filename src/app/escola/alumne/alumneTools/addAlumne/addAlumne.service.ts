@@ -1,7 +1,7 @@
 import {Injectable}  from '@angular/core';
 import {Http,Headers,Response}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
-import {HomeService} from '../../../../home/home.service';
+import {LoginService} from '../../../../login/login.service';
 
 
 @Injectable()
@@ -12,11 +12,11 @@ private addUrl = 'http://172.17.0.98:8080/escola/addAlumne?';
 private headers = new Headers({
     'Content-Type': 'application/x-www-form-urlencoded',
     // 'Content-Type': 'application/json',
-     'Authorization': 'Bearer ' + this.homeService.getToken()
+     'Authorization': 'Bearer ' + this.loginService.getToken()
      });
   constructor(
     private http: Http,
-    private homeService: HomeService) {
+    private loginService: LoginService) {
   }
 
 addAlumne(addid,addnom,addidcentre,addnomcentre){     
