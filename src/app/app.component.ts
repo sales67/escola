@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
+
 import { Component, OnInit} from '@angular/core';
->>>>>>> d5480ef7868180ce4b68f91a8b6052b6863be461
+
 import {Http} from '@angular/http';
 import { HomeService } from './home/home.service';
 import { RouterModule,Router } from '@angular/router';
@@ -19,21 +17,8 @@ export class AppComponent implements OnInit{
 
     
     title = 'Escola Otaku';
-<<<<<<< HEAD
-    prova;
-    logged=true;
 
-    constructor(private http:Http){}
-
-    getProva() {
-      this.prova = this.http.get("http://localhost:8080/helloWorld/world")
-        .map(res => res.text())
-        .subscribe(
-            value => this.prova = value,
-            error => {},
-        );        
-    }        
-=======
+   
     logged=false;
     observer;
 
@@ -56,7 +41,6 @@ export class AppComponent implements OnInit{
             this.logged=true;                        
         }
     }
-           
->>>>>>> d5480ef7868180ce4b68f91a8b6052b6863be461
+
 }
 

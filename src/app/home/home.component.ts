@@ -36,16 +36,15 @@ export class HomeComponent{
                 if (result === true) {
 
                     console.log("el resultat es true");
-<<<<<<< HEAD
                     this.router.navigate(['/consultar-profe']);
                     console.log(result);
                     // login successful
 
 
-=======
+
                     window.location.reload()
-                    this.router.navigate(['consultar-profe']);                    
->>>>>>> d5480ef7868180ce4b68f91a8b6052b6863be461
+                    this.router.navigate(['consultar-profe']);                   
+                    
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
