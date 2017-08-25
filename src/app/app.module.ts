@@ -42,6 +42,7 @@ import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
 import { FormulariComponent } from './formulari/formulari.component';
 
+import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { LoginComponent } from './login/login.component';
 //Login

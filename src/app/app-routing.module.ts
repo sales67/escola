@@ -57,54 +57,41 @@ import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
 
+<<<<<<< HEAD
 import { JsDavidComponent } from './escola/JS/JsDavid/JsDavid.component';
 import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
 import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
-import { LoginComponent } from './login/login.component';
+import {HomeComponent} from './home/home.component';
 
+
+import { LoginComponent } from './login/login/login.component';
+=======
+
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './escola/home/home.component';
+
+>>>>>>> 66564617540507d1fff2e82085f11c39d4299725
 
 
 const routes: Routes = [
-   /* {
+    {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
     },
     {
-   path: 'home',
-    component: HomeComponent,
-    
+    path: 'home',
+    component: HomeComponent,    
     children: []
-    },*/
+    },
     {
    path: 'login',
     component: LoginComponent,
     children: []
-    },
-    {
-   path: 'JsDavid',
-    component: JsDavidComponent,
-    children: []
-    },
-    {
-   path: 'JsSergi',
-    component: JsSergiComponent,
-    children: []
-    },
-    {
-   path: 'JsJaumeM',
-    component: JsJaumeMComponent,
-    children: []
-    },
-    {
-   path: 'JsJaumeC',
-    component: JsJaumeCComponent,
-    children: []
-    },
-    
+    },    
     {
    path: 'formulari',
     component: FormulariComponent,
