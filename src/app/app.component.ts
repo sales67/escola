@@ -1,13 +1,14 @@
 import { Component, OnInit} from '@angular/core';
 import {Http} from '@angular/http';
 import { LoginService } from './login/login.service';
+
 import { RouterModule,Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-root',                 // elemento html consumidor
-  templateUrl: './app.component.html',  // ruta relativa a la vista
-  styleUrls: ['./app.component.css'],   // potencialmente múltiples hojas de estilo
+  selector: 'app-root',  
+  templateUrl: './app.component.html', 
+  styleUrls: ['./app.component.css'],  
   providers: [ LoginService ]
 })
 
@@ -41,6 +42,5 @@ export class AppComponent implements OnInit{
             this.router.navigate(['/home']);
         }
     }
-
 }
 

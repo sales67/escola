@@ -28,6 +28,11 @@ export class ProfessorService {
         'Authorization': 'Bearer ' + this.loginService.getToken()
     });
 
+    private headers_post = new Headers({
+        'Content-Type': 'x-www-form-urlencoded',
+        'Authorization': 'Bearer ' + this.loginService.getToken()
+    });
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // A C O N S E G U I R   L ' I D   A C T U A L + 1
@@ -51,7 +56,7 @@ export class ProfessorService {
         //const headers = new Headers();
         //headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers})
+        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers_post})
                    .map(res => {console.log("la resposta és: " + res.json()), res.json()})
     }
 
