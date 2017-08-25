@@ -1,4 +1,4 @@
-import { HomeService } from '../../home/home.service';
+import { LoginService } from '../../login/login.service';
 
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
@@ -10,7 +10,7 @@ export class ProfessorService {
 
     //myURL = 'http://172.17.0.191:8080/escola';
     myURL = 'http://172.17.0.191:8080/demo';
-    urlCrearProfe = '/addPtoC?';
+    urlCrearProfe = '/addProfe?';
     urlGetProfe = '/unProfe?id=';
     urlGetProfes = '/profes?camp=';
     urlDelProfe = '/delProfe?camp=';
@@ -21,10 +21,15 @@ export class ProfessorService {
 
     //constructor(@Inject(HomeService) private homeService: HomeService, private http: Http) { }
     //constructor(private homeService: HomeService, private http: Http) { }
-    constructor(private homeService: HomeService, private http: Http) { }
+    constructor(private loginService: LoginService, private http: Http) { }
 
     private headers = new Headers({
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.loginService.getToken()
+    });
+
+    private headers_post = new Headers({
+        'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Bearer ' + this.homeService.getToken()
     });
 
@@ -43,16 +48,16 @@ export class ProfessorService {
     // C R E A R   U N   P R O F E S S O R
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    crearProfe(id, nom, cognoms, dni, curs, naixement) {
+    crearProfe(id, nom, cognoms, dni, curs) {
 
-        const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni + '&naixement=' + naixement;
+        //const creds = 'idc=' + curs + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni;
+        const creds = 'idc=1' + '&idp=' + id + '&nomp=' + nom + '&cognoms=' + cognoms + '&dni=' + dni;
 
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        //const headers = new Headers();
+        //headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post(this.myURL + this.urlCrearProfe, creds, {
-            headers: headers
-        }).map(res => {console.log("la resposta és: " + res.json()), res.json()})
+        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers})
+                   .map(res => {console.log("la resposta és: " + res.json()), res.json()})
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

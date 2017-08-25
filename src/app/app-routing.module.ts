@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {EscolaComponent} from './escola/escola.component';
 
 //------------------------SERGI
 
@@ -64,15 +63,14 @@ import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
-
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
 
 
 import { LoginComponent } from './login/login/login.component';
 
 
 const routes: Routes = [
-    {
+   /* {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -80,7 +78,12 @@ const routes: Routes = [
     {
    path: 'home',
     component: HomeComponent,
-    //component: LoginComponent,
+    
+    children: []
+    },*/
+    {
+   path: 'login',
+    component: LoginComponent,
     children: []
     },
     {
