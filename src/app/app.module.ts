@@ -44,7 +44,6 @@ import { FormulariComponent } from './formulari/formulari.component';
 
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
-import { LoginComponent } from './login/login.component';
 //Login
 
 
