@@ -10,9 +10,8 @@ html {background-color: skyblue;}
 
   </button> 
     <div id="cssmenu" *ngIf="logged">
-
         <ul>
-          <li>
+          <li class="has-sub">
             <!--<a routerLink="/professor" routerLinkActive="active" href="index.html">Professors</a>-->
               <a routerLink="/professor" routerLinkActive="active">Professors</a>
               <ul>
@@ -22,7 +21,7 @@ html {background-color: skyblue;}
                   <li><a routerLink="/modificar-profe" routerLinkActive="active">Modificar dades</a></li>
               </ul>
           </li>
-          <li>
+          <li class="has-sub">
             <a routerLink="/curs" routerLinkActive="active">Cursos</a>
             <ul>
               <li><a routerLink="/addCurs" routerLinkActive="active">Add</a></li>
@@ -32,7 +31,7 @@ html {background-color: skyblue;}
                 <li><a routerLink="/cursaula" routerLinkActive="active">Cursaula</a></li>
             </ul>  
           </li>
-          <li>
+          <li class="has-sub">
             <a  routerLink="/centre" routerLinkActive="active">Centres</a>
             <ul>
               <li><a routerLink="/addCentre" routerLinkActive="active">Add</a></li>
@@ -95,63 +94,45 @@ html {background-color: skyblue;}
                     </ul>   
                   <li>
                       <a routerLink="/formulariS" routerLinkActive="active">Formulari</a>
-                  </li>
+                </li>
               </ul>
           </li>
-          <li>
-                 <a routerLink="/php" routerLinkActive="active">php</a>  
-                  <ul>
-                        <li>
-                            <a routerLink="/phpDavid" routerLinkActive="active">david</a>
-                        </li>
-                        <li>
-                            <a routerLink="/phpSergi" routerLinkActive="active">sergi</a>
-                        </li>
-                        <li>
+          <li class="has-sub">
+             <a routerLink="/php" routerLinkActive="active">php</a>  
+              <ul>
+                    <li>
+                        <a routerLink="/phpDavid" routerLinkActive="active">david</a>
+                    </li>
+                    <li>
+                        <a routerLink="/phpSergi" routerLinkActive="active">sergi</a>
+                    </li>
+                    <li>
 
-                            <a routerLink="/formulari" routerLinkActive="active">Formulari</a>
-                        </li>
-                      
-                      <li>
-                            <a routerLink="/phpJaumeC" routerLinkActive="active">jaumeC</a>
-                        </li>
+                        <a routerLink="/formulari" routerLinkActive="active">Formulari</a>
+                    </li>
 
-                    </ul>
-         </li>
-            
-            <li>
-                <a routerLink="/js" routerLinkActive="active">javaScript</a>
-                <ul>
-                    <li>
-                        <a routerLink="/JsDavid" routerLinkActive="active">David</a>
+                  <li>
+                        <a routerLink="/phpJaumeC" routerLinkActive="active">jaumeC</a>
                     </li>
-                    <li>
-                        <a routerLink="/JsJaumeM" routerLinkActive="active">Jaume</a>
-                    </li>
-                    <li>
-                        <a routerLink="/JsSergi" routerLinkActive="active">Sergi</a>
-                    </li>
-                     <li>
-                        <a routerLink="/JsJaumeC" routerLinkActive="active">Jaume Calle</a>
-                    </li>
+
                 </ul>
-            </li>
+         </li> 
             <li class="logout">
                 <a class="logout" (click)="logout()">Logout</a>
             </li>
        </ul>
     </div>  
-        <div id="cssmenu" *ngIf="!logged">
+    <div id="cssmenu" *ngIf="!logged">
         <ul>
-           <li>
-              <a routerLink="/home" routerLinkActive="active">Home</a>
-           </li>
             <li>
-             <a routerLink="/login" routerLinkActive="active">Login</a>
+                <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+                <a routerLink="/login" routerLinkActive="active">Login</a>
             </li>
         </ul>
 
-        </div>
+    </div>
 <router-outlet></router-outlet>
     
         </body>

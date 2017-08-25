@@ -37,14 +37,7 @@ export class LoginService {
                }
            }).catch((error:any) => Observable.throw(error.json().error || 'Server error'));
    }
-
-<<<<<<< HEAD
-
    getToken(): String {
-=======
-    getToken(): String {
-
->>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";

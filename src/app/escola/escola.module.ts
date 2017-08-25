@@ -64,10 +64,8 @@ import { PhpDavidComponent } from './php/phpDavid/phpDavid.component';
 
 import { PhpJaumeCComponent } from './php/phpJaumeC/phpJaumeC.component';
 
-import { JsDavidComponent } from './JS/JsDavid/JsDavid.component';
-import { JsSergiComponent } from './JS/JsSergi/JsSergi.component';
-import { JsJaumeMComponent } from './JS/JsJaumeM/JsJaumeM.component';
-import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
+import {HomeComponent} from './home/home.component';
+
 
 @NgModule({
   imports: [
@@ -76,7 +74,9 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       FormsModule,
       AppRoutingModule
   ],
-  declarations: [     
+  declarations: [   
+      
+      HomeComponent,
       
       
       AlumneModol,
@@ -120,12 +120,7 @@ import { JsJaumeCComponent } from './JS/JsJaumeC/JsJaumeC.component';
       AddCursComponent,
       PutCursComponent,
       AddCursaulaComponent,
-      
-      JsDavidComponent,
-      JsJaumeCComponent,
-      JsJaumeMComponent,
-      JsSergiComponent,
-      
+
 
       ProfessorComponent,
       EsportComponent,

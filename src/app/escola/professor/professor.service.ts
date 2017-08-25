@@ -28,11 +28,6 @@ export class ProfessorService {
         'Authorization': 'Bearer ' + this.loginService.getToken()
     });
 
-    private headers_post = new Headers({
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + this.homeService.getToken()
-    });
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // A C O N S E G U I R   L ' I D   A C T U A L + 1
