@@ -12,6 +12,11 @@ import {AddAlumneService} from './addAlumne.service';
 
     export class AddAlumneComponent{
         
+        canActivate() {
+    console.log('AuthGuard#canActivate called');
+    return true;
+  }
+        
         addid;addnom;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;
            
  constructor(private addAlumneService: AddAlumneService) { } 

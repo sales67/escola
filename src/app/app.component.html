@@ -7,8 +7,10 @@ html {background-color: skyblue;}
     <body>        
 <button class="title" >
   <h1>{{title}} <img class="ii" src="http://mon.uvic.cat/teknos/files/2015/08/Logo_Tekn%C3%B3s_3-e1440427535804.jpg" /></h1>
-  </button>   
-    <div id="cssmenu">
+
+  </button> 
+    <div id="cssmenu" *ngIf="logged">
+
         <ul>
           <li>
             <!--<a routerLink="/professor" routerLinkActive="active" href="index.html">Professors</a>-->
@@ -134,9 +136,13 @@ html {background-color: skyblue;}
                     </li>
                 </ul>
             </li>
+            <li class="logout">
+                <a class="logout" (click)="logout()">Logout</a>
+            </li>
        </ul>
     </div>        
 <router-outlet></router-outlet>
+    
         </body>
 </html>
 

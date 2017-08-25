@@ -1,50 +1,63 @@
-// Los componentes son los bloques de construcción de Angular 2 que representan regiones de la pantalla (vista)
 
-// Las aplicaciones se definen como árboles de componentes
+import { Component, OnInit} from '@angular/core';
 
-// Nuestra aplicación es un árbol que tiene una raíz, habitualmente llamado app y que es común a cualquier desarrollo
-
-
-// Cada componente a su vez está formado por tres partes: 
-
-// 1. La vista: es el código que se renderizará para los usuarios. Esta plantilla estará en un fichero de extensión .html (app.component.html)
-
-// 2. La clase controladora: En ES6 usaremos clases para declarar los controladores que exponen datos y funcionalidad a la vista
-
-// 3. Metadata: Se declara como un decorador, una función especial de TypeScript, que recibe un objeto de configuración. Esto acompaña al controlador en un fichero de extensión .ts (app.component.ts)
-
-
-// El componente define propiedades y métodos que están disponibles en su template, pero eso no te da licencia para meter ahí todo lo que te parezca
-
-// És importante extraer toda la lógica en servicios para que el controlador solo se encargue de gestionar una única cosa: la vista
-
-import { Component } from '@angular/core';
 import {Http} from '@angular/http';
+<<<<<<< HEAD
+=======
+import { HomeService } from './home/home.service';
+import { RouterModule,Router } from '@angular/router';
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
 
-// Función decoradora que registra un componente
-// Lo que hace es asociar al controlador una plantilla HTML app.component.html y un selector para ser invocado desde otra vista <app-root></app-root>.
 @Component({
+<<<<<<< HEAD
   selector: 'app-root',                 // elemento html consumidor
   templateUrl: './app.component.html',  // ruta relativa a la vista
   styleUrls: ['./app.component.css']   // potencialmente múltiples hojas de estilo
+=======
+  selector: 'app-root',                 
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css'],  
+  providers: [ HomeService ]
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
 })
-// Esta clase es todo lo que se exporta en este fichero
-// y esto se importará en app.module.ts para ser incorporado al módulo raíz
-export class AppComponent{
-    // las propiedades de la clase representan el modelo de datos
-    // son accesibles desde la vista
+
+
+export class AppComponent implements OnInit{
+
+    
     title = 'Escola Otaku';
-    prova;
 
-    constructor(private http:Http){}
+   
+    logged=false;
+    observer;
 
-    getProva() {
-      this.prova = this.http.get("http://localhost:8080/helloWorld/world")
-        .map(res => res.text())
-        .subscribe(
-            value => this.prova = value,
-            error => {},
-        );        
-    }        
+    constructor(private homeService : HomeService,
+               private router:Router){}
+
+
+
+    logout(){ 
+         window.location.reload();
+         this.homeService.logout();  
+         this.router.navigate(['/home']); 
+    }
+
+    ngOnInit(){
+        this.observer=this.homeService.getToken();
+        console.log(this.observer);
+        if (this.homeService.getToken()=="")
+            {
+                this.logged=false;
+                this.router.navigate(['/home']); 
+            }
+        else{
+            this.logged=true;                        
+        }
+    }
+
+<<<<<<< HEAD
+=======
+           
+>>>>>>> b36a59aab447d8b62759d7bfff2047688ab4d739
 }
 
