@@ -32,9 +32,7 @@ export class LoginComponent{
             console.log(result);
                 if (result === true) {
                     console.log("el resultat es true");
-                    window.location.reload();
-                    this.router.navigate(['consultar-profe']);   
-                    
+                    window.location.reload();                   
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
