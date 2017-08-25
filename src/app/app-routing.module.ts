@@ -64,14 +64,7 @@ import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
-<<<<<<< HEAD
 import {HomeComponent} from './home/home.component';
-
-
-=======
-
-import { HomeComponent } from './home/home.component';
->>>>>>> c5e2a72e68516af98cb3eff83c4fd7d442b9912b
 
 
 import { LoginComponent } from './login/login/login.component';

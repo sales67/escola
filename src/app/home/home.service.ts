@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
@@ -11,6 +10,7 @@ export class HomeService {
 
     public token: string;
 
+
     constructor(private http: Http) {
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
@@ -18,10 +18,9 @@ export class HomeService {
 
     private authUrl = 'http://localhost:8080/auth';
 
-<<<<<<< HEAD
     private headers = new Headers({'Content-Type': 'application/json'});
     
-    
+
     
 /*
     login(username: string, password: string): Observable<boolean> {
@@ -34,27 +33,6 @@ export class HomeService {
     private headers = new Headers({'Content-Type': 'application/json'});    
 */
     login(username: string, password: string): Observable<boolean>{
-=======
-    login(username: string, password: string): Observable<boolean> {
-        console.log(password);
-        return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
-            .map((response: Response) => {
-                // login successful if there's a jwt token in the response
-                let token = response.json() && response.json().token;
-                if (token) {
-                    // store username and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
-
-                    // return true to indicate successful login
-                    return true;
-                } else {
-                    // return false to indicate failed login
-                    return false;
-                }
-            }).catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-    }
-    /*login(username: string, password: string): Observable<boolean>{
->>>>>>> c5e2a72e68516af98cb3eff83c4fd7d442b9912b
         
         let creds = JSON.stringify({'username':username, 'password':password});
         
@@ -64,6 +42,7 @@ export class HomeService {
 
         return this.http.post(this.authUrl,creds,options)
             .map((response: Response) => { 
+                 console.log("dasdada");
                 // login successful if there's a jwt token in the response        
                 let token = response.json().data && response.json().token;
                 if (token) {
@@ -79,22 +58,10 @@ export class HomeService {
             }).catch((error:any) => Observable.throw(error.json().error || 'Server error'));
             //console.log(a);
             //return a;
-    }*/
+    }
 
-<<<<<<< HEAD
-    /*getToken(): String {
-=======
-<<<<<<< HEAD
     getToken(): String {
->>>>>>> c5e2a72e68516af98cb3eff83c4fd7d442b9912b
-=======
 
-
-    /*getToken(): String {
-
-   /* getToken(): String {
-
->>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       var token = currentUser && currentUser.token;
       return token ? token : "";

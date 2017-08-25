@@ -16,15 +16,7 @@ export class HomeComponent {
     model: any = {};
     loading = false;
     error = '';
-<<<<<<< HEAD
-   // token:any;
-    constructor(
-        private router: Router,
-        private homeService: HomeService) {
-       // var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        //this.token = currentUser && currentUser.token;
-         }
-=======
+
     //token:any;
 
     constructor(
@@ -33,7 +25,6 @@ export class HomeComponent {
         //var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         //this.token = currentUser && currentUser.token;
         }
->>>>>>> c5e2a72e68516af98cb3eff83c4fd7d442b9912b
 
     ngOnInit() {
         console.log("iniciat");
@@ -50,12 +41,10 @@ export class HomeComponent {
 
                     console.log("el resultat es true");
                     this.router.navigate(['/consultar-profe']);
-<<<<<<< HEAD
-
                     console.log(result);
                     // login successful
 
-=======
+
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
@@ -99,8 +88,4 @@ export class HomeComponent {
 <<<<<<< HEAD
     }*/
 }
-=======
-    }
-}
 
->>>>>>> 122e80dc50d44211b8ec2afad94d8b0fe2c7a0fc
