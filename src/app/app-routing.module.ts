@@ -52,15 +52,7 @@ import {listCentreComponent } from './escola/centre/listCentre/listCentre.compon
 import { PhpSergiComponent } from './escola/php/phpSergi/phpSergi.component';
 import { PhpDavidComponent } from './escola/php/phpDavid/phpDavid.component';
 
-
-//import { FormulariComponent } from './formulari/formulari.component';
-
 import { PhpJaumeCComponent } from './escola/php/phpJaumeC/phpJaumeC.component';
-
-import { JsDavidComponent } from './escola/JS/JsDavid/JsDavid.component';
-import { JsSergiComponent } from './escola/JS/JsSergi/JsSergi.component';
-import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
-import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './escola/home/home.component';

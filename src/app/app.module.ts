@@ -10,7 +10,6 @@ import { FormulariComponent } from './formulari/formulari.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
