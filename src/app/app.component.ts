@@ -2,23 +2,16 @@
 import { Component, OnInit} from '@angular/core';
 
 import {Http} from '@angular/http';
-<<<<<<< HEAD
-=======
+
 import { HomeService } from './home/home.service';
 import { RouterModule,Router } from '@angular/router';
->>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
+
 
 @Component({
-<<<<<<< HEAD
-  selector: 'app-root',                 // elemento html consumidor
-  templateUrl: './app.component.html',  // ruta relativa a la vista
-  styleUrls: ['./app.component.css']   // potencialmente múltiples hojas de estilo
-=======
   selector: 'app-root',                 
   templateUrl: './app.component.html',  
   styleUrls: ['./app.component.css'],  
   providers: [ HomeService ]
->>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
 })
 
 
@@ -54,10 +47,5 @@ export class AppComponent implements OnInit{
             this.logged=true;                        
         }
     }
-
-<<<<<<< HEAD
-=======
-           
->>>>>>> b36a59aab447d8b62759d7bfff2047688ab4d739
 }
 

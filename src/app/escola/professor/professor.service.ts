@@ -56,7 +56,7 @@ export class ProfessorService {
         //const headers = new Headers();
         //headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers})
+        return this.http.post(this.myURL + this.urlCrearProfe, creds, {headers: this.headers_post})
                    .map(res => {console.log("la resposta és: " + res.json()), res.json()})
     }
 
