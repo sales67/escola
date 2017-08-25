@@ -11,14 +11,11 @@ html {background-color: skyblue;}
   </button> 
     <div id="cssmenu" *ngIf="logged">
         <ul>
-<<<<<<< HEAD
             <li>
                 <a routerLink="/home" routerLinkActive="active">Home</a>
             </li>
             <li>
-=======
           <li class="has-sub">
->>>>>>> 968b1955a651ca9bdd998047f7a8a5024bff1781
             <!--<a routerLink="/professor" routerLinkActive="active" href="index.html">Professors</a>-->
               <a routerLink="/professor" routerLinkActive="active">Professors</a>
               <ul>
@@ -131,22 +128,13 @@ html {background-color: skyblue;}
     </div>  
     <div id="cssmenu" *ngIf="!logged">
         <ul>
-<<<<<<< HEAD
-           <li>
-                <a routerLink="/home" routerLinkActive="active">Home</a>
-=======
             <li>
                 <a routerLink="/home" routerLinkActive="active">Home</a>
-            </li>
-            <li>
-                <a routerLink="/login" routerLinkActive="active">Login</a>
->>>>>>> 968b1955a651ca9bdd998047f7a8a5024bff1781
             </li>
              <li>
              <a routerLink="/login" routerLinkActive="active">Login</a>
-           </li>
+            </li>
         </ul>
-
     </div>
 <router-outlet></router-outlet>
     
