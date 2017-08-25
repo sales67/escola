@@ -1,21 +1,25 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
+=======
+import { Component, OnInit} from '@angular/core';
+>>>>>>> d5480ef7868180ce4b68f91a8b6052b6863be461
 import {Http} from '@angular/http';
 import { HomeService } from './home/home.service';
+import { RouterModule,Router } from '@angular/router';
 
-// Función decoradora que registra un componente
-// Lo que hace es asociar al controlador una plantilla HTML app.component.html y un selector para ser invocado desde otra vista <app-root></app-root>.
 @Component({
-  selector: 'app-root',                 // elemento html consumidor
-  templateUrl: './app.component.html',  // ruta relativa a la vista
-  styleUrls: ['./app.component.css'],   // potencialmente múltiples hojas de estilo
+  selector: 'app-root',                 
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css'],  
   providers: [ HomeService ]
 })
-// Esta clase es todo lo que se exporta en este fichero
-// y esto se importará en app.module.ts para ser incorporado al módulo raíz
-export class AppComponent{
-    // las propiedades de la clase representan el modelo de datos
-    // son accesibles desde la vista
+
+
+export class AppComponent implements OnInit{
+
+    
     title = 'Escola Otaku';
+<<<<<<< HEAD
     prova;
     logged=true;
 
@@ -29,5 +33,30 @@ export class AppComponent{
             error => {},
         );        
     }        
+=======
+    logged=false;
+    observer;
+
+    constructor(private homeService : HomeService,
+               private router:Router){}
+
+    test(){
+        
+    }
+
+    ngOnInit(){
+        this.observer=this.homeService.getToken();
+        console.log(this.observer);
+        if (this.homeService.getToken()=="")
+            {
+                this.logged=false;
+                this.router.navigate(['/home']); 
+            }
+        else{
+            this.logged=true;                        
+        }
+    }
+           
+>>>>>>> d5480ef7868180ce4b68f91a8b6052b6863be461
 }
 
