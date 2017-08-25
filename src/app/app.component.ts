@@ -29,18 +29,18 @@ export class AppComponent implements OnInit{
     logout(){ 
          window.location.reload();
          this.loginService.logout();  
-         this.router.navigate(['/login']); 
+         this.router.navigate(['/home']); 
     }
 
     ngOnInit(){
         if (this.loginService.getToken()=="")
             {
                 this.logged=false;
-                this.router.navigate(['/login']); 
+                this.router.navigate(['/home']); 
             }
         else{
             this.logged=true;  
-            this.router.navigate(['/consultar-profe']);
+            this.router.navigate(['/home']);
         }
     }
 
