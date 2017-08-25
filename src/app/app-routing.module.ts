@@ -63,15 +63,8 @@ import { JsJaumeMComponent } from './escola/JS/JsJaumeM/JsJaumeM.component';
 import { JsJaumeCComponent } from './escola/JS/JsJaumeC/JsJaumeC.component';
 
 
-<<<<<<< HEAD
-
 import { LoginComponent } from './login/login.component';
-=======
-import {HomeComponent} from './home/home.component';
 
-
-import { LoginComponent } from './login/login/login.component';
->>>>>>> 893d4ddf52b65ccc3547a258c63b98a759f6f07c
 
 
 const routes: Routes = [
