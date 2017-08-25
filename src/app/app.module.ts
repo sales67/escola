@@ -43,7 +43,7 @@ import { EscolaModule } from './escola/escola.module';
 import { FormulariComponent } from './formulari/formulari.component';
 
 import { LoginService } from './login/login.service';
-
+import { LoginComponent } from './login/login.component';
 //Login
 
 
@@ -64,7 +64,7 @@ import { LoginService } from './login/login.service';
     AppComponent,
     FormulariComponent,
    // HomeComponent,
-    //LoginComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

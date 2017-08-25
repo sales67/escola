@@ -12,7 +12,10 @@ html {background-color: skyblue;}
     <div id="cssmenu" *ngIf="logged">
 
         <ul>
-          <li>
+            <li>
+                <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
             <!--<a routerLink="/professor" routerLinkActive="active" href="index.html">Professors</a>-->
               <a routerLink="/professor" routerLinkActive="active">Professors</a>
               <ul>
@@ -144,11 +147,11 @@ html {background-color: skyblue;}
         <div id="cssmenu" *ngIf="!logged">
         <ul>
            <li>
-              <a routerLink="/home" routerLinkActive="active">Home</a>
-           </li>
-            <li>
-             <a routerLink="/login" routerLinkActive="active">Login</a>
+                <a routerLink="/home" routerLinkActive="active">Home</a>
             </li>
+             <li>
+             <a routerLink="/login" routerLinkActive="active">Login</a>
+           </li>
         </ul>
 
         </div>
