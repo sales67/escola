@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Http, Headers, Response} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -16,17 +16,27 @@ export class HomeService {
         this.token = currentUser && currentUser.token;
     }
 
+    private headers = new Headers({'Content-Type':'application/json'});
     private authUrl = 'http://localhost:8080/auth';
+<<<<<<< HEAD
 
     private headers = new Headers({'Content-Type': 'application/json'});
     
 
     
 /*
+=======
+    
+>>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
     login(username: string, password: string): Observable<boolean> {
+        let body:any = { "username": username, "password": password };
         console.log(password);
+<<<<<<< HEAD
         return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
         
+=======
+        return this.http.post(this.authUrl,body, {headers: this.headers})
+>>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;
@@ -34,13 +44,13 @@ export class HomeService {
 */
     login(username: string, password: string): Observable<boolean>{
         
-        let creds = JSON.stringify({'username':username, 'password':password});
+        //let creds = JSON.stringify({'username':username, 'password':password});
         
            
        // headers.append('Content-Type', 'application/x-www-form-urlencoded');         
-        let options = new RequestOptions({headers: this.headers});
+       // let options = new RequestOptions({headers: this.headers});
 
-        return this.http.post(this.authUrl,creds,options)
+        return this.http.post(this.authUrl, JSON.stringify({username: username, password: password}), {headers: this.headers})
             .map((response: Response) => { 
                  console.log("dasdada");
                 // login successful if there's a jwt token in the response        
@@ -58,8 +68,16 @@ export class HomeService {
             }).catch((error:any) => Observable.throw(error.json().error || 'Server error'));
             //console.log(a);
             //return a;
+<<<<<<< HEAD
     }
 
+=======
+
+    }*/
+
+
+
+>>>>>>> 0375a0fc732131a324f0125fd4034ee23406b92f
     getToken(): String {
 
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
