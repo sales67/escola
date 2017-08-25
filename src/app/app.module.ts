@@ -41,11 +41,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscolaModule } from './escola/escola.module';
 import { FormulariComponent } from './formulari/formulari.component';
-import {HomeComponent} from './home/home.component'
 
-import { HomeService } from './home/home.service';
-import { LoginComponent } from './login/login/login.component';
-import { AuthenticationService } from './login/_services/authentication.service';
+import { LoginService } from './login/login.service';
 
 //Login
 
@@ -66,8 +63,8 @@ import { AuthenticationService } from './login/_services/authentication.service'
   declarations: [
     AppComponent,
     FormulariComponent,
-    HomeComponent,
-    LoginComponent
+   // HomeComponent,
+    //LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +73,7 @@ import { AuthenticationService } from './login/_services/authentication.service'
     AppRoutingModule,
     EscolaModule,    
   ],
-  providers: [ AuthenticationService, HomeService ],
+  providers: [LoginService],
   bootstrap: [AppComponent] // El componente asignado será el componente raíz de la app. De él penderá cualquier otro componente que se utilice.
 })
 export class AppModule { }

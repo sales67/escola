@@ -1,17 +1,16 @@
 
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from './home.service';
+import { LoginService } from './login.service';
 import { RouterModule,Router } from '@angular/router';
 
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers: [ HomeService ]
+  selector: 'login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
+  providers: [ LoginService ]
 })
-export class HomeComponent{
-    //constructor(private homeService: HomeService) { }
+export class LoginComponent{
     
     model: any = {};
     loading = false;
@@ -19,23 +18,29 @@ export class HomeComponent{
 
     constructor(
         private router: Router,
-        private homeService: HomeService) {}
+        private loginService: LoginService) {}
     //token:any;
 
     ngOnInit() {
-        console.log("iniciat");
-        // reset login status
-        this.homeService.logout();
+        this.loginService.logout(); 
     }
 
 
     login() {
         this.loading = true;
-        this.homeService.login(this.model.username, this.model.password)
+        this.loginService.login(this.model.username, this.model.password)
             .subscribe(result => {
+            console.log(result);
                 if (result === true) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
                     console.log("el resultat es true");
+<<<<<<< HEAD:src/app/login/login.component.ts
+                    window.location.reload();
+                    this.router.navigate(['consultar-profe']);                    
+=======
                     this.router.navigate(['/consultar-profe']);
                     console.log(result);
                     // login successful
@@ -45,6 +50,7 @@ export class HomeComponent{
                     window.location.reload()
                     this.router.navigate(['consultar-profe']);                   
                     
+>>>>>>> 893d4ddf52b65ccc3547a258c63b98a759f6f07c:src/app/home/home.component.ts
                 } else {
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
@@ -90,5 +96,9 @@ export class HomeComponent{
 <<<<<<< HEAD
 <<<<<<< HEAD
     }*/
+<<<<<<< HEAD
+}
+=======
 }
 
+>>>>>>> 4d8feb49dec917403be7b4da4c7f05f3522cfc2b
