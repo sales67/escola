@@ -37,6 +37,9 @@ export class AppComponent implements OnInit{
                 this.router.navigate(['/home']); 
             }
         else{
+            var a = this.loginService.getToken();
+            console.log(a);
+            var a = this.currentUserData();
             this.logged=true;  
             this.router.navigate(['/home']);
         }
