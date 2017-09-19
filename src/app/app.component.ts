@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import {Http} from '@angular/http';
+//import {Http} from '@angular/http';
 import { LoginService } from './login/login.service';
-import { RouterModule,Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
